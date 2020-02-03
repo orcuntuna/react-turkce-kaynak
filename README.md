@@ -162,7 +162,7 @@ HTML ve JSX arasında style tanımlamalarında farklar görmüş olabilirsiniz. 
 | background-image: url('bg.png') | backgroundImage: "url('bg.png')" |
 | z-index: 10                     | zIndex: 10                       |
 
-CSS ve HTML DOM Style biçimlendirmesi arasındaki tüm farkları görmek için [buraya tıklayarak](https://www.w3schools.com/jsref/dom_obj_style.asp) w3school kaynağına göz atabilirsiniz.
+CSS ve HTML DOM Style biçimlendirmesi arasındaki tüm farkları (aslında HTML DOM stillerini) görmek için [buraya tıklayarak](https://www.w3schools.com/jsref/dom_obj_style.asp) w3school'un hazırladığı listeye göz atabilirsiniz.
 
 Yukarıdaki tabloda da görüldüğü gibi neredeyse bire bir olarak aynılar. Üst kısımda bazı zorunluluklar olduğundan bahsetmiştik. Bunlara da kısaca bir göz atalım. 
 
@@ -208,6 +208,28 @@ const isim = "orçun";
 const mevcutYas = 20;
 const kacYasindasin = yas => yas + 10;
 const yasYazi = <h1>{isim} 15 sene yaşlandın, yeni yaşın: {kacYasindasin(yas) + 5}</h1>
+```
+
+## Bileşenler (components)
+
+Öncelikle bileşenlerin tanımından başlayalım, sonrasında türlerini inceleyip örnek kodlara göz atalım.
+
+Bileşenleri bir bütünü oluşturan parçalar olarak düşünebiliriz. Bu bileşenler birbirinden bağımsız olarak çalışır fakat, istenilen durumlarda bu bileşenler arasında kendimiz bağlantılar oluşturabiliriz. Yarattığımız bileşenleri başka bileşenler içinde bir ya da birden fazla kez kullanabiliriz. Bir bileşeni ekranda gösterebilmenin (render) iki yolu vardır.
+
+1. index üzerinde render edilmesi ve dökümana yazdırılması
+
+2. Render edilen başka bir bileşen içinde çağrılması
+
+Varsayılan olarak oluşturduğumuz uygulamada index.js içinde 1. maddedeki gibi App bileşeni render ediliyor ve bu sayesede tarayıcıda App bileşenini görüyoruz. Eğer başka bir bileşen daha oluşturup bunu da App içinde çağırıp kullansaydık bu da 2. maddedeki gibi bir bileşen kullanımı olacaktı. Aşağıda birinci maddeye projemizdeki örnek kodu ekledim, ikinci maddenin örneğini de kendi bileşenlerimizi oluşturmaya başladığımızda göreceğiz.
+
+```jsx
+// bahsedilen index.js içeriği
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
+
+ReactDOM.render(<App />, document.getElementById('root'));
 ```
 
 
