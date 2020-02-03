@@ -5,3 +5,4 @@ http://kangax.github.io/compat-table/es6/
 https://ceaksan.com/tr/webpack-nedir/
 https://medium.com/t%C3%BCrkiye/javascriptin-en-g%C4%B1c%C4%B1k-konular%C4%B1-webpack-babel-eslint-ve-di%C4%9Ferleri-fb2e1232a085
 https://www.w3schools.com/jsref/dom_obj_style.asp
+https://medium.com/path2code/map-in-jsx-2d7285b39f8
