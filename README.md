@@ -48,7 +48,7 @@ Geliştirmeye başlamadan önce webpack ve babel kavramları hakkında bilgi sah
 
 ### Webpack
 
-![oruz.](C:\Users\orcun\Documents\react-turkce-kaynak\images\webpack.jpg)
+![oruz.](images/webpack.jpg)
 
 Bildiğiniz gibi javascript üzerinde farklı kodları içeri aktarıp bir dosya üzerinden kodlamaya devam edebileceğimiz bir sistem mevcut değil (Python'daki import, PHP'deki include gibi). Burada webpack devreye giriyor. Webpack oluşturduğumuz dosyalar arasında içeri aktarma yapmamızı sağlıyor. Sonrasında ise bir bundle dosyasında tüm içerikleri bir araya getiriyor. Böylelikle javascript üzerinde import işlemi yapabilmiş oluyoruz.
 
@@ -93,7 +93,7 @@ npm start
 
 Şuanda yerel sunucunuzda react çalışır durumda olması gerekiyor. Otomatik olarak tarayıcınızda bağlantı açılacaktır eğer açılmaz ise, tarayıcınızda adres çubuğuna **http://localhost:3000** yazarak bağlanabilirsiniz. Karşılaşmanız gereken ekran şu şekilde olmalı:
 
-![s](C:\Users\orcun\Documents\react-turkce-kaynak\images\react.png)
+![s](images/react.png)
 
 package.json dosyasını incelerseniz "scripts" kısmında kullanabileceğiniz bazı komutlara rastlayacaksınız. Buradaki start, build, test ve eject komutlarını kısaca inceleyelim.
 
@@ -104,9 +104,3 @@ package.json dosyasını incelerseniz "scripts" kısmında kullanabileceğiniz b
 - **npm run test:** projemize dahil olan jest ile hazırladığınız testleri çalıştırır.
 
 - **npm run eject:** proje dosyaları içinde görmediğimiz server ve config dosyalarını manuel olarak yönetmek için dışarı çıkarır. Bu işlem yapılmak isteniyorsa proje oluşturulduğunda hiçbir ekleme ve düzenleme yapılmadan çalıştırılmalıdır. Aksi halde çalışmaz ve bu komutu çalıştırırken dikkatli olunması gerekir çünkü kalıcı bir zarar verebilir.
-
-
-
-
-
-
