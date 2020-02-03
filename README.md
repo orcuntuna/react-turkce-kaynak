@@ -107,22 +107,6 @@ package.json dosyasını incelerseniz "scripts" kısmında kullanabileceğiniz b
 
 create-react-app haricinde react projesi oluşturmak için birçok farklı alternatif araç mevcut. Biz facebook tarafından geliştirilen resmi araç olduğu için create-react-app kullanacağız. Siz diğer alternatiflere de göz atmak isterseniz diye onları da bir liste halinde ekleyeceğim.
 
-- [enclave](https://github.com/eanplatter/enclave)
-
-- [nwb](https://github.com/insin/nwb)
-
-- [motion](https://github.com/steelbrain/motion)
-
-- [rackt-cli](https://github.com/mzabriskie/rackt-cli)
-
-- [budo](https://github.com/mattdesl/budo)
-
-- [rwb](https://github.com/petehunt/rwb)
-
-- [quik](https://github.com/satya164/quik)
-
-- [sagui](https://github.com/saguijs/sagui)
-
-- [roc](https://github.com/rocjs/roc)
+Alternatif araçlar: [enclave](https://github.com/eanplatter/enclave), [nwb](https://github.com/insin/nwb), [motion](https://github.com/steelbrain/motion), [rackt-cli](https://github.com/mzabriskie/rackt-cli), [budo](https://github.com/mattdesl/budo), [rwb](https://github.com/petehunt/rwb), [quik](https://github.com/satya164/quik), [sagui](https://github.com/saguijs/sagui), [roc](https://github.com/rocjs/roc)
 
 
