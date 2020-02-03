@@ -104,3 +104,25 @@ package.json dosyasını incelerseniz "scripts" kısmında kullanabileceğiniz b
 - **npm run test:** projemize dahil olan jest ile hazırladığınız testleri çalıştırır.
 
 - **npm run eject:** proje dosyaları içinde görmediğimiz server ve config dosyalarını manuel olarak yönetmek için dışarı çıkarır. Bu işlem yapılmak isteniyorsa proje oluşturulduğunda hiçbir ekleme ve düzenleme yapılmadan çalıştırılmalıdır. Aksi halde çalışmaz ve bu komutu çalıştırırken dikkatli olunması gerekir çünkü kalıcı bir zarar verebilir.
+
+create-react-app haricinde react projesi oluşturmak için birçok farklı alternatif araç mevcut. Biz facebook tarafından geliştirilen resmi araç olduğu için create-react-app kullanacağız. Siz diğer alternatiflere de göz atmak isterseniz diye onları da bir liste halinde ekleyeceğim.
+
+- [enclave](https://github.com/eanplatter/enclave)
+
+- [nwb](https://github.com/insin/nwb)
+
+- [motion](https://github.com/steelbrain/motion)
+
+- [rackt-cli](https://github.com/mzabriskie/rackt-cli)
+
+- [budo](https://github.com/mattdesl/budo)
+
+- [rwb](https://github.com/petehunt/rwb)
+
+- [quik](https://github.com/satya164/quik)
+
+- [sagui](https://github.com/saguijs/sagui)
+
+- [roc](https://github.com/rocjs/roc)
+
+
