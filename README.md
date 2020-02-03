@@ -109,4 +109,105 @@ create-react-app haricinde react projesi oluşturmak için birçok farklı alter
 
 Alternatif araçlar: [enclave](https://github.com/eanplatter/enclave), [nwb](https://github.com/insin/nwb), [motion](https://github.com/steelbrain/motion), [rackt-cli](https://github.com/mzabriskie/rackt-cli), [budo](https://github.com/mattdesl/budo), [rwb](https://github.com/petehunt/rwb), [quik](https://github.com/satya164/quik), [sagui](https://github.com/saguijs/sagui), [roc](https://github.com/rocjs/roc)
 
+## JSX ve HTML
+
+JSX React için özel olarak hazırlanmış bir biçimlendirme dilidir. React içinde HTML değil de JSX kullanmamızın en büyük sebeplerinden biri de JSX ile oluşturduğumuz şablonlara javascript ile kolaylıkla hükmedebiliyor olmamızdır. Yani JSX yazarken aslında biraz eskiye dönüp javascript ve html dillerini bir arada yazıyoruz.
+
+Örneğin html ile değişkenleri, matematiksel işlemleri, fonksiyonları, koşullu karşılaştırmaları, döngüleri ve bunlar gibi dinamik olan hiçbir şeyi kullanamazken JSX ile bunları kullanabiliyoruz.
+
+Genel olarak JSX yazımı HTML üzerine kurulmuştur. Bazı anahtar kelimeler değiştirilmiş ve bazı zorunluluklar getirilmiştir.
+
+**HTML ve JSX arasındaki bazı anahtar kelime farkları:**
+
+| HTML     | JSX            | Açıklama                                                                                                         |
+| -------- | -------------- | ---------------------------------------------------------------------------------------------------------------- |
+| checked  | defaultChecked | checkbox veya radio tipindeki elemanlarda varsayılan olarak seçili gelme özelliği                                |
+| class    | className      | bir elemanın tasarımını css ile ilişkilendirme özelliği                                                          |
+| for      | htmlFor        | genellikle label için kullanılan for anahtar sözcüğü                                                             |
+| style="" | style={}       | style özelliği ile inline css verilirken html'de string olarak jsx'de ise javascript objesi olarak değer girilir |
+| value    | defaultValue   | input ve textarea için varsayılan değer                                                                          |
+
+**Bir elemana sınıf atama karşılaştırması:**
+
+```html
+<!-- HTML ile div'e sınıf atama -->
+<div class="container"></div>
+```
+
+```jsx
+// JSX ile div'e sınıf atama
+// {"container"} yerine "container" de kullanılabilir
+<div className={"container"}></div>
+```
+
+**Bir elemana inline css atama karşılaştırması:**
+
+```html
+<!-- HTML ile div'e inline css ekleme -->
+<div style="margin-top:10px;background-color:#fff;width:75%">
+```
+
+```jsx
+// JSX ile div'e inline css ekleme
+<div style={{ marginTop: 10, backgroundColor: "#fff", width: "75%" }}>
+```
+
+HTML ve JSX arasında style tanımlamalarında farklar görmüş olabilirsiniz. Biraz da bu farklarda değinelim. JSX tarafında tanımlamalar javascript objesi olarak yapıldığı için direkt olarak style üzerinde de javascript üzerinde kullanılan css isimlendirmelerini kullanıyoruz. Yani normalde "margin-top: 10px" derken aradaki çizgiyi kaldırıp her ilk kelime hariç sonraki harflerin ilk harfini büyük harfe çevirerek "marginTop: 10" şeklinde yazıyoruz. Ayrıca fark ettiğiniz gibi HTML'de "10px" yazarken JSX'de integer olarak 10 yazdık. Aynı yazım biçimini fontSize, height, weight gibi sayısal değerler girilen özelliklerde de kullanıyoruz. Burada integer olarak yazılan değerler piksel olarak algılanıyor. Eğer yüzde şeklinde bir ifade girmek isterseniz bunu tırnakların içine olarak belirtiyorsunuz. Eğer bu yazım tarzı size sıkıcı geldi ise özel bir css dosyası oluşturup içine normal css kodlarını yazmaya devam edebilirsiniz, bileşene "className" özelliğini kullanarak bu sınıf ismini verdiğinizde css kodlarınız geçerli olacaktır.
+
+| HTML (style)                    | JSX (style)                      |
+| ------------------------------- | -------------------------------- |
+| margin-top: 10px                | marginTop: 10                    |
+| color: red                      | color: "red"                     |
+| background-color: #fff          | backgroundColor: "#fff"          |
+| background-image: url('bg.png') | backgroundImage: "url('bg.png')" |
+| z-index: 10                     | zIndex: 10                       |
+
+CSS ve HTML DOM Style biçimlendirmesi arasındaki tüm farkları görmek için [buraya tıklayarak](https://www.w3schools.com/jsref/dom_obj_style.asp) w3school kaynağına göz atabilirsiniz.
+
+Yukarıdaki tabloda da görüldüğü gibi neredeyse bire bir olarak aynılar. Üst kısımda bazı zorunluluklar olduğundan bahsetmiştik. Bunlara da kısaca bir göz atalım. 
+
+HTML üzerinde bir eleman açılır ve kapatılmaz ise genellikle tarayıcılar bunu gözardı eder ve bir sorun yokmuş gibi devam eder. JSX tarafında eğer bir bileşen açıldıysa kapatılmak zorundadır, kapatmazsanız hata alacaksınız.
+
+Bir eleman html ve jsx üzerinde 2 farklı şekilde kapatılabilir.
+
+1. İçinde başka bir eleman olacak şekilde kapatma
+
+2. Açılış ve kapanış için tek etiket
+
+```html
+<!-- 1. madde örnek -->
+<p>merhaba dünya</p>
+<div class="container">
+    <span>açtık kapattık</span>    
+</div>
+
+<!-- 2. madde örnek -->
+<br />
+<meta charset="UTF-8" />
+<img src="logo.png" alt="logo" />
+<input type="text" name="kutucuk" />
+```
+
+Yukarıda 2. örnekte sondan hemen önce koyduğumuz "/" işareti o elemanı kapattığımızın göstergesidir. Yukarıdaki 2 örnek de doğrudur ve bu şekilde tüm elemanlar açıldığı gibi kapatılmalıdır. Eğer HTML tarafında input, img ve br gibi etiketleri kapatmasaydınız da kod çalışmaya devam edecekti.
+
+Başka bir zorunluluk ise oluşturacağımız bileşenlerde ilk harfi büyük seçmemiz gerekiyor. Aksi taktirde bu özel bir bileşen değil html elemanı olarak algınacaktır ve bileşene erişimimizi engelleyecektir.
+
+Son olarak JSX'in birkaç özelliğine daha değinip JSX bölümünü bitirelim. Az biraz yukarıda JSX içinde HTML tarafında yapamadığımız bazı şeyleri de yapabildiğimizi söyledik. Bunlardan bazıları bu JSX kodlarını bir değişkene atayabiliriz ya da bir JSX kodu içinde mevcut javascript değişkenlerini kullanabiliriz. O da mı yetmedi? Fonksiyon çağırıp bir de gelen cevaba 5 bile ekleriz.
+
+```jsx
+// JSX'i değişkene atama ve içerisinde değişken kullanma
+
+const isim = "orçun";
+const baslik = <h1>merhaba ben {isim}</h1>;
+```
+
+```jsx
+// JSX'i değişkene atama, fonksiyon çağırma ve aritmatik işlem
+
+const isim = "orçun";
+const mevcutYas = 20;
+const kacYasindasin = (yas) => (yas + 10);
+const yasYazi = <h1>{isim} 15 sene yaşlandın, yeni yaşın: {kacYasindasin(yas) + 5}</h1>
+```
+
 
