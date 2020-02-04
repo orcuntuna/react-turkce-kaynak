@@ -362,4 +362,240 @@ Eğer projeniz çalışır durumda değilde "npm start" ile ayağa kaldırın ve
 
 ![bilesen](images/bilesen.png)
 
+## Props (Bileşen Parametreleri)
 
+Şimdiye kadar oluşturduğumuz bileşenlerde herhangi bir özelleştirme yapmadık ve hiçbir parametre kullanmadık. Prop'lar ile bileşenlerimize veri gönderimi sağlayabiliyoruz. Bu şekilde gönderdiğimiz parametreleri bileşen içinde kullanarak özelleştirmeler yapabiliyoruz.
+
+Prop'ları bileşenlerde sınıf tabanlı veya fonksiyonel tabanlı olması farketmeksizin tümünde kullanabiliyoruz. Aralarında nesne yönelimli kullanımdan kaynaklanın tek kelimelik bir fark oluyor fakat bunu da nesneye biraz hakimseniz karıştıracağınızı düşünmüyorum.
+
+Prop'ların örneklerine geçmeden önce html üzerinden basit bir örnek vererek mantığını  pekiştirebileceğinizi düşünüyorum. Html üzerinde bir resim çağırdığımızı düşünelim. Bunu koda nasıl ekleriz?
+
+```html
+<img src="logo.png" alt="site başlığı" />
+```
+
+Burada gördüğünüz gibi img elemanına src ve alt olmak üzere iki paremetre gönderdik. Tarayıcı kodu görüntüye çevirirken bu parametreleri kullanacak ve bize bir sonuç üretecek. Aynı şekilde bileşenlere de direkt olarak aynı şekilde (biraz daha gelişmiş) parametreler göndereceğiz. HTML içinde bu parametrelerin nasıl kullanılacağına karar veremeyiz ama bileşenimiz üzerinden gelen bu değişkenleri kontrol edip ona göre hareket etmesini sağlayacağız.
+
+Yukarıda oluşturduğumuz HavaDurumu bileşenine prop desteği ekleyelim ve gelen parametreye göre geri dönüş yapalım.
+
+```jsx
+// fonksiyon tabanlı bileşende prop kullanımı
+
+import React from "react";
+
+function HavaDurumu(props) {
+    return <p>bugün hava {props.durum}</p>
+}
+
+export default HavaDurumu;
+```
+
+```jsx
+// sınıf tabanlı bileşende prop kullanımı
+
+import React from "react";
+
+class HavaDurumu extends React.Component {
+    render() {
+        return <p>bugün hava {this.props.durum}</p>
+    }
+}
+
+export default HavaDurumu;
+```
+
+Örneklerde de görüldüğü gibi fonksiyon tabanlı bileşenlerde propsları okuyabilmek için bileşenmizi oluşturan fonksiyona props adında bir parametre ekledik ve bunun içindeki durum parametresini kullandık.
+
+Sınıf tabanlı bileşende ise prop'ları kullanmak için herhangi bir ekstra kod eklemedik. Bunun sebebi sınıfımızın içinde zaten prop'ların barındırılması. Bu prop'lara erişmek için this sözcüğünü kullanarak sınıf içindeki props değerlerine erişebiliyoruz.
+
+```jsx
+import React from "react";
+import "./App.css";
+import HavaDurumu from "./HavaDurumu";
+
+function App() {
+    return (
+        <div className="App">
+            <header className="App-header">
+                <HavaDurumu durum={"güneşli"} />
+                <HavaDurumu durum={"yağmurlu"} />
+                <HavaDurumu durum={"bulutlu"} />
+            </header>
+        </div>
+    )
+}
+export default App;
+```
+
+App tarafında da HavaDurumu olarak çağırdığımız bileşenlerin sayısını 3'e çıkardım ve her birine durum parametresi ile farklı bir string değer gönderdim. Görmemiz gereken ekran şuna benzer bir şey olması gerekiyor.
+
+![props](images/props.png)
+
+HTML içinde bu parametrelere attributes diyoruz ve bunlara sadece string olarak parametreler gönderiliyor. JSX'de ise burada sadece string gönderme gibi bir durum yok. 
+
+Prop içeriği olarak string, integer, boolean, object, array ve hatta fonksiyon bile gönderebiliriz. String haricinde bir prop gönderimini incelemek için 2 parametre daha ekleyelim. Birincisi style (object), ikincisi ise aktiflik (boolean) olsun. Tanımladığımız style'ı bileşenimiz içerisindeki html üzerinden kullanığımız p'nin style özelliğine bağlayacağız ve eğer aktiflik parametresinde false değeri geldiyse geri dönüş olarak yazımızı değil de null bir değer döndüreceğiz.
+
+Bu sefer öncelikle App tarafını yapalım sonrasında bileşenimizi düzenleyelim.
+
+```jsx
+import React from "react";
+import "./App.css";
+import HavaDurumu from "./HavaDurumu";
+
+function App() {
+    return (
+        <div className="App">
+            <header className="App-header">
+                <HavaDurumu
+                    aktiflik={true}
+                    style={{ backgroundColor: "yellow", color: "black" }}
+                    durum={"güneşli"} />
+                <HavaDurumu
+                     aktiflik={false}
+                     style={{ backgroundColor: "red" , color: "white" }}
+                     durum={"yağmurlu"} />
+                <HavaDurumu
+                     aktiflik={true}
+                     style={{ backgroundColor: "cyan", color: "black" }}
+                     durum={"bulutlu"} />
+            </header>
+        </div>
+    )
+}
+
+export default App;
+```
+
+Yaptığımız düzenlemelere göre hava durumlarımızdan ikinci olanın gözükmemesi gerekecek. Birinci ve sonuncunun arkaplan renkleri ise sırasıyla sarı ve turkuaz olmalı. Bunun için bileşenimizde düzenleme yapmaya başlayalım.
+
+```jsx
+// fonksiyon tabanlı bileşen
+
+import React from "react";
+
+function HavaDurumu(props) {
+    return (
+        <div>
+            {
+                props.aktiflik ? (
+                    <p style={props.style}>bugün hava {props.durum}</p>
+                ) : null
+            }
+        </div>
+    )
+}
+
+export default HavaDurumu;
+```
+
+```jsx
+// sınıf tabanlı bileşen
+
+import React from "react";
+
+class HavaDurumu extends React.Component {
+    render() {
+        return (
+            <div>
+                {
+                    this.props.aktiflik ? (
+                        <p style={this.props.style}>bugün hava {this.props.durum}</p>
+
+                    ) : null
+                }
+            </div>
+        )
+    }
+}
+
+export default HavaDurumu;
+```
+
+Her iki bileşen türünde de JSX içinde kısa if/else bloğunu kullanabilmek için objelerimizi ana bir div elemanı içine aldım. Böylelikle artık "sorgu ? if bloğu : else bloğu" şeklindeki kısa yazımı kullanabildik. Ana bir div elemanı içine almadan düz if sorgusu ile eğer aktiflik true ise deyip if bloğu içinde render da yapabilirdik. Böylelikle geriye boş bir div değil sadece null döndürmüş olurduk. Benim bu şekilde yapmaktaki amacım JSX içinde kısa if/else kullanımını da göstermek.
+
+### Prop Types ile Kısıtlama ve Zorlama
+
+Oluşturduğunuz bileşen kullanılmak istendiğinde mutlaka gönderilmesi gereken parametreler olabilir. Aynı şekilde zorunlu olmasa bile gelen prop değerinin belirli bir değişken tipinde olması gerekiyor olabilir. Örneğin adet prop'unuza "eşyan" gelmesi anlamsız olur, çünkü bu prop sadece integer tipinde değerler almalı. Bunun için bileşen içinde tek tek if sorguları yazmak yerine "prop-types" paketini kullanarak basit bir şekilde prop değerlerine kısıtlamalar koyabilir ya da prop değerlerini zorunlu kılabilirsiniz.
+
+> prop-types paketi create-react-app aracı ile otomatik olarak kurulmaktadır, eğer paket yok ise "npm install --save prop-types" komutu ile projenize ekleyebilirsiniz.
+
+Örnek olması açısında daha önceki yazdığımız kodlardan bağımsız bir bileşen oluşturacağım. Bileşenimiz bir sitedeki blog yazısını temsil edecek ve 4 adet prop değerine sahip olacak.
+
+1. Başlık (string tipinde olacak ve zorunlu olacak)
+
+2. İçerik (string tipinde olacak ve zorunlu olmayacak)
+
+3. Puan (1 ve 10 arasındaki bir integer değer olacak ve zorunlu olmayacak)
+
+4. Kategoriler (string dizisi olacak ve zorunlu olmayacak)
+
+```jsx
+import React from "react";
+import PropTypes from "prop-types";
+
+class Blog extends React.Component {
+    render() {
+        return (
+            <div className="blog">
+                <h1>Başlık: {this.props.baslik}</h1>
+                <p>İçerik: {this.props.icerik}</p>
+                <p>Puan: {this.props.puan}</p>
+                <p>Kategoriler:
+                {
+                   this.props.kategoriler.map(kategori => (
+                       <span>{kategori}</span>
+                   )) 
+                }
+                </p>
+            </div>            
+        )
+    }
+}
+
+Blog.propTypes = {
+    baslik: PropTypes.string.isRequired,
+    icerik: PropTypes.string,
+    puan: PropTypes.oneOf([1,2,3,4,5,6,7,8,9,10]),
+    kategoriler: PropTypes.arrayOf(PropTypes.string)
+}
+
+export default Blog;
+```
+
+**Kullanabileceğiniz PropTypes değerleri:** array, bool, func, number, object, string, symbol
+
+**Kullanabileceğiniz PropTypes fonksiyonları:** instanceOf, oneOf, oneOfType, arrayOf, objectOf, shape, exact
+
+Yukarıdaki örnekte prop-types haricinde kategoriler kısmında map kullanarak bir dizi içindeki tüm elemanları span etiketi içerisinde yazdırmayı da görmüş olduk.
+
+> Eğer bileşeninizde prop-types kullanarak olması gereken prop'ları belirtirseniz bu hem sizin için hem de daha sonrasında kodunuzu okuyacak başka yazılımcılar için büyük fayda sağlayacaktır. Bir takım olarak proje geliştiriyorsanız veya büyük çaplı bir işin altına girdiyseniz prop-types kullanmanızı şiddetle tavsiye ederim.
+
+### Varsayılan Prop Değerlerini Belirlemek
+
+Prop'lar üzerinden değer gönderilmediği zaman kullanılmak için varsayılan değerler belirleyebilirsiniz. PropTypes'a benzer bir şekilde kolaylıkla bu atamaları yapabiliriz. Yine önceki projemizden bağımsız basit bir örnek ile kodu inceleyelim.
+
+```jsx
+import React from "react";
+
+class Telefon extends React.Component {
+    render() {
+        return (
+            <div className="telefon">
+                <p>Marka: {this.props.marka}</p>
+                <p>RAM: {this.props.ram}</p>
+                <p>Bellek: {this.props.disk}</p>              
+            </div>
+        )
+    }
+}
+
+Telefon.defaultProps = {
+    marka: "Xiaomi",
+    ram: 4,
+    disk: 64    
+}
+
+export default Telefon;
+```
+
+Telefon örneğinin çok mantıklı olmadığının farkındayım fakat genel olarak yapıyı göstermek için basit bir şekilde bileşen oluşturdum. İhtiyacınıza göre kendi varsayılan değerlerinizi ayarlayabilirsiniz.
