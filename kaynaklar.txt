@@ -8,3 +8,4 @@ https://www.w3schools.com/jsref/dom_obj_style.asp
 https://medium.com/path2code/map-in-jsx-2d7285b39f8
 https://medium.com/@Zwenza/functional-vs-class-components-in-react-231e3fbd7108
 https://developer.mozilla.org/tr/docs/Web/JavaScript/Reference/Classes
+https://www.npmjs.com/package/prop-types
