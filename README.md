@@ -244,20 +244,120 @@ Bu iki tip bileşen aslında aynı şeyi temsil ediyor fakat kullanım tarafınd
 
 Bahsettiğimiz iki tip bileşen arasında özellik olarak bakıldığında çok fark kalmıyor. Daha önemli kısım olan optimizasyon tarafına baktığımızda ise react'ın resmi dökümanında fonksiyonel bileşen kullanımının daha performanslı olduğundan bahsediliyor ve kullanımı tavsiye ediliyor. Bunun sebebi de aslında javascript tarafında normalde sınıf diye bir kavram yok. Ecmascript 2015 ile sınıfları kullanmamıza olanak sağlanıyor fakat hala arka tarafta bir sınıf yok. Bizim yazdığımız sınıf kodları işlenirken prototype'lara dönüştürülüyor. Bu yüzden direkt olarak OOP mimarisini kullanamıyoruz ve bir yavaşlık söz konusu oluyor. 
 
-Syntax olarak fonksiyon ve sınıf tabanlı bileşenlere göz atalım. (Bu örneklerde props'lar devreye sokulmamıştır.)
+Syntax olarak fonksiyon ve sınıf tabanlı bileşenlere göz atalım. (Bu örneklerde props'lar devreye sokulmamıştır)
 
 ```jsx
+import React from "react";
+
 function Hosgeldin() {
     return <h1>hoşgeldin melek, sefalar getirdin!<h1>
 }
 ```
 
 ```jsx
+import React from "react";
+
 class Hosgeldin extends React.Component {
     render(){
         return <h1>hoşgeldin melek, sefalar getirdin!</h1>
     }
 }
 ```
+
+**Dikkat edilmesi gereken bazı noktalar:**
+
+- Oluşturulan bileşen isimlerinin ilk harfi büyük olmak zorundadır.
+
+- return ifadesinde sadece bir adet ana JSX veya HTML elemanı döndürülebilir. (Doğru ve yanlış kullanım için örnekler ekleyeceğim)
+
+- Sadece sınıf tabanlı bileşenlerde render metodu kullanılır, fonksiyonel bileşenlerde fonksiyon içinden geri dönen değer otomatik render edilir.
+
+- return ifadesi içinde geri dönen değerler direkt olarak yazılabileceği gibi parantez içinde de yazılabilir. Bu şekilde çok satırlı ifadeleri geri döndürebiliriz.
+
+- JSX bölümünde JSX kodlarını değişkene atayabileceğimizi söylemiştik. Bu şekilde değişkene atanan bir JSX ifadesini de geri döndürebiliriz.
+
+```jsx
+// Hatalı geri döndürme
+// Birden fazla ana eleman döndürülemez
+
+function Hosgeldin() {
+    return (
+        <h1>hoşgeldin</h1>
+        <p>bugün çok güzelsin</p>
+    )
+}
+```
+
+```jsx
+// Doğru geri döndürme
+// Birden fazla elemanı tek bir ana eleman altında birleştirdik ve tek bir ana eleman geri döndürdük
+
+// src/Hosgeldin.js
+
+function Hosgeldin() {
+    return (
+        <div>
+            <h1>hoşgeldin</h1>
+            <p>bugün çok güzelsin</p>
+        </div>
+    )
+}
+```
+
+### Bileşeni Dışarı Aktarmak
+
+Bileşen oluşturmayı öğrendiğimize göre artık bileşenimizi diğer bileşenlerin içinde kullanabiliriz. Bunun için oluşturduğumu bileşen içindeyken bileşenimizi dışarı aktarmamız gerekiyor. Dışarı aktarmak yetmeyecek, kullanmak istediğimiz yerde de içeri aktaracağız. 
+
+Şuanda mevcut uygulamamızda index.js üzerinde App bileşenimiz çağırılıyor. Projemizdeki src dizini içerisine **HavaDurumu.js** adında bir dosya oluşturalım ve yukarıda öğrendiğimiz gibi fonksiyon tabanlı bir bileşen oluşturalım. Fazladan bir satır daha ekleyeceğiz ve bileşenimizi dışarı aktaracağız.
+
+```jsx
+// Webpack dışarı aktarma yöntemi 1
+
+import React from "react";
+
+function HavaDurumu() {
+    return <p>bugün hava güneşli</p>
+}
+
+export default HavaDurumu;
+```
+
+İstersek satır fazlalığını kaldırmak için fonksiyonumuzu tanımlarken de "export default" anahtar sözcüklerini kullanarak dışarı aktarma yapabiliriz.
+
+```jsx
+// Webpack dışarı aktarma yöntemi 2
+
+import React from "react";
+
+export default function HavaDurumu() {
+    return <p>bugün hava güneşli</p>
+}
+```
+
+İki kod bloğundan birini seçip kullanabilirsiniz bir farkı yok. Dışarı aktarmayı tamamladığımıza göre içeri aktarma kısmına geçebiliriz. App.js dosyamızda kod kalabalığını engellemek için biraz temizlik yapalım. Fazla yazıları ve logoyu kaldıralım ki daha rahat çalışalım.
+
+```jsx
+import React from "react";
+import "./App.css";
+import HavaDurumu from "./HavaDurumu";
+
+function App() {
+    return (
+        <div className="App">
+            <header className="App-header">
+                <HavaDurumu />
+            </header>
+        </div>
+    )
+}
+
+export default App;
+```
+
+Burada nasıl React'ı import ediyorsak aynı şekilde kendi bileşenimizi de import ettik. Sadece farkettiyseniz bir dosyayı içeri aktardığımız halde "./HavaDurumu" yazdık ve ".js" uzantısını eklemedik. Javascript dosyalarını içeri atarırken bu şekilde sadece dosya ismini yazmamız yeterli oluyor.
+
+Eğer projeniz çalışır durumda değilde "npm start" ile ayağa kaldırın ve localhost:3000 üzerinde bu ekranı görüp görmediğinizi kontrol edin. Eğer bu şekilde çıktıyı aldıysanız her şey tamam demektir.
+
+![bilesen](images/bilesen.png)
 
 
