@@ -601,3 +601,76 @@ export default Telefon;
 ```
 
 Telefon örneğinin çok mantıklı olmadığının farkındayım fakat genel olarak yapıyı göstermek için basit bir şekilde bileşen oluşturdum. İhtiyacınıza göre kendi varsayılan değerlerinizi ayarlayabilirsiniz.
+
+## State
+
+React.js öğrenmeye başladığımda daha önce kullanmadığımdan state mevzusunu tam olarak kafama oturtamamıştım. O yüzden en basit şekilde anlatmaya çalışacağım. Hatta state mantığına benzer bir şekilde jQuery tarafında bunun ne anlama geldiğini de anlatmaya çalışacağım.
+
+Bir önceki bölümde prop'lardan bahsetmiştik. Bir üst bileşenden gönderilen prop değerlerini bileşen içinde kullanıyorduk. Bileşene gönderilen prop değeri sabittir, sonradan değişmez.
+
+State ise isminden de anlaşılabileceği gibi durumu temsil ediyor ve her an değişebilir bir şekilde bekliyor. State değeri değiştiğinde bileşen tekrar render edilir ve değişen değeri bileşen içinde kullanırız.
+
+State'ler, prop'larda olduğu gibi bir üst bileşenden aktarılmaz. Ama istersek prop'dan gelen değeri state değişkenine eşitleriz ve state'in ilk değerini belirlemiş olabiliriz.
+
+Ayrıca şu an için (react 16.12) state'ler normal yazımı ile sınıf tabanlı bileşenlerde kullanılabilir durumdalar. Fonksiyon tabanlı bileşenlerde de state'leri kullanmamızı sağlayan hooks güncellemesini ileriki bölümlerde göreceğiz. Bu sebeple bu bölümde sınıf tabanlı bileşenlerle çalışacağız.
+
+### jQuery tarafında state mantığı
+
+> State mantığını daha iyi kavrayabilmeniz için jQuery ile basit bir state mimarisi oluşturacağım. Bunun react ile hiçbir ilgisi yok. Eğer jQuery bilmiyorsanız burayı atlayabilirsiniz.
+
+```javascript
+<span id="sayac">0</span>
+
+var sayac = 0;
+
+function sayacGuncelle(sure){
+    sayac = sure;
+    $("#sayac").text(sayac);
+}
+
+$(function(){
+    setInterval(function(){
+        sayacGuncelle(sayac + 1);
+    }, 1000);
+});
+```
+
+Kabataslak böyle bir jquery kodu yazdığımızda ekranımızda sıfırdan başlayarak her saniye bir artan bir sayaç görüntüleceğiz.
+
+Hadi bunu react ile yapalım. Sayaca adında bir bileşen oluşturup App üzerinden çağıralım ve içine şu şekilde dolduralım.
+
+```jsx
+import React from "react";
+
+export default class Sayac extends React.Component {
+
+    state = {
+
+        sayac: 0
+    }
+
+    componentDidMount(){
+        setInterval(() => {
+            this.setState({
+                sayac: this.state.sayac + 1
+            })
+        }, 1000);
+    }
+
+    render() {
+        return (
+            <div>
+                {this.state.sayac}
+            </div>
+        )
+    }
+}
+```
+
+State değerleri sınıfın içindeki state değişkeninde bir obje olarak tutuluyor. Bu değerleri  this.state.state_ismi şeklinde erişebiliyoruz. Buradaki en önemli şey ise bir state değerini değiştirmek istediğimizde bu değere direkt olarak müdahale etmemek. Değişiklik yapacağımızda **setState** metodunu kullanmalıyız. Böylece react state üzerinde bir değişiklik olduğunu anlayacak ve bileşeni tekrar render edecek.
+
+Varsayılan state değerleri oluşturmak için de sınıf içinde direkt olarak state objesinin içine ekleme yapabiliriz.
+
+> Kodda gördüğünüz **componentDidMount** react içinde tanımlı özel bir metoddur. Bileşen render edildikten hemen sonra çalıştırılır. Bir sonraki bölümde yaşam döngüsü dediğimiz bu özel metodları listeleyeceğiz.
+
+
