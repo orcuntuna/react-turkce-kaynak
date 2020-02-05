@@ -677,6 +677,30 @@ Varsayılan state değerleri oluşturmak için de sınıf içinde direkt olarak 
 
 Ekranım ara verdiğimde açık kalmış ve aşağıdaki gibi 2210 saniye ilerlemiş :)
 
+## Yaşam Döngüsü
+
+Yazdığımız react kodları ekranda görülebilir bir hale gelmeden önce belirli aşamalaradan geçiyor ve yaşam döngüsünde özel metodları kullanarak bu aşamalara dahil olup işleyişe müdaheleler yapabiliyoruz. Önceki bölümde kullandığımız componentDidMount bu özel metodlardan biriydi. Aynı şekilde kaynağın başından beri her yerde gördüğünüz render'da bu özel metodların arasında. React'ın işleyişindeki bu yaşam döngüsüne lifecycle ismini veriyoruz. Birkaç önemli noktaya değindikten sonra bir görsel ile tüm bu işleyişi öğreneceğiz.
+
+**Yaşam döngüsü aşamaları:**
+
+- Mounting (ekleme)
+
+- Updating (güncelleme)
+
+- Unmounting (kaldırma)
+
+![lifecycle](images/yasamdongusu.png)
+
+Görsele biraz göz atarak tüm özel metodların hangi sırayla ilerlediğini kavrayabilirsiniz. Bu şablondaki yeşil ile gösterilen özel metodları async olarak da kullanabiliyoruz. Görsel üzerinden her şey anlaşılsa da kısa bir şekilde en çok kullanılan 5 özel metodu tablo üzerinde inceleyelim.
+
+| Metod                | Açıklama                                                                                                                                                                                                                     |
+| -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| constructor          | Bileşen çağrıldığında ilk çalışan metod budur. Çalıştığı anda bileşen üzerinde herhangi bir şey render edilmemiş olur ve yüzden dom ile ilgili işlemler yapılamaz. Prop'lar ve state'ler ile ilgili kontrolleri yapabiliriz. |
+| render               | Yazdığımız kodlarından işlendiği kısımdır. render içeriside state'leri ve prop'ları kullanabiliriz. State güncelleme işlemini de burası da dahil olacak şekilde bu kısımdan kısımdan itibaren yapabiliriz.                   |
+| componentDidMount    | render işleminden sonra çalışan kısımdır. Genel olarak API ile ilgili işlemlerde veya bileşen oluşturulduğunda başlaması gereken olaylar için kullanıyoruz.                                                                  |
+| componentDidUpdate   | Daha önceden render edilen bileşenimiz üzerinde bir değişiklik olduğunda çalışır. Örneğin setState kullanarak yaptığımız state değişiklerinden sonra bu metod aktif olur.                                                    |
+| componentWillUnmount | Bileşen eğer dom'dan çıkarılacak ise çıkarılmadan önce bu metod çalışır. Örneğin az önce yaptığımız sayaç bileşenden sonlanırken durdurulmalı ve bu işlemi burada yapmalıyız.                                                |
+
 ## Olay Yönetimi (Events)
 
 Javascript tarafındaki eventler ile neredeyse aynıdır fakat bazı isimlendirme farkları bulunuyor. Bu farkları css tarafındaki ve jsx tarafındaki style isimleri gibi değerlendirebiliriz. 
