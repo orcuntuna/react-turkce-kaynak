@@ -12,3 +12,4 @@ https://www.npmjs.com/package/prop-types
 https://flaviocopes.com/react-events/
 https://medium.com/@mmuratcoskun/javascript-call-apply-ve-bind-fonksiyonlar%C4%B1-3b0242fbc7dd
 https://programmingwithmosh.com/javascript/react-lifecycle-methods/
+http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
