@@ -9,3 +9,5 @@ https://medium.com/path2code/map-in-jsx-2d7285b39f8
 https://medium.com/@Zwenza/functional-vs-class-components-in-react-231e3fbd7108
 https://developer.mozilla.org/tr/docs/Web/JavaScript/Reference/Classes
 https://www.npmjs.com/package/prop-types
+https://flaviocopes.com/react-events/
+https://medium.com/@mmuratcoskun/javascript-call-apply-ve-bind-fonksiyonlar%C4%B1-3b0242fbc7dd

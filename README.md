@@ -673,4 +673,80 @@ Varsayılan state değerleri oluşturmak için de sınıf içinde direkt olarak 
 
 > Kodda gördüğünüz **componentDidMount** react içinde tanımlı özel bir metoddur. Bileşen render edildikten hemen sonra çalıştırılır. Bir sonraki bölümde yaşam döngüsü dediğimiz bu özel metodları listeleyeceğiz.
 
+![state](images/state.png)
+
+Ekranım ara verdiğimde açık kalmış ve aşağıdaki gibi 2210 saniye ilerlemiş :)
+
+## Olay Yönetimi (Events)
+
+Javascript tarafındaki eventler ile neredeyse aynıdır fakat bazı isimlendirme farkları bulunuyor. Bu farkları css tarafındaki ve jsx tarafındaki style isimleri gibi değerlendirebiliriz. 
+
+Örneğin dom'da "onclick" (lowercase) iken react tarafında bunu "onClick" (camelCase) olarak kullanıyoruz. Ekstra olarak dom tarafında bu eventelere string içerisinde  fonksiyon isimlerini giriyorken react'da direkt olarak fonksiyonu belirtiyoruz.
+
+Bir diğer fark ise dom tarafında bir elemanın varsayılan işlemini engellemek için "return false" ifadesi de kullanılabiliyorken react'da bu tanımlı değildir. Eğer bir eventin varsayılan özelliğini pasifleştirmek isterseniz "e.preventDefault()" fonksiyonunu kullanmalısınız.
+
+React'ın kendi dökümanında tüm eventlerin bir listesi bulunmuyor ya da ben bulamadım. Burada bir tablo halinde kullanabileceğininiz tüm event isimlerini kategorilendirerek paylaşacağım fakat tek tek açılmalarını yapmayacağım. Çünkü zaten isimlerinden kolaylıkla ne için kullanılacağı anlaşılabiliyor.
+
+| Kategori    | Event Listesi                                                                                                                                                                                                                                                                           |
+| ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Clipboard   | onCopy, onCut, onPaste                                                                                                                                                                                                                                                                  |
+| Composition | onCompositionEnd, onCompositionStart, onCompositionUpdate                                                                                                                                                                                                                               |
+| Keyboard    | onKeyDown, onKeyPress, onKeyUp                                                                                                                                                                                                                                                          |
+| Focus       | onFocus, onBlur                                                                                                                                                                                                                                                                         |
+| Form        | onChange, onInput, onSubmit                                                                                                                                                                                                                                                             |
+| Mouse       | onClick, onContextMenu, onDoubleClick, onDrag, onDragEnd, onDragEnter, onDragExit, onDragLeave, onDragOver, onDragStart, onDrop, onMouseDown, onMouseEnter, onMouseLeave, onMouseMove, onMouseOut, onMouseOver, onMouseUp                                                               |
+| Selection   | onSelect                                                                                                                                                                                                                                                                                |
+| Touch       | onTouchCancel, onTouchEnd, onTouchMove, onTouchStart                                                                                                                                                                                                                                    |
+| UI          | onScroll                                                                                                                                                                                                                                                                                |
+| Mouse Whell | onWhell                                                                                                                                                                                                                                                                                 |
+| Media       | onAbort, onCanPlay, onCanPlayThrough, onDurationChange, onEmptied, onEncrypted, onEnded, onError, onLoadedData, onLoadedMetadata, onLoadStart, onPause, onPlay, onPlaying, onProgress, onRateChange, onSeeked, onSeeking, onStalled, onSuspend, onTimeUpdate, onVolumeChange, onWaiting |
+| Image       | onLoad, onError                                                                                                                                                                                                                                                                         |
+| Animation   | onAnimationStart, onAnimationEnd, onAnimationIteration                                                                                                                                                                                                                                  |
+| Transition  | onTransitionEnd                                                                                                                                                                                                                                                                         |
+
+Kategori isimlerini özellikle çevirmedim çünkü bazı çevirilerin anlamı bozduğunu düşünüyorum.
+
+### Eventler için Bind
+
+Eğer bileşen sınıfımızdaki nesneleri event bağlantısını yaptığımız metod içinde kullanmaya devam etmek istiyorsak bind işlemi uygulamalıyız. Javascript üzerinde bind fonksiyonun tanımı için Mustafa Murat Coşkun'un medium yazısından bir alıntı yapacağım.
+
+> Bind() fonksiyonu, içine verilen objeye göre yeni bir fonksiyon kopyası yaratır. Oluşan bu kopya fonksiyonu daha sonradan argüman listesi ile beraber gönderilen objeye kullanabiliriz.
+
+Bind işlemini yazısal olarak açıklamak biraz zor ama kendimce de açıklamaya çalışacak olursam mevcut bulunduğumuz scope'u kullanmaya devam edebilmek için başka bir scope'a referans olarak göndermek diyebilirim.
+
+Bind işlemini 2 şekilde yapabiliriz.
+
+1. Constructor içeresinde bir defa bind işlemi yaparak
+
+2. Event işleminde her seferinde bind işlemi yaparak
+
+```jsx
+// Yöntem 1: menuAc metodunu this ile bind ederek metod içinde this anahtarıyla sınıfı kullanmaya devam edebileceğiz.
+
+constructor(props){
+    super(props);
+    this.menuAc = this.menuAc.bind(this);    
+}
+```
+
+```jsx
+<button onPress={() => this.menuAc.bind(this)}>Menüyü Aç</button>
+```
+
+### Event'ler ile Parametre Göndermek
+
+Event yönetiminde eleman içinde olan bir değeri ya da mevcutta bulunan başka bir değeri parametre olarak gönderebilirsiniz. Bileşeni tamamen oluşturmadan 2 parça halinde metodu ve render edilen elemanı yazacağım.
+
+```jsx
+// olay yöneticisi metod
+function kayit(yazi){
+    console.log(yazi);
+}
+
+// render edilen eleman
+<input onChange={e => this.kayit(e.target.value)} />
+```
+
+Hazırladığımız örnek kodda sayfamızda bulunan inputta bir değişiklik olduğunda (value değiştiğinde) konsolumuza log olarak değeri yazdırılacak.
+
 
