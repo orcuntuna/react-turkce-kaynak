@@ -890,6 +890,8 @@ Tasarımları koda dökerken ui kütühaneleri gerçekten çok işimize yarıyor
 
 - Material UI
 
+![uikit](images/uikit.png)
+
 Biz örnek kullanım olarak React Bootstrap'ı seçelim ve nasıl kurulup, kullanılacağına bakalım.
 
 React Bootstrap dökümanı: [https://react-bootstrap.github.io/](https://react-bootstrap.github.io/)
@@ -938,7 +940,5 @@ function Ornek(props) {
     )
 }
 ```
-
-# 
 
 
