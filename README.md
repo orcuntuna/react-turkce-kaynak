@@ -939,6 +939,38 @@ function Ornek(props) {
         </div>
     )
 }
+
+export default Ornek;
 ```
 
+## React Fragment
 
+React üzerinde bir bileşende JSX kodu döndürürken tek bir ana eleman içinde olmasını gerektiğini en başlarda söylemiştim. Bu yüzden kodlarımızı boş bir div içine alıyorduk. Bazı durumlarda bu div tasarımsal sorunlara yol açabilir ve gereksiz bir div olmamasını isteyebiliriz.
+
+Bu durumda tüm kodumuzu div ile kapsamak yerine React.Fragment ile kapsayabiliriz. Böylece DOM üzerinde ekstra bir eleman olmadan sadece Fragment içindeki nesneler aktarılır. Kullanımı ise gerçekten çok basit, div yerine React.Fragment yazacağız.
+
+```jsx
+import React from "react";
+
+function Ornek(props) {
+    return (
+        <React.Fragment>
+            <p>birinci nesne</p>
+            <a href="#">ikinci nesne</a>
+            <span>üçüncü nesne</span>
+        </React.Fragment>
+    )
+}
+
+export default Ornek;
+```
+
+React.Fragment yazmamızın sebebi import olarak react.js kodlarını React olarak içeri aktarmamız. Fragment, React altında olduğu için bu şekilde nokta ile altında olduğunu belirttik.
+
+Böyle katmanlı şekilde göstermeden şu kullanımı da yapabilirdik.
+
+```jsx
+import React, { Fragment } from "react";
+```
+
+Böylece artık React.Fragment yazmak yerine Fragment yazarak kullanabiliriz. Bu kullanım biçimini sınıf tabanlı bileşenlerde "class xxx extends React.Component" yazmak yerine, dahil ederken süslü parantezler içinde Component de eklersek direkt olarak Component olarak miras alabiliriz.
