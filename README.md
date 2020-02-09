@@ -803,7 +803,7 @@ class Sayac extends React.Component {
         super(props);
         this.sayacArttir = this.sayacArttir.bind(this);
     }
-    
+
     state = {
         sayi: 0
     }
@@ -813,7 +813,7 @@ class Sayac extends React.Component {
             sayi: this.state.sayi + 1
         });      
     }
-    
+
     render() {
         return (
             <div>
@@ -864,6 +864,81 @@ Bu amaçla üretilen çok kütüphane olabilir fakat şuanda en fazla kullanıla
 
 > Redux ve MobX için yapılan övgü ve eleştiriler kesinlik içeren şeyler değil sadece benim düşüncelerimdir. Projeye ve kullanım yerine göre iki kütüphane de farklı sebeplerden dolayı tercih edilebilir.
 
+Şu an itibariyle react.js tarafındaki temel kavramları öğrendik diyebiliriz. Bundan sonrasında daha gelişmiş işlemleri ile ilgileneceğiz. Başlangıç için hooks, ui kütüphanesi kullanımı ve api kullanımına bakacağız. İleride talepler doğrultusunda server side rendering, mobx ve refler gibi daha karmaşık konularla da devam edebiliriz.
 
+
+
+---
+
+
+
+## UI Kütüphanesi Dahil Etmek (bootstrap vs.)
+
+Tasarımları koda dökerken ui kütühaneleri gerçekten çok işimize yarıyor. Aslında sadece ui diğer bir çok kütüphaneyi kullanıyoruz. Sonuçta react bileşen tabanlı bir sistem ve geliştiriciler tarafından hazırlanmış binlerce hazır bileşen var. Yeri geldiğinde bunları kullanmak bize zamandan ve koddan tasarruf sağlatıyor.
+
+**React üzerinde en popüler ui kütühaneler:**
+
+- Ant Design (tavsiyem)
+
+- Blueprint (typescript)
+
+- React Bootstrap
+
+- React Toolbox
+
+- React Semantic UI
+
+- Material UI
+
+Biz örnek kullanım olarak React Bootstrap'ı seçelim ve nasıl kurulup, kullanılacağına bakalım.
+
+React Bootstrap dökümanı: [https://react-bootstrap.github.io/](https://react-bootstrap.github.io/)
+
+```bash
+npm i bootstrap react-bootstrap --save
+```
+
+bootstrap kütüphanesini css tarafı için ekledik böylece bildiğimiz grid, button, alert vs. css sınıflarını direkt tanımlayarak kullanabileceğiz. react-bootstrap ise daha çok çalışması için javascript gereken modal, dropdown, carousel gibi bileşenler için. Bu demek değil ki react-bootstrap'ın içinde button, alert ve diğer basit bileşenler yok. Yine react-bootstrap içinden bu bileşenleri de JSX olarak kullanabileceğiz.
+
+Npm paketlerimizi indirdikten sonra projemize bootstrap'in css tarafını dahil edelim. Bunu 2 yöntem ile yapabiliriz.
+
+1. public/index.html dosyamıza link tag olarak css dosyamızı ekleriz.
+
+2. index.js veya App.js (tüm bileşenleri kapsayan) bir dosyadan import ile css dosyasını dahil ederiz. (tavsiye)
+
+Eğer birinci adımı uygulayacak isek css dosyalarını cdn üzerinden de çağırabiliriz. Aksi halde tarayıcı üzerinden projemizdeki bir dosyaya ulaşmak için public klasöründe barınması gerektiğinden bootstrap dosyasını taşımamız gerekecek ve bu çok saçma bir hareket olacak. O yüzden eğer html içinde ekliyorsak cdn kullanalım.
+
+```html
+<!-- 1. yöntem (public/index.html) -->
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+```
+
+```jsx
+// 2. yöntem (index.js)
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+```
+
+Yukarıdaki yöntemlerden birini seçip uygulayın. Benim tavsiyem ikinci yöntem olacak. Eklemeyi yaptıkran sonra artık bootstrap bileşenlerini kullanabilir durumdayız.
+
+Örnek olması için bir button eklemesi yapalım ve bunu hem bileşen hem de css olarak gösterelim.
+
+```jsx
+import React from "react";
+import { Button } from "react-bootstrap";
+
+function Ornek(props) {
+    return (
+        <div>
+            <Button variant="primary">JSX Düğme</Button>
+            <br />
+            <button className="btn btn-primary">HTML Düğme</button>
+        </div>
+    )
+}
+```
+
+# 
 
 
