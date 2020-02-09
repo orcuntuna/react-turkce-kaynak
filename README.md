@@ -864,11 +864,13 @@ Bu amaçla üretilen çok kütüphane olabilir fakat şuanda en fazla kullanıla
 
 > Redux ve MobX için yapılan övgü ve eleştiriler kesinlik içeren şeyler değil sadece benim düşüncelerimdir. Projeye ve kullanım yerine göre iki kütüphane de farklı sebeplerden dolayı tercih edilebilir.
 
-Şu an itibariyle react.js tarafındaki temel kavramları öğrendik diyebiliriz. Bundan sonrasında daha gelişmiş işlemleri ile ilgileneceğiz. Başlangıç için hooks, ui kütüphanesi kullanımı ve api kullanımına bakacağız. İleride talepler doğrultusunda server side rendering, mobx ve refler gibi daha karmaşık konularla da devam edebiliriz.
-
 
 
 ---
+
+
+
+Şu an itibariyle react.js tarafındaki temel kavramları öğrendik diyebiliriz. Bundan sonrasında daha gelişmiş işlemleri ile ilgileneceğiz. Başlangıç için hooks, ui kütüphanesi kullanımı ve api kullanımına bakacağız. İleride talepler doğrultusunda server side rendering, mobx ve refler gibi daha karmaşık konularla da devam edebiliriz.
 
 
 
