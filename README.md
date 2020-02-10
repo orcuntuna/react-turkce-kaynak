@@ -864,15 +864,9 @@ Bu amaçla üretilen çok kütüphane olabilir fakat şuanda en fazla kullanıla
 
 > Redux ve MobX için yapılan övgü ve eleştiriler kesinlik içeren şeyler değil sadece benim düşüncelerimdir. Projeye ve kullanım yerine göre iki kütüphane de farklı sebeplerden dolayı tercih edilebilir.
 
-
-
 ---
 
-
-
 Şu an itibariyle react.js tarafındaki temel kavramları öğrendik diyebiliriz. Bundan sonrasında daha gelişmiş işlemleri ile ilgileneceğiz. Başlangıç için hooks, ui kütüphanesi kullanımı ve api kullanımına bakacağız. İleride talepler doğrultusunda server side rendering, mobx ve refler gibi daha karmaşık konularla da devam edebiliriz.
-
-
 
 ## UI Kütüphanesi Dahil Etmek (bootstrap vs.)
 
@@ -976,3 +970,153 @@ import React, { Fragment } from "react";
 ```
 
 Böylece artık React.Fragment yazmak yerine Fragment yazarak kullanabiliriz. Bu kullanım biçimini sınıf tabanlı bileşenlerde "class xxx extends React.Component" yazmak yerine, dahil ederken süslü parantezler içinde Component de eklersek direkt olarak Component olarak miras alabiliriz.
+
+## Hook'lara Giriş
+
+Şuana kadar state işlemleri yapabilmek için hep sınıf tabanlı bileşen oluşturduk. React 16.8 sürümünde gelen hook'lar fonksiyonel bileşenlerde de state kullanmamıza olanak tanıyor. Aslında sadece state değil, sınıf üzerinde yapabildiğimiz diğer işlemleri de yapmanızı sağlıyor.
+
+![hooks](images/hooks.png)
+
+### Hook'lar ile State Kullanımı
+
+Vazgeçilmez örneğimiz olan sayaç örneğimiz ile hook'ları inceleyelim.
+
+```jsx
+import React, { useState } from "react";
+
+function Ornek() {
+
+    // sayac adinda yeni bir state değişkeni tanımlayalım
+    const [ sayac, setSayac ] = useState(0);
+    
+    return (
+        <div>
+            <p>Butona {sayac} defa tıklandı!</p>
+            <button onClick={() => setSayac(count + 1)}>Tıkla</button>
+        </div>
+    )
+}
+
+export default Ornek;
+```
+
+Gördüğünüz gibi basit bir kullanımı var. State kullanımı react kütüphanesinden çağırdığımız useState fonksiyonuyla sağlıyoruz.
+
+Tanımlama kısmındaki sayac ve setSayac'dan birincisi değişkenimizin adını, ikincisi ise state'i güncellememizi sağlayan fonksiyonu tanımlıyor. State'imizin başlangıç değerini ise useState içine gönderdiğimiz değer tanımlıyor. Biz "0" gönderdiğimiz için sayacımız 0'dan başlayacak.
+
+### Hook'lar ile Effect Kullanımı
+
+Az önce yaptığımız örnekten bahsetmek gerekirse sayaç state'i değiştiğinde dom üzerinde bir güncelleme olacak ve sayfadaki sayaç değeri yenilenecektir. Bu değişim yapıldığı anda bazı kontroller veya birbirini tetikleyen başka değişiklikler de yapmak isteyebiliririz. React'ın yaşam döngüsünde gördüğümüz componentDidUpdate metodu bunun için ideal fakat bunu sadece sınıf tabanlı bileşenlerde kullanabiliyoruz.
+
+Bu tarz durumlarda bir değişiklik olduğunda işlem yapmak için useEffect hook'unu kullanacağız.
+
+Az önceki yazdığımız kodda her butona tıklandığında p etiketi içindeki yazıyı tarayıcıda gözüken title'a yazmak isteseydik ne yapabilirdik? Sayfada title'a müdahale etmek için "document.title" kullanacağız fakat bunu direkt olarak sağlayacağımız bir yer yok. Aynı örneği kopyalayarak useEffect eklemesi yapalım.
+
+```jsx
+import React, { useState, useEffect } from "react";
+
+function Ornek() {
+
+    // sayac adinda yeni bir state değişkeni tanımlayalım
+    const [ sayac, setSayac ] = useState(0);
+    
+    useEffect(() => {
+        // her güncelleme olduğunda burası çalışacak
+        document.title = "Butona " + sayac + " defa tıklandı!"; 
+    });
+
+    return (
+        <div>
+            <p>Butona {sayac} defa tıklandı!</p>
+            <button onClick={() => setSayac(count + 1)}>Tıkla</button>
+        </div>
+    )
+}
+
+export default Ornek;
+```
+
+Hook tarafında sadece useState ve useEffect yok. Sınıf üzerinde yapabileceğimiz şeyleri yapmamızı sağladığını söylemiştik. Şuan için hook listesi şu şekilde.
+
+- **Basit hook'lar:** useState, useEffect, useContext
+
+- **Ekstra hook'lar:** useReducer, useCallback, useMemo, useRef, useImperativeHandle, useLayoutEffect, useDebugValue
+
+## API Kullanımı (axios)
+
+İnternet üzerinden bir bağlantı yapmak istediğimizde genel olarak REST veya SOAP üzerinden bağlantı sağlarız ve veri alışverişinde bulunuruz. Bu bağlantıyı javascript üzerinde bulunan fetch ile sağlayabiliriz. Fetch yerine daha kullanışlı olan api kullanımı üzerine geliştirilen kütüphaneler de mevcut. Bunların bir listesini ve karşılaştırma tablosunu görsel olarak ekleyeceğim. Ben axios kullanmayı tercih ediyorum ve kaynak üzerinde de kullanım olarak basit bir şekilde bunu göstereceğim. Siz daha önceden aşina olduğunuz (tabloda jQuery de mevcut onu görmezden gelin) diğer kütüphaneleri de kullanabilirisiniz, ama mantık olarak zaten hepsi aynı olduğundan fark etmeyecektir.
+
+Öncelikle axios'u projemize eklemekle başlayalım.
+
+```bash
+npm i axios --save
+```
+
+API kullanımını jsonplaceholder.com üzerinde bulunan users test verisi üzerinden sağlayacağız. Basit bir şekilde gelen kullanıcı verisinden isim ve e-posta adresini okuyup sayfamızda listeleyeceğiz.
+
+```jsx
+import React from "react";
+import axios from "axios";
+
+export default class Users extends React.Component {
+
+    state = {
+        data: []
+    }
+
+    componentDidMount() {
+        axios({
+            method: 'get',
+            url: 'https://jsonplaceholder.typicode.com/users',
+        }).then(res => {
+            this.setState({data: res.data});
+        });          
+    }
+
+    render() {
+        return (
+            <div>
+                {
+                    this.state.data.length ? (
+                        <ul style={{listStyle: "none"}}>
+                            {
+                                this.state.data.map((item) => (
+                                    <li key={"item" + item.id}>{item.name} -> {item.email}</li>
+                                ))
+                            }
+                        </ul>
+                    ) : (
+                        <p>Lütfen bekleyin veri yükleniyor...</p>
+                    )
+                }
+            </div>
+        )
+    }
+}
+```
+
+Örnekte data isminde bir state oluşturduk ve varsayılan değerine boş bir dizi verdik. Render kısmında da data'nın uzunluğu var ise ul > li şeklinde datayı dönerek listelemesini yok ise bir bekleme mesajı yazdırmasını sağladık. Böylelikle ilk başta veri olmadığı için ekranda bekleyiniz şeklinde yazı gelecek ve veri yüklendiğinde otomatik olarak liste ekrana gelecek.
+
+Biz burada GET metodu için bir örnek verdik. axios içerisinde POST, DELETE, PUT vb. diğer bütün metodları da kullanabilirsiniz. İstek içerisinde headers ve data belirterek ekstra veri alışverişi de sağlayabilirsiniz.
+
+Axios üzerinde yapabileceğiniz işlemler kendi readme'sinde mevcut onu da aşağıdaki linkten inceleyebilirsiniz.
+
+Axios dökümanı: [https://github.com/axios/axios](https://github.com/axios/axios)
+
+---
+
+Hazır konu REST Api kısmına gelmişken @ahmetkorkmaz3 ile birlikte geliştirdiğimiz github üzerindeki açık kaynaklı rest api client uygulaması olan **guvercin**'i de inceleyebilirsiniz. Uygulama windows, linux ve mac üzerinde kullanılabilir durumda.
+
+Hatta linux üzerinden hızlı bir şekilde snap üzerinden yükleyebilirsiniz.
+
+```bash
+sudo snap install guvercin
+```
+
+Guvercin uygulamasını yüklemek veya kaynak kodlarını incelemek için : [https://github.com/orcuntuna/guvercin](https://github.com/orcuntuna/guvercin)
+
+![guvercin](images/guvercin.png)
+
+---
+
+
