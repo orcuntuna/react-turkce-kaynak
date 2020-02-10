@@ -1046,6 +1046,8 @@ Hook tarafında sadece useState ve useEffect yok. Sınıf üzerinde yapabileceğ
 
 İnternet üzerinden bir bağlantı yapmak istediğimizde genel olarak REST veya SOAP üzerinden bağlantı sağlarız ve veri alışverişinde bulunuruz. Bu bağlantıyı javascript üzerinde bulunan fetch ile sağlayabiliriz. Fetch yerine daha kullanışlı olan api kullanımı üzerine geliştirilen kütüphaneler de mevcut. Bunların bir listesini ve karşılaştırma tablosunu görsel olarak ekleyeceğim. Ben axios kullanmayı tercih ediyorum ve kaynak üzerinde de kullanım olarak basit bir şekilde bunu göstereceğim. Siz daha önceden aşina olduğunuz (tabloda jQuery de mevcut onu görmezden gelin) diğer kütüphaneleri de kullanabilirisiniz, ama mantık olarak zaten hepsi aynı olduğundan fark etmeyecektir.
 
+![axios](images/axios.png)
+
 Öncelikle axios'u projemize eklemekle başlayalım.
 
 ```bash
@@ -1133,5 +1135,3 @@ Bunu yapmamızın sebebi react sayfalarda değişiklikler olduğunda bu elemanla
 **Önemli:** Key değerleri özgün olması gerektiği gibi veri tipi de string olması gerekiyor.
 
 Bir önceki örnekte bizim verimizdeki id'lerimiz integer olarak bulunuyordu. Ben yanına "user-" şeklinde bir ön ek koyarak bunu hem bu liste için özgün bir hale çevirdim hem de string türüne çevirmiş oldum. Size de bu şekilde kullanmanızı tavsiye ederim. Başka liste elemanları ile denk gelme ihtimalini de yoketmiş olursunuz.
-
-
