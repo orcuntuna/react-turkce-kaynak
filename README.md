@@ -1,4 +1,4 @@
-# React.js Türkçe Kaynak
+# React.js Türkçe Kaynak (Orçun Tuna)
 
 ![react](images/giris.jpeg)
 
@@ -1352,5 +1352,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 Eğer kaynağı beğenerek okuduysanız ve bir kahve ısmarlamak isterseniz aşağıdan ko-fi profilime ulaşabilirsiniz.
 
 [![https://ko-fi.com/tunaorcun](images/kofi.svg)](https://ko-fi.com/tunaorcun)
+
+Bu kaynak [Orçun Tuna]([https://github.com/orcuntuna](https://github.com/orcuntuna) tarafından hazırlanmıştır ve en güncel hali [https://github.com/orcuntuna/react-turkce-kaynak](https://github.com/orcuntuna/react-turkce-kaynak) üzerinden ücretsiz bir şekilde okunabilir durumdadır. PDF ve HTML versiyonlarını da github üzerinden edinebilirsiniz.
 
 
