@@ -1081,7 +1081,8 @@ export default class Users extends React.Component {
                         <ul style={{listStyle: "none"}}>
                             {
                                 this.state.data.map((item) => (
-                                    <li key={"item" + item.id}>{item.name} -> {item.email}</li>
+                                    <li key={"user-" + item.id}>{item.name} -> {item.email}</li>
+
                                 ))
                             }
                         </ul>
@@ -1118,5 +1119,19 @@ Guvercin uygulamasını yüklemek veya kaynak kodlarını incelemek için : [htt
 ![guvercin](images/guvercin.png)
 
 ---
+
+## Döngülerde Key Kullanımı
+
+Araya küçük bir reklam girmiş gibi oldu ama bir önceki örnekte aslında key kullanımını zaten yaptık. Eğer bir döngü ile listeleme yapıyorsanız listelediğiniz elemana key parametresini de eklemeniz gerekiyor. Eğer az önceki örnekte li elemanına key eklemeseydiniz geliştirici konsolunda şu hatayı görecektiniz.
+
+> Warning: Each child in a list should have a unique "key" prop.
+
+Uyarıdan da görüldüğü gibi sadece key parametresi olması yetmiyor ayrıca bu key parametreleri her elemana özgün olup tekrar etmemeli.
+
+Bunu yapmamızın sebebi react sayfalarda değişiklikler olduğunda bu elemanlara bir kimlik atıyor. Böylece hangi elemanın değiştini, silindiğini veya yeni bir eleman eklendiğini anlayabilecek ve daha hızlı işlem yapacak.
+
+**Önemli:** Key değerleri özgün olması gerektiği gibi veri tipi de string olması gerekiyor.
+
+Bir önceki örnekte bizim verimizdeki id'lerimiz integer olarak bulunuyordu. Ben yanına "user-" şeklinde bir ön ek koyarak bunu hem bu liste için özgün bir hale çevirdim hem de string türüne çevirmiş oldum. Size de bu şekilde kullanmanızı tavsiye ederim. Başka liste elemanları ile denk gelme ihtimalini de yoketmiş olursunuz.
 
 
