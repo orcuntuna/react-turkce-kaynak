@@ -4,7 +4,7 @@
 
 ## İçindekiler
 
-1. Giriş ve Tanışma
+1. [Giriş ve Tanışma](#giriş-ve-tanışma)
 
 2. Nelere İhtiyacımız Olacak?
 
