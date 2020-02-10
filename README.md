@@ -1,4 +1,4 @@
-# React.js Türkçe Kaynak (Orçun Tuna)
+# React.js Türkçe Kaynak
 
 ![react](images/giris.jpeg)
 
