@@ -2,6 +2,78 @@
 
 ![react](images/giris.jpeg)
 
+## İçindekiler
+
+1. Giriş ve Tanışma
+
+2. Nelere İhtiyacımız Olacak?
+
+3. React Nedir?
+
+4. Webpack ve Babel Kavramları
+   
+   1. Webpack
+   
+   2. Babel
+
+5. Kurulum ve create-react-app
+
+6. JSX ve HTML
+
+7. Bileşenler (components)
+   
+   1. Bileşeni Dışarı Aktarmak
+
+8. Props (Bileşen Parametreleri)
+   
+   1. Prop Types ile Kısıtlama ve Zorlama
+   
+   2. Varsayılan Prop Değerlerini Belirlemek
+
+9. State
+   
+   1. jQuery tarafında state mantığı
+
+10. Yaşam Döngüsü
+
+11. Olay Yönetimi (Events)
+    
+    1. Eventler için Bind
+    
+    2. Event'ler ile Parametre Göndermek
+
+12. Bileşenler Arasında İletişim
+    
+    1. Üst'ten Alt Bileşene Erişim (Parent to Child)
+    
+    2. Alt'dan Üst Bileşene Erişim (Child to Parent)
+    
+    3. Alt-Üst İlişkisi Olmayan Bileşenlere Erişim
+
+13. React Router
+
+14. UI Kütüphanesi Dahil Etmek (bootstrap vs.)
+
+15. React Fragment
+
+16. Hook'lara Giriş
+    
+    1. Hook'lar ile State Kullanımı
+    
+    2. Hook'lar ile Effect Kullanımı
+
+17. API Kullanımı (axios)
+
+18. Döngülerde Key Kullanımı
+
+19. Server Side Rendering
+
+20. Build Almak (create-react-app)
+
+21. Çoklu import/export Kullanımı (webpack)
+
+22. Kapanış
+
 ## Giriş ve Tanışma
 
 React.js ile ilgili içeriklere başlamadan önce kısaca kendimden bu kaynağın yapılış amacından bahsedeyim. İsmim **Orçun Tuna**, yazılım mühendisi adayıyım. Bu kaynak ile sizlerin günümüzün en popüler ön yüz kütüphanesi olan React'ı öğrenmesini amaçlıyorum. Bu projenin çıkış noktası ise ücretsiz yazılım kaynakları sunan goalkicker oldu. Aynı şekilde Türkçe olarak da detaylı bir kaynak olması açısından bu dökümanı baz alarak bu kaynağı hazırlamaya başladım. Bahsettiğim kaynak üzerindeki bilgileri çeviri ile sizlere sunmayacağım. Kendim düzenlemeler, eklemeler ve çıkarmalar yapacağım. Ama genel olarak rotamızı oradan kopya çekerek ilerleteceğiz. Bu kaynak GitHub üzerinde paylaşılacağı için eksik veya yanlış gördüğünüz yerleri "pull request" göndererek kaynağı iyileştirmeme yardımcı olabilirsiniz.
@@ -1272,6 +1344,8 @@ import { BrowserRouter as Router } from "react-router-dom";
 Örnekte görüldüğü gibi artık BrowserRouter bileşenini Router olarak kullanacağız.
 
 ---
+
+## Kapanış
 
 Şuan için genel olarak react konularını bitirdik. Eğer eksik veya hatalı gördüğünüz bir kısım var ise öncelikle bu repoyu forklayıp sonrasında kendinize göre düzenleme yaptıktan sonra pull request gönderirseniz, kaynağa siz de katkı sağlamış olursunuz.
 
