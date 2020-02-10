@@ -6,73 +6,73 @@
 
 1. [Giriş ve Tanışma](#giriş-ve-tanışma)
 
-2. Nelere İhtiyacımız Olacak?
+2. [Nelere İhtiyacımız Olacak?](#nelere-i̇htiyacımız-olacak)
 
-3. React Nedir?
+3. [React Nedir?](#react-nedir)
 
-4. Webpack ve Babel Kavramları
+4. [Webpack ve Babel Kavramları](#webpack-ve-babel-kavramları)
    
-   1. Webpack
+   1. [Webpack](#webpack)
    
-   2. Babel
+   2. [Babel](#babel)
 
-5. Kurulum ve create-react-app
+5. [Kurulum ve create-react-app](#kurulum-ve-create-react-app)
 
-6. JSX ve HTML
+6. [JSX ve HTML](#jsx-ve-html)
 
-7. Bileşenler (components)
+7. [Bileşenler (components)](#bileşenler-components)
    
-   1. Bileşeni Dışarı Aktarmak
+   1. [Bileşeni Dışarı Aktarmak](#bileşeni-dışarı-aktarmak)
 
-8. Props (Bileşen Parametreleri)
+8. [Props (Bileşen Parametreleri)](#props-bileşen-parametreleri)
    
-   1. Prop Types ile Kısıtlama ve Zorlama
+   1. [Prop Types ile Kısıtlama ve Zorlama](#prop-types-ile-kısıtlama-ve-zorlama)
    
-   2. Varsayılan Prop Değerlerini Belirlemek
+   2. [Varsayılan Prop Değerlerini Belirlemek](#varsayılan-prop-değerlerini-belirlemek)
 
-9. State
+9. [State](#state)
    
-   1. jQuery tarafında state mantığı
+   1. [jQuery tarafında state mantığı](#jquery-tarafında-state-mantığı)
 
-10. Yaşam Döngüsü
+10. [Yaşam Döngüsü](#yaşam-döngüsü)
 
-11. Olay Yönetimi (Events)
+11. [Olay Yönetimi (Events)](#olay-yönetimi-events)
     
-    1. Eventler için Bind
+    1. [Eventler için Bind](#eventler-için-bind)
     
-    2. Event'ler ile Parametre Göndermek
+    2. [Event'ler ile Parametre Göndermek](#eventler-ile-parametre-göndermek)
 
-12. Bileşenler Arasında İletişim
+12. [Bileşenler Arasında İletişim](#bileşenler-arasında-i̇letişim)
     
-    1. Üst'ten Alt Bileşene Erişim (Parent to Child)
+    1. [Üst'ten Alt Bileşene Erişim (Parent to Child)](#1-üstten-alt-bileşene-erişim-parent-to-child)
     
-    2. Alt'dan Üst Bileşene Erişim (Child to Parent)
+    2. [Alt'dan Üst Bileşene Erişim (Child to Parent)](#2-altdan-üst-bileşene-erişim-child-to-parent)
     
-    3. Alt-Üst İlişkisi Olmayan Bileşenlere Erişim
+    3. [Alt-Üst İlişkisi Olmayan Bileşenlere Erişim](#3-alt-üst-i̇lişkisi-olmayan-bileşenlere-erişim)
 
-13. React Router
+13. [React Router](#react-router)
 
-14. UI Kütüphanesi Dahil Etmek (bootstrap vs.)
+14. [UI Kütüphanesi Dahil Etmek (bootstrap vs.)](#ui-kütüphanesi-dahil-etmek-bootstrap-vs)
 
-15. React Fragment
+15. [React Fragment](#react-fragment)
 
-16. Hook'lara Giriş
+16. [Hook'lara Giriş](#hooklara-giriş)
     
-    1. Hook'lar ile State Kullanımı
+    1. [Hook'lar ile State Kullanımı](#hooklar-ile-state-kullanımı)
     
-    2. Hook'lar ile Effect Kullanımı
+    2. [Hook'lar ile Effect Kullanımı](#hooklar-ile-effect-kullanımı)
 
-17. API Kullanımı (axios)
+17. [API Kullanımı (axios)](#api-kullanımı-axios)
 
-18. Döngülerde Key Kullanımı
+18. [Döngülerde Key Kullanımı](#döngülerde-key-kullanımı)
 
-19. Server Side Rendering
+19. [Server Side Rendering](#server-side-rendering)
 
-20. Build Almak (create-react-app)
+20. [Build Almak (create-react-app)](#build-almak-create-react-app)
 
-21. Çoklu import/export Kullanımı (webpack)
+21. [Çoklu import/export Kullanımı (webpack)](#çoklu-importexport-kullanımı-webpack)
 
-22. Kapanış
+22. [Kapanış](#kapanış)
 
 ## Giriş ve Tanışma
 
