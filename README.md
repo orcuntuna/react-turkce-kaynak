@@ -868,6 +868,64 @@ Bu amaçla üretilen çok kütüphane olabilir fakat şuanda en fazla kullanıla
 
 Şu an itibariyle react.js tarafındaki temel kavramları öğrendik diyebiliriz. Bundan sonrasında daha gelişmiş işlemleri ile ilgileneceğiz. Başlangıç için hooks, ui kütüphanesi kullanımı ve api kullanımına bakacağız. İleride talepler doğrultusunda server side rendering, mobx ve refler gibi daha karmaşık konularla da devam edebiliriz.
 
+## React Router
+
+React router ile sayfalar arasında geçiş yapabiliyoruz. Şuana kadar hep tek bir sayfa üzerinde çalıştık. Şimdi ise birden fazla sayfaya sahip olacağız ve bu sayfalar arasında geçiş yapacağız. Aslında mantık olarak yine tek bir ana bileşene sahip olacağız. Router gelen url üzerinden, belirttiğimiz sayfa deseniyle eşleşen sayfa bileşenini aktif edecek.
+
+Router için alt kısımda bahsettiğimiz "server side rendering" bölümünde next.js kütüphanesi ile de bunu daha basit bir şekilde kullanacağımızı söyleyeceğiz. Daha güzel bir çözüm için orayı da okumayı unutmayın.
+
+```bash
+npm i react-router-dom --save
+```
+
+Kütüphaneyi projemize ekleyerek başlayalım. Sonrasında bütün bileşenleri kapsayan bir router bileşenine ihtiyacımız var. Bunun için yeni bir bileşen oluşturabiliriz ya da App bileşenimizi kullanabiliriz.
+
+Aşağıdaki kodda Anasayfa, Profil ve Ayarlar adında bileşenlerimizin olduğunu ve bunların components klasöründen export edildiğini varsayalım.
+
+```jsx
+import React from "react";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { Anasayfa, Profil, Ayarlar } from "./components";
+
+export default function App() {
+    return (
+        <BrowserRouter>
+            <Switch>
+                <Route exact path="/">
+                    <Anasayfa />
+                </Route>
+                <Route path="/profil">
+                    <Profil/>
+                </Route>
+                <Route path="/ayarlar">
+                    <Ayarlar />
+                </Route>
+            </Switch>
+        </BrowserRouter>
+    )
+}
+```
+
+Sayfalar arasında geçiş yapabilmek için ise tekrar hayali bir Anasayfa bileşeni oluşturalım ve ayarlar için 3 farklı yöntemle yönlendirme sağlayalım.
+
+```jsx
+import React from "react";
+import { Link, useHistory } from "react-router-dom";
+
+export default function Anasayfa() {
+    return (
+        <div>
+            <h1>Anasayfa</h1>
+            <Link to="/ayarlar">Link kullanarak ayarları aç</Link>
+            <a href="/ayarlar">a kullanarak ayarları aç</a>
+            <button onClick={() => { useHistory().push("/ayarlar") }}>
+                Yolendirme ile ayarları aç                
+            </button>
+        </div>
+    )
+}
+```
+
 ## UI Kütüphanesi Dahil Etmek (bootstrap vs.)
 
 Tasarımları koda dökerken ui kütühaneleri gerçekten çok işimize yarıyor. Aslında sadece ui diğer bir çok kütüphaneyi kullanıyoruz. Sonuçta react bileşen tabanlı bir sistem ve geliştiriciler tarafından hazırlanmış binlerce hazır bileşen var. Yeri geldiğinde bunları kullanmak bize zamandan ve koddan tasarruf sağlatıyor.
@@ -1135,3 +1193,33 @@ Bunu yapmamızın sebebi react sayfalarda değişiklikler olduğunda bu elemanla
 **Önemli:** Key değerleri özgün olması gerektiği gibi veri tipi de string olması gerekiyor.
 
 Bir önceki örnekte bizim verimizdeki id'lerimiz integer olarak bulunuyordu. Ben yanına "user-" şeklinde bir ön ek koyarak bunu hem bu liste için özgün bir hale çevirdim hem de string türüne çevirmiş oldum. Size de bu şekilde kullanmanızı tavsiye ederim. Başka liste elemanları ile denk gelme ihtimalini de yoketmiş olursunuz.
+
+## Server Side Rendering
+
+React üzerinde yazdığımız kodlar tarayıcı üzerinde sayfa açıldığıda render edilir ve ekrana çıktı üretilir. Bu yüzden geliştirci konsolundan sayfanın kaynağını incele dediğinizde yazdığınız kodları göremezsiniz. Göreceğiniz içerik public/index.html dosyasının içeriği ve ekstra olarak bundle haline getirilmiş javascript dosyaları.
+
+![sayfakaynagi](images/sayfakaynagi.png)
+
+**Peki bu ne gibi bir soruna yol açıyor?**
+
+Birincil olarak en büyük problem SEO tarafında. Google sayfaları index'leyip veritabanına kaydeder ve sonrasında arama sonuçlarında görünür olmasını sağlar. Buradaki en büyük etkenler title, description ve sayfa kaynak kodunda bulunan metinlerdir. Bizim içeriğimiz client tarafında render edildiği için Google tüm sayfalarda boş bir index.html görecek ve bunu sağlıklı bir şekilde index'lemeyecektir. Eğer doğrudan erişme kapalı bir site değilsek ve google arama sonuçlarında çıkmazsak bu gerçekten büyük bir problem yaratır.    
+
+Bunu Server Side Rendering dediğimiz yöntem ile çözebiliyoruz. Mevcut react kodlarımız build alınarak statik html sayfalar oluşturuluyor. Böylelikle yazdığımız kodların html haline dönüştürülmüş versiyonunu yayımlıyoruz ve örümcekler (google ve diğer arama motorlarının sayfaları dolaşan yazılımlarına verilen isim) sitemizin içeriğini anlayabiliyor ve indexliyor.
+
+Bahsettiğimiz build kısmı kullandığımız create-react-app oluşturucusunda da mevcut fakat yine bir bundle üretiyor ve kaynak kodu statik olarak oluşturmuyor.
+
+![nextjs](images/nextjs.png)
+
+Bu sebeple kullanabileceğimiz en iyi çözüm react üzerine server side rendering uygulamalar geliştirmek için hazırlanmış **next.js** kütüphanesi olacaktır. Next.js içinde dahili bir router bulunduğundan ekstra bir router kütüphanesi kullanmamıza da gerek kalmayacak. Ayrıca create-react-app üzerinde eject işlemi yaparak yapabildiğimiz konfigurasyonları da yapmamızı sağlıyor. Bu yüzden basit ve tatlı bir kütüphane.
+
+Şuan için next.js kütüphanesinin kullanımına girmeyeceğim, ileriki zamanlarda bir yazı ya da video olarak kullanımı hakkında paylaşım yapabilirim.
+
+## Build Almak (create-react-app)
+
+package.json dosyasından da görebileceğiniz üzere create-react-app ile oluşturduğunuz bir projeyi canlıya almak için "npm run build" komutunu kullanıyorsunuz.
+
+```bash
+npm run build
+```
+
+İşlem tamamlandığında proje dizininde build adında bir klasör oluşacak. static klasörü içerisinde bundle halindeki css ve javascript dosyaları bulunuyor. Projenizde public klasörüne koyduğunuz dosyalar ise direkt olarak build klasörü içine geliyor ve böylelikle sunucu tarafında erişilebilir oluyor. Sunucuyu aktarımı sağladığınız zaman gelen bir istek olduğunda index.html dosyası çalışacak ve bundle dosyaları ile projenizi kullanıcıya render ederek gösterecek.
