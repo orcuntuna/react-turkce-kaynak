@@ -249,7 +249,7 @@ const baslik = <h1>merhaba ben {isim}</h1>;
 const isim = "orçun";
 const mevcutYas = 20;
 const kacYasindasin = yas => yas + 10;
-const yasYazi = <h1>{isim} 15 sene yaşlandın, yeni yaşın: {kacYasindasin(yas) + 5}</h1>
+const yasYazi = <h1>{isim} 15 sene yaşlandın, yeni yaşın: {kacYasindasin(mevcutYas) + 5}</h1>
 ```
 
 ## Bileşenler (components)
