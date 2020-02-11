@@ -856,12 +856,14 @@ class Sayac extends React.Component {
         return (
             <div>
                 <p>{this.state.sayi}</p>
-                <Dugme arttir={this.sayacArttir()} />
+                <Dugme arttir={this.sayacArttir} />
             </div>
         )
     }
 
 }
+
+export default Sayac;
 ```
 
 ```jsx
@@ -869,15 +871,17 @@ class Sayac extends React.Component {
 
 import React from "react";
 
-class Dugme extends React.Component {
+export default class Dugme extends React.Component {
    render() {
        return (
-           <button onClick={this.props.arttir()}>
+           <button onClick={() => this.props.arttir()}>
                Arttır
            </button>
        )
    }
 }
+
+export default Dugme;
 ```
 
 > Bir sonraki (üçüncü) erişim türündeki kütüphaneler farklı bir kullanım biçimiyle bu aşamada yaptığımız işlemleri de yapabileceksiniz.
