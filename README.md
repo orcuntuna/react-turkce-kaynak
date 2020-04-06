@@ -46,7 +46,7 @@ React.js ile ilgili içeriklere başlamadan önce kısaca kendimden bu kaynağı
 
 ## Nelere İhtiyacımız Olacak?
 
-React bir javascript kütüphanesi ve javascript platform bağımsız çalışan bir dil olduğundan işletim sistemi olarak herhangi bir kısıtlamamız yok. Aynı şekilde editör tarafında da birçok editör veya ide arasından seçim yapabilirsiniz. Geliştirme yaparken kullanabileceğiniz birkaç editörü yazalım bunlar arasından tercihinizi siz yapın.
+React bir JavaScript kütüphanesi ve JavaScript platform bağımsız çalışan bir dil olduğundan işletim sistemi olarak herhangi bir kısıtlamamız yok. Aynı şekilde editör tarafında da birçok editör veya IDE arasından seçim yapabilirsiniz. Geliştirme yaparken kullanabileceğiniz birkaç editörü yazalım bunlar arasından tercihinizi siz yapın.
 
 - Visual Studio Code
 
@@ -62,7 +62,7 @@ Benim tavsiyemi soracak olursanız eğer öğrenci iseniz JetBrains ürünlerind
 
 Kurulum tarafında ihtiyacımız olacak yazılım ise NPM ve Node.js olacak. Bunları da kolaylıkla indirip platform bağımsız şekilde kurabilirsiniz.
 
-Geldik programlama dillerine, aşağıdakileri bilmeden maalesef react öğrenmeye başlayamazsınız. Eğer listedeki dil veya kavramlardan eksiğiniz var ise öncelikle bunları tamamlayıp sonrasında buraya dönmenizi tavsiye ederim. Aksi halde çoğu şeyi anlayamayabilirsiniz.
+Geldik programlama dillerine, aşağıdakileri bilmeden maalesef React öğrenmeye başlayamazsınız. Eğer listedeki dil veya kavramlardan eksiğiniz var ise öncelikle bunları tamamlayıp sonrasında buraya dönmenizi tavsiye ederim. Aksi halde çoğu şeyi anlayamayabilirsiniz.
 
 - HTML
 
@@ -74,13 +74,13 @@ Geldik programlama dillerine, aşağıdakileri bilmeden maalesef react öğrenme
 
 React, Facebook tarafından geliştirilen ve açık kaynaklı bir front-end kütüphanesidir. Ayrıca daha önce duymuş olabileceğiniz "component based" yani bileşen tabanlıdır.
 
-Ayrıca React DOM'u kullanarak sanal bir DOM (Document Object Model) oluşturur. Bu sayede sayfa üzerinde bir değişiklik olduğunda tüm sayfayı güncellemek yerine sadece değişiklik yapılan kısmı güncellerek. Böylelikle performans tarafında fark gerçek DOM'a göre daha hızlı çalışır.
+Ayrıca React DOM'u kullanarak sanal bir DOM (Document Object Model) oluşturur. Bu sayede sayfa üzerinde bir değişiklik olduğunda tüm sayfayı güncellemek yerine sadece değişiklik yapılan kısmı güncellenecek. Böylelikle performans tarafında fark gerçek DOM'a göre daha hızlı çalışır.
 
 React içerisinde JSX adı verilen özel bir biçimlendirme dili kullanılır. React bu JSX kodlarını HTML kodlarına dönüştürür ve tarayıcı tarafından çalıştırılmasını sağlar. JSX denildiğinde gözünüz korkmasın. Neredeyse birebir olarak HTML şeklinde fakat kendine özgü birkaç özelliği daha olan bir biçimlendirme dili.
 
 İlk paragrafta basettiğim bileşen tabanlılık özelliği ile geliştirme tarafında büyük kolaylıklar sağlar. Bunu şu şekilde basit bir örnek ile açıklayabiliriz. Bir yemek tarifi sitesinin anasayfasını düşünelim. Header, footer, sidebar ve yemek tariflerinin bulunduğu kartlar var. Buradaki her bir alanı bir bileşen olarak böleriz ve bunları tekrar tekrar kullanabiliriz. Header bileşeni, yemek tarifi kartı bileşeni ve bu şekilde bileşenleri oluştururuz.
 
-Bu kısımda son olarak react'ın neden bir framework değilde kütüphane olduğunu konuşalım. Framework ve kütüphane ayrımı front-end tarafında içinde router bulunup bulunmadığına bakılarak karar veriliyor. React.js içinde varsayılan olarak bir router bulunmadığı için react'a kütüphane diyebiliriz. Router kısmını ise ileride react-router veya next.js gibi ekstra çözümler ile halletmeye çalışacağız.
+Bu kısımda son olarak React'ın neden bir framework değilde kütüphane olduğunu konuşalım. Framework ve kütüphane ayrımı front-end tarafında içinde router bulunup bulunmadığına bakılarak karar veriliyor. React.js içinde varsayılan olarak bir router bulunmadığı için React'a kütüphane diyebiliriz. Router kısmını ise ileride react-router veya next.js gibi ekstra çözümler ile halletmeye çalışacağız.
 
 ## Webpack ve Babel Kavramları
 
@@ -90,11 +90,11 @@ Geliştirmeye başlamadan önce webpack ve babel kavramları hakkında bilgi sah
 
 ![oruz.](images/webpack.jpg)
 
-Bildiğiniz gibi javascript üzerinde farklı kodları içeri aktarıp bir dosya üzerinden kodlamaya devam edebileceğimiz bir sistem mevcut değil (Python'daki import, PHP'deki include gibi). Burada webpack devreye giriyor. Webpack oluşturduğumuz dosyalar arasında içeri aktarma yapmamızı sağlıyor. Sonrasında ise bir bundle dosyasında tüm içerikleri bir araya getiriyor. Böylelikle javascript üzerinde import işlemi yapabilmiş oluyoruz.
+Bildiğiniz gibi JavaScript üzerinde farklı kodları içeri aktarıp bir dosya üzerinden kodlamaya devam edebileceğimiz bir sistem mevcut değil (Python'daki import, PHP'deki include gibi). Burada webpack devreye giriyor. Webpack oluşturduğumuz dosyalar arasında içeri aktarma yapmamızı sağlıyor. Sonrasında ise bir bundle dosyasında tüm içerikleri bir araya getiriyor. Böylelikle JavaScript üzerinde import işlemi yapabilmiş oluyoruz.
 
 ### Babel
 
-Gereksinimler kısmında javascript yanında biraz da ecmascript demiştik. Babel'in görevi ecmascript üzerine ve bu yüzden ecmascript'e biraz hakim olmak gerekiyor.
+Gereksinimler kısmında JavaScript yanında biraz da ecmascript demiştik. Babel'in görevi ecmascript üzerine ve bu yüzden ecmascript'e biraz hakim olmak gerekiyor.
 
 Şuanda kullandığımız tarayıcılar tam olarak bütün ecmascript sürümlerini maalesef destekleyemiyorlar. Bu yüzden tarayıcının bizim kodlarımızı anlayabilmesi için ecmascript kodlarını daha düşük ecmascript versiyonlarına çevirmemiz gerekiyor.
 
@@ -102,7 +102,7 @@ Babel tam olarak bu işi yapıyoruz. Böylelikle daha modern ve anlaşılır kod
 
 ## Kurulum ve create-react-app
 
-Yeni bir react projesi oluşturmak için create-react-app paketini kullanacağız. Paket kullanılmadan manuel olarak da react projeleri oluşturulabilir. Fakat hem çok fazla kullanılmadığı hem de başlangıçta kafa karışıklığına sebep olmamak için bu kısımdan bahsetmeyeceğim. Direkt olarak kurulumumuzu create-react-app paketini kullanarak yapacağız.
+Yeni bir React projesi oluşturmak için create-react-app paketini kullanacağız. Paket kullanılmadan manuel olarak da React projeleri oluşturulabilir. Fakat hem çok fazla kullanılmadığı hem de başlangıçta kafa karışıklığına sebep olmamak için bu kısımdan bahsetmeyeceğim. Direkt olarak kurulumumuzu create-react-app paketini kullanarak yapacağız.
 
 create-react-app paketi Facebook tarafından sunulan react proje oluşturma aracı. Bu aracı kullanarak manuel olarak yapmamız gereken her şeyden kurtulacağız. Paket bize hazır olarak şunları sağlıyor:
 
@@ -131,13 +131,13 @@ cd ilk-uygulama
 npm start
 ```
 
-Şuanda yerel sunucunuzda react çalışır durumda olması gerekiyor. Otomatik olarak tarayıcınızda bağlantı açılacaktır eğer açılmaz ise, tarayıcınızda adres çubuğuna **http://localhost:3000** yazarak bağlanabilirsiniz. Karşılaşmanız gereken ekran şu şekilde olmalı:
+Şuanda yerel sunucunuzda React çalışır durumda olması gerekiyor. Otomatik olarak tarayıcınızda bağlantı açılacaktır eğer açılmaz ise, tarayıcınızda adres çubuğuna **http://localhost:3000** yazarak bağlanabilirsiniz. Karşılaşmanız gereken ekran şu şekilde olmalı:
 
 ![s](images/react.png)
 
 package.json dosyasını incelerseniz "scripts" kısmında kullanabileceğiniz bazı komutlara rastlayacaksınız. Buradaki start, build, test ve eject komutlarını kısaca inceleyelim.
 
-- **npm run start:** geliştirme ortamında react uygulamasını ayağa kaldırır.
+- **npm run start:** geliştirme ortamında React uygulamasını ayağa kaldırır.
 
 - **npm run build:** geliştirme ortamından canlı ortalama transfer için build işlemini gerçekleştirir.
 
@@ -145,7 +145,7 @@ package.json dosyasını incelerseniz "scripts" kısmında kullanabileceğiniz b
 
 - **npm run eject:** proje dosyaları içinde görmediğimiz server ve config dosyalarını manuel olarak yönetmek için dışarı çıkarır. Bu işlem yapılmak isteniyorsa proje oluşturulduğunda hiçbir ekleme ve düzenleme yapılmadan çalıştırılmalıdır. Aksi halde çalışmaz ve bu komutu çalıştırırken dikkatli olunması gerekir çünkü kalıcı bir zarar verebilir.
 
-create-react-app haricinde react projesi oluşturmak için birçok farklı alternatif araç mevcut. Biz facebook tarafından geliştirilen resmi araç olduğu için create-react-app kullanacağız. Siz diğer alternatiflere de göz atmak isterseniz diye onları da bir liste halinde ekleyeceğim.
+create-react-app haricinde React projesi oluşturmak için birçok farklı alternatif araç mevcut. Biz facebook tarafından geliştirilen resmi araç olduğu için create-react-app kullanacağız. Siz diğer alternatiflere de göz atmak isterseniz diye onları da bir liste halinde ekleyeceğim.
 
 Alternatif araçlar: [enclave](https://github.com/eanplatter/enclave), [nwb](https://github.com/insin/nwb), [motion](https://github.com/steelbrain/motion), [rackt-cli](https://github.com/mzabriskie/rackt-cli), [budo](https://github.com/mattdesl/budo), [rwb](https://github.com/petehunt/rwb), [quik](https://github.com/satya164/quik), [sagui](https://github.com/saguijs/sagui), [roc](https://github.com/rocjs/roc)
 
@@ -153,9 +153,9 @@ Alternatif araçlar: [enclave](https://github.com/eanplatter/enclave), [nwb](htt
 
 ![jsx](images/jsx.png)
 
-JSX React için özel olarak hazırlanmış bir biçimlendirme dilidir. React içinde HTML değil de JSX kullanmamızın en büyük sebeplerinden biri de JSX ile oluşturduğumuz şablonlara javascript ile kolaylıkla hükmedebiliyor olmamızdır. Yani JSX yazarken aslında biraz eskiye dönüp javascript ve html dillerini bir arada yazıyoruz.
+JSX React için özel olarak hazırlanmış bir biçimlendirme dilidir. React içinde HTML değil de JSX kullanmamızın en büyük sebeplerinden biri de JSX ile oluşturduğumuz şablonlara macOS Catalina ile kolaylıkla hükmedebiliyor olmamızdır. Yani JSX yazarken aslında biraz eskiye dönüp JavaScript ve HTML dillerini bir arada yazıyoruz.
 
-Örneğin html ile değişkenleri, matematiksel işlemleri, fonksiyonları, koşullu karşılaştırmaları, döngüleri ve bunlar gibi dinamik olan hiçbir şeyi kullanamazken JSX ile bunları kullanabiliyoruz.
+Örneğin HTML ile değişkenleri, matematiksel işlemleri, fonksiyonları, koşullu karşılaştırmaları, döngüleri ve bunlar gibi dinamik olan hiçbir şeyi kullanamazken JSX ile bunları kullanabiliyoruz.
 
 Genel olarak JSX yazımı HTML üzerine kurulmuştur. Bazı anahtar kelimeler değiştirilmiş ve bazı zorunluluklar getirilmiştir.
 
@@ -164,9 +164,9 @@ Genel olarak JSX yazımı HTML üzerine kurulmuştur. Bazı anahtar kelimeler de
 | HTML     | JSX            | Açıklama                                                                                                         |
 | -------- | -------------- | ---------------------------------------------------------------------------------------------------------------- |
 | checked  | defaultChecked | checkbox veya radio tipindeki elemanlarda varsayılan olarak seçili gelme özelliği                                |
-| class    | className      | bir elemanın tasarımını css ile ilişkilendirme özelliği                                                          |
+| class    | className      | bir elemanın tasarımını CSS ile ilişkilendirme özelliği                                                          |
 | for      | htmlFor        | genellikle label için kullanılan for anahtar sözcüğü                                                             |
-| style="" | style={}       | style özelliği ile inline css verilirken html'de string olarak jsx'de ise javascript objesi olarak değer girilir |
+| style="" | style={}       | style özelliği ile inline CSS verilirken HTML'de string olarak jsx'de ise JavaScript objesi olarak değer girilir |
 | value    | defaultValue   | input ve textarea için varsayılan değer                                                                          |
 
 **Bir elemana sınıf atama karşılaştırması:**
@@ -182,19 +182,19 @@ Genel olarak JSX yazımı HTML üzerine kurulmuştur. Bazı anahtar kelimeler de
 <div className={"container"}></div>
 ```
 
-**Bir elemana inline css atama karşılaştırması:**
+**Bir elemana inline CSS atama karşılaştırması:**
 
 ```html
-<!-- HTML ile div'e inline css ekleme -->
+<!-- HTML ile div'e inline CSS ekleme -->
 <div style="margin-top:10px;background-color:#fff;width:75%">
 ```
 
 ```jsx
-// JSX ile div'e inline css ekleme
+// JSX ile div'e inline CSS ekleme
 <div style={{ marginTop: 10, backgroundColor: "#fff", width: "75%" }}>
 ```
 
-HTML ve JSX arasında style tanımlamalarında farklar görmüş olabilirsiniz. Biraz da bu farklarda değinelim. JSX tarafında tanımlamalar javascript objesi olarak yapıldığı için direkt olarak style üzerinde de javascript üzerinde kullanılan css isimlendirmelerini kullanıyoruz. Yani normalde "margin-top: 10px" derken aradaki çizgiyi kaldırıp her ilk kelime hariç sonraki harflerin ilk harfini büyük harfe çevirerek "marginTop: 10" şeklinde yazıyoruz. Ayrıca fark ettiğiniz gibi HTML'de "10px" yazarken JSX'de integer olarak 10 yazdık. Aynı yazım biçimini fontSize, height, weight gibi sayısal değerler girilen özelliklerde de kullanıyoruz. Burada integer olarak yazılan değerler piksel olarak algılanıyor. Eğer yüzde şeklinde bir ifade girmek isterseniz bunu tırnakların içine olarak belirtiyorsunuz. Eğer bu yazım tarzı size sıkıcı geldi ise özel bir css dosyası oluşturup içine normal css kodlarını yazmaya devam edebilirsiniz, bileşene "className" özelliğini kullanarak bu sınıf ismini verdiğinizde css kodlarınız geçerli olacaktır.
+HTML ve JSX arasında style tanımlamalarında farklar görmüş olabilirsiniz. Biraz da bu farklarda değinelim. JSX tarafında tanımlamalar JavaScript objesi olarak yapıldığı için direkt olarak style üzerinde de JavaScript üzerinde kullanılan CSS isimlendirmelerini kullanıyoruz. Yani normalde "margin-top: 10px" derken aradaki çizgiyi kaldırıp her ilk kelime hariç sonraki harflerin ilk harfini büyük harfe çevirerek "marginTop: 10" şeklinde yazıyoruz. Ayrıca fark ettiğiniz gibi HTML'de "10px" yazarken JSX'de integer olarak 10 yazdık. Aynı yazım biçimini fontSize, height, weight gibi sayısal değerler girilen özelliklerde de kullanıyoruz. Burada integer olarak yazılan değerler piksel olarak algılanıyor. Eğer yüzde şeklinde bir ifade girmek isterseniz bunu tırnakların içine olarak belirtiyorsunuz. Eğer bu yazım tarzı size sıkıcı geldi ise özel bir CSS dosyası oluşturup içine normal CSS kodlarını yazmaya devam edebilirsiniz, bileşene "className" özelliğini kullanarak bu sınıf ismini verdiğinizde CSS kodlarınız geçerli olacaktır.
 
 | HTML (style)                    | JSX (style)                      |
 | ------------------------------- | -------------------------------- |
@@ -210,7 +210,7 @@ Yukarıdaki tabloda da görüldüğü gibi neredeyse bire bir olarak aynılar. �
 
 HTML üzerinde bir eleman açılır ve kapatılmaz ise genellikle tarayıcılar bunu gözardı eder ve bir sorun yokmuş gibi devam eder. JSX tarafında eğer bir bileşen açıldıysa kapatılmak zorundadır, kapatmazsanız hata alacaksınız.
 
-Bir eleman html ve jsx üzerinde 2 farklı şekilde kapatılabilir.
+Bir eleman HTML ve jsx üzerinde 2 farklı şekilde kapatılabilir.
 
 1. İçinde başka bir eleman olacak şekilde kapatma
 
@@ -232,9 +232,9 @@ Bir eleman html ve jsx üzerinde 2 farklı şekilde kapatılabilir.
 
 Yukarıda 2. örnekte sondan hemen önce koyduğumuz "/" işareti o elemanı kapattığımızın göstergesidir. Yukarıdaki 2 örnek de doğrudur ve bu şekilde tüm elemanlar açıldığı gibi kapatılmalıdır. Eğer HTML tarafında input, img ve br gibi etiketleri kapatmasaydınız da kod çalışmaya devam edecekti.
 
-Başka bir zorunluluk ise oluşturacağımız bileşenlerde ilk harfi büyük seçmemiz gerekiyor. Aksi taktirde bu özel bir bileşen değil html elemanı olarak algınacaktır ve bileşene erişimimizi engelleyecektir.
+Başka bir zorunluluk ise oluşturacağımız bileşenlerde ilk harfi büyük seçmemiz gerekiyor. Aksi taktirde bu özel bir bileşen değil HTML elemanı olarak algınacaktır ve bileşene erişimimizi engelleyecektir.
 
-Son olarak JSX'in birkaç özelliğine daha değinip JSX bölümünü bitirelim. Az biraz yukarıda JSX içinde HTML tarafında yapamadığımız bazı şeyleri de yapabildiğimizi söyledik. Bunlardan bazılarında JSX kodlarını bir değişkene atayabiliriz ya da bir JSX kodu içinde mevcut javascript değişkenlerini kullanabiliriz. O da mı yetmedi? Fonksiyon çağırıp bir de gelen cevaba 5 bile ekleriz.
+Son olarak JSX'in birkaç özelliğine daha değinip JSX bölümünü bitirelim. Az biraz yukarıda JSX içinde HTML tarafında yapamadığımız bazı şeyleri de yapabildiğimizi söyledik. Bunlardan bazılarında JSX kodlarını bir değişkene atayabiliriz ya da bir JSX kodu içinde mevcut JavaScript değişkenlerini kullanabiliriz. O da mı yetmedi? Fonksiyon çağırıp bir de gelen cevaba 5 bile ekleriz.
 
 ```jsx
 // JSX'i değişkene atama ve içerisinde değişken kullanma
@@ -262,7 +262,7 @@ Bileşenleri bir bütünü oluşturan parçalar olarak düşünebiliriz. Bu bile
 
 2. Render edilen başka bir bileşen içinde çağrılması
 
-Varsayılan olarak oluşturduğumuz uygulamada index.js içinde 1. maddedeki gibi App bileşeni render ediliyor ve bu sayesede tarayıcıda App bileşenini görüyoruz. Eğer başka bir bileşen daha oluşturup bunu da App içinde çağırıp kullansaydık bu da 2. maddedeki gibi bir bileşen kullanımı olacaktı. Aşağıda birinci maddeye projemizdeki örnek kodu ekledim, ikinci maddenin örneğini de kendi bileşenlerimizi oluşturmaya başladığımızda göreceğiz.
+Varsayılan olarak oluşturduğumuz uygulamada index.js içinde 1. maddedeki gibi App bileşeni render ediliyor ve bu sayede tarayıcıda App bileşenini görüyoruz. Eğer başka bir bileşen daha oluşturup bunu da App içinde çağırıp kullansaydık bu da 2. maddedeki gibi bir bileşen kullanımı olacaktı. Aşağıda birinci maddeye projemizdeki örnek kodu ekledim, ikinci maddenin örneğini de kendi bileşenlerimizi oluşturmaya başladığımızda göreceğiz.
 
 ```jsx
 // bahsedilen index.js içeriği
@@ -282,7 +282,7 @@ Kendi bileşenlerimizi oluşturmadan önce bilmemiz gereken bir ayrıntı daha v
 
 Bu iki tip bileşen aslında aynı şeyi temsil ediyor fakat kullanım tarafında büyük farklar oluşuyor. Yaşam döngüsü içinde bulunan bazı metodları sınıf tabanlı bileşenlerde kullanabiliyorken fonksiyon tabanlı metodlarda kullanamıyoruz. Aynı şekilde daha işlemediğimiz ama en önemli kavramlardan biri olan state'ler önceden fonksiyon tabanlı bileşenlerde kullanılamıyordu, React 16.8 ile birlikte gelen Hooks güncellemesi ile state'ler fonksiyonel bileşenlerde de kullanılmaya başlandı.
 
-Bahsettiğimiz iki tip bileşen arasında özellik olarak bakıldığında çok fark kalmıyor. Daha önemli kısım olan optimizasyon tarafına baktığımızda ise react'ın resmi dökümanında fonksiyonel bileşen kullanımının daha performanslı olduğundan bahsediliyor ve kullanımı tavsiye ediliyor. Bunun sebebi de aslında javascript tarafında normalde sınıf diye bir kavram yok. Ecmascript 2015 ile sınıfları kullanmamıza olanak sağlanıyor fakat hala arka tarafta bir sınıf yok. Bizim yazdığımız sınıf kodları işlenirken prototype'lara dönüştürülüyor. Bu yüzden direkt olarak OOP mimarisini kullanamıyoruz ve bir yavaşlık söz konusu oluyor. 
+Bahsettiğimiz iki tip bileşen arasında özellik olarak bakıldığında çok fark kalmıyor. Daha önemli kısım olan optimizasyon tarafına baktığımızda ise React'ın resmi dökümanında fonksiyonel bileşen kullanımının daha performanslı olduğundan bahsediliyor ve kullanımı tavsiye ediliyor. Bunun sebebi de aslında JavaScript tarafında normalde sınıf diye bir kavram yok. Ecmascript 2015 ile sınıfları kullanmamıza olanak sağlanıyor fakat hala arka tarafta bir sınıf yok. Bizim yazdığımız sınıf kodları işlenirken prototype'lara dönüştürülüyor. Bu yüzden direkt olarak OOP mimarisini kullanamıyoruz ve bir yavaşlık söz konusu oluyor. 
 
 Syntax olarak fonksiyon ve sınıf tabanlı bileşenlere göz atalım. (Bu örneklerde props'lar devreye sokulmamıştır)
 
@@ -394,9 +394,9 @@ function App() {
 export default App;
 ```
 
-Burada nasıl React'ı import ediyorsak aynı şekilde kendi bileşenimizi de import ettik. Sadece farkettiyseniz bir dosyayı içeri aktardığımız halde "./HavaDurumu" yazdık ve ".js" uzantısını eklemedik. Javascript dosyalarını içeri atarırken bu şekilde sadece dosya ismini yazmamız yeterli oluyor.
+Burada nasıl React'ı import ediyorsak aynı şekilde kendi bileşenimizi de import ettik. Sadece farkettiyseniz bir dosyayı içeri aktardığımız halde "./HavaDurumu" yazdık ve ".js" uzantısını eklemedik. JavaScript dosyalarını içeri atarırken bu şekilde sadece dosya ismini yazmamız yeterli oluyor.
 
-Eğer projeniz çalışır durumda değilde "npm start" ile ayağa kaldırın ve localhost:3000 üzerinde bu ekranı görüp görmediğinizi kontrol edin. Eğer bu şekilde çıktıyı aldıysanız her şey tamam demektir.
+Eğer projeniz çalışır durumda değilse "npm start" ile ayağa kaldırın ve localhost:3000 üzerinde bu ekranı görüp görmediğinizi kontrol edin. Eğer bu şekilde çıktıyı aldıysanız her şey tamam demektir.
 
 ![bilesen](images/bilesen.png)
 
@@ -406,7 +406,7 @@ Eğer projeniz çalışır durumda değilde "npm start" ile ayağa kaldırın ve
 
 Prop'ları bileşenlerde sınıf tabanlı veya fonksiyonel tabanlı olması farketmeksizin tümünde kullanabiliyoruz. Aralarında nesne yönelimli kullanımdan kaynaklanın tek kelimelik bir fark oluyor fakat bunu da nesneye biraz hakimseniz karıştıracağınızı düşünmüyorum.
 
-Prop'ların örneklerine geçmeden önce html üzerinden basit bir örnek vererek mantığını  pekiştirebileceğinizi düşünüyorum. Html üzerinde bir resim çağırdığımızı düşünelim. Bunu koda nasıl ekleriz?
+Prop'ların örneklerine geçmeden önce HTML üzerinden basit bir örnek vererek mantığını  pekiştirebileceğinizi düşünüyorum. Html üzerinde bir resim çağırdığımızı düşünelim. Bunu koda nasıl ekleriz?
 
 ```html
 <img src="logo.png" alt="site başlığı" />
@@ -471,7 +471,7 @@ App tarafında da HavaDurumu olarak çağırdığımız bileşenlerin sayısın�
 
 HTML içinde bu parametrelere attributes diyoruz ve bunlara sadece string olarak parametreler gönderiliyor. JSX'de ise burada sadece string gönderme gibi bir durum yok. 
 
-Prop içeriği olarak string, integer, boolean, object, array ve hatta fonksiyon bile gönderebiliriz. String haricinde bir prop gönderimini incelemek için 2 parametre daha ekleyelim. Birincisi style (object), ikincisi ise aktiflik (boolean) olsun. Tanımladığımız style'ı bileşenimiz içerisindeki html üzerinden kullanığımız p'nin style özelliğine bağlayacağız ve eğer aktiflik parametresinde false değeri geldiyse geri dönüş olarak yazımızı değil de null bir değer döndüreceğiz.
+Prop içeriği olarak string, integer, boolean, object, array ve hatta fonksiyon bile gönderebiliriz. String haricinde bir prop gönderimini incelemek için 2 parametre daha ekleyelim. Birincisi style (object), ikincisi ise aktiflik (boolean) olsun. Tanımladığımız style'ı bileşenimiz içerisindeki HTML üzerinden kullanığımız p'nin style özelliğine bağlayacağız ve eğer aktiflik parametresinde false değeri geldiyse geri dönüş olarak yazımızı değil de null bir değer döndüreceğiz.
 
 Bu sefer öncelikle App tarafını yapalım sonrasında bileşenimizi düzenleyelim.
 
@@ -650,13 +650,13 @@ State ise isminden de anlaşılabileceği gibi durumu temsil ediyor ve her an de
 
 State'ler, prop'larda olduğu gibi bir üst bileşenden aktarılmaz. Ama istersek prop'dan gelen değeri state değişkenine eşitleriz ve state'in ilk değerini belirlemiş olabiliriz.
 
-Ayrıca şu an için (react 16.12) state'ler normal yazımı ile sınıf tabanlı bileşenlerde kullanılabilir durumdalar. Fonksiyon tabanlı bileşenlerde de state'leri kullanmamızı sağlayan hooks güncellemesini ileriki bölümlerde göreceğiz. Bu sebeple bu bölümde sınıf tabanlı bileşenlerle çalışacağız.
+Ayrıca şu an için (React 16.12) state'ler normal yazımı ile sınıf tabanlı bileşenlerde kullanılabilir durumdalar. Fonksiyon tabanlı bileşenlerde de state'leri kullanmamızı sağlayan hooks güncellemesini ileriki bölümlerde göreceğiz. Bu sebeple bu bölümde sınıf tabanlı bileşenlerle çalışacağız.
 
 ### jQuery tarafında state mantığı
 
-> State mantığını daha iyi kavrayabilmeniz için jQuery ile basit bir state mimarisi oluşturacağım. Bunun react ile hiçbir ilgisi yok. Eğer jQuery bilmiyorsanız burayı atlayabilirsiniz.
+> State mantığını daha iyi kavrayabilmeniz için jQuery ile basit bir state mimarisi oluşturacağım. Bunun React ile hiçbir ilgisi yok. Eğer jQuery bilmiyorsanız burayı atlayabilirsiniz.
 
-```javascript
+```JavaScript
 <span id="sayac">0</span>
 
 var sayac = 0;
@@ -675,7 +675,7 @@ $(function(){
 
 Kabataslak böyle bir jquery kodu yazdığımızda ekranımızda sıfırdan başlayarak her saniye bir artan bir sayaç görüntüleceğiz.
 
-Hadi bunu react ile yapalım. Sayaca adında bir bileşen oluşturup App üzerinden çağıralım ve içine şu şekilde dolduralım.
+Hadi bunu React ile yapalım. Sayaca adında bir bileşen oluşturup App üzerinden çağıralım ve içine şu şekilde dolduralım.
 
 ```jsx
 import React from "react";
@@ -705,11 +705,11 @@ export default class Sayac extends React.Component {
 }
 ```
 
-State değerleri sınıfın içindeki state değişkeninde bir obje olarak tutuluyor. Bu değerleri  this.state.state_ismi şeklinde erişebiliyoruz. Buradaki en önemli şey ise bir state değerini değiştirmek istediğimizde bu değere direkt olarak müdahale etmemek. Değişiklik yapacağımızda **setState** metodunu kullanmalıyız. Böylece react state üzerinde bir değişiklik olduğunu anlayacak ve bileşeni tekrar render edecek.
+State değerleri sınıfın içindeki state değişkeninde bir obje olarak tutuluyor. Bu değerleri  this.state.state_ismi şeklinde erişebiliyoruz. Buradaki en önemli şey ise bir state değerini değiştirmek istediğimizde bu değere direkt olarak müdahale etmemek. Değişiklik yapacağımızda **setState** metodunu kullanmalıyız. Böylece React state üzerinde bir değişiklik olduğunu anlayacak ve bileşeni tekrar render edecek.
 
 Varsayılan state değerleri oluşturmak için de sınıf içinde direkt olarak state objesinin içine ekleme yapabiliriz.
 
-> Kodda gördüğünüz **componentDidMount** react içinde tanımlı özel bir metoddur. Bileşen render edildikten hemen sonra çalıştırılır. Bir sonraki bölümde yaşam döngüsü dediğimiz bu özel metodları listeleyeceğiz.
+> Kodda gördüğünüz **componentDidMount** React içinde tanımlı özel bir metoddur. Bileşen render edildikten hemen sonra çalıştırılır. Bir sonraki bölümde yaşam döngüsü dediğimiz bu özel metodları listeleyeceğiz.
 
 ![state](images/state.png)
 
@@ -717,7 +717,7 @@ Ekranım ara verdiğimde açık kalmış ve aşağıdaki gibi 2210 saniye ilerle
 
 ## Yaşam Döngüsü
 
-Yazdığımız react kodları ekranda görülebilir bir hale gelmeden önce belirli aşamalaradan geçiyor ve yaşam döngüsünde özel metodları kullanarak bu aşamalara dahil olup işleyişe müdaheleler yapabiliyoruz. Önceki bölümde kullandığımız componentDidMount bu özel metodlardan biriydi. Aynı şekilde kaynağın başından beri her yerde gördüğünüz render'da bu özel metodların arasında. React'ın işleyişindeki bu yaşam döngüsüne lifecycle ismini veriyoruz. Birkaç önemli noktaya değindikten sonra bir görsel ile tüm bu işleyişi öğreneceğiz.
+Yazdığımız React kodları ekranda görülebilir bir hale gelmeden önce belirli aşamalaradan geçiyor ve yaşam döngüsünde özel metodları kullanarak bu aşamalara dahil olup işleyişe müdahaleler yapabiliyoruz. Önceki bölümde kullandığımız componentDidMount bu özel metodlardan biriydi. Aynı şekilde kaynağın başından beri her yerde gördüğünüz render'da bu özel metodların arasında. React'ın işleyişindeki bu yaşam döngüsüne lifecycle ismini veriyoruz. Birkaç önemli noktaya değindikten sonra bir görsel ile tüm bu işleyişi öğreneceğiz.
 
 **Yaşam döngüsü aşamaları:**
 
@@ -733,19 +733,19 @@ Görsele biraz göz atarak tüm özel metodların hangi sırayla ilerlediğini k
 
 | Metod                | Açıklama                                                                                                                                                                                                                     |
 | -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| constructor          | Bileşen çağrıldığında ilk çalışan metod budur. Çalıştığı anda bileşen üzerinde herhangi bir şey render edilmemiş olur ve yüzden dom ile ilgili işlemler yapılamaz. Prop'lar ve state'ler ile ilgili kontrolleri yapabiliriz. |
+| constructor          | Bileşen çağrıldığında ilk çalışan metod budur. Çalıştığı anda bileşen üzerinde herhangi bir şey render edilmemiş olur ve yüzden DOM ile ilgili işlemler yapılamaz. Prop'lar ve state'ler ile ilgili kontrolleri yapabiliriz. |
 | render               | Yazdığımız kodlarından işlendiği kısımdır. render içeriside state'leri ve prop'ları kullanabiliriz. State güncelleme işlemini de burası da dahil olacak şekilde bu kısımdan kısımdan itibaren yapabiliriz.                   |
 | componentDidMount    | render işleminden sonra çalışan kısımdır. Genel olarak API ile ilgili işlemlerde veya bileşen oluşturulduğunda başlaması gereken olaylar için kullanıyoruz.                                                                  |
 | componentDidUpdate   | Daha önceden render edilen bileşenimiz üzerinde bir değişiklik olduğunda çalışır. Örneğin setState kullanarak yaptığımız state değişiklerinden sonra bu metod aktif olur.                                                    |
-| componentWillUnmount | Bileşen eğer dom'dan çıkarılacak ise çıkarılmadan önce bu metod çalışır. Örneğin az önce yaptığımız sayaç bileşenden sonlanırken durdurulmalı ve bu işlemi burada yapmalıyız.                                                |
+| componentWillUnmount | Bileşen eğer DOM'dan çıkarılacak ise çıkarılmadan önce bu metod çalışır. Örneğin az önce yaptığımız sayaç bileşenden sonlanırken durdurulmalı ve bu işlemi burada yapmalıyız.                                                |
 
 ## Olay Yönetimi (Events)
 
-Javascript tarafındaki eventler ile neredeyse aynıdır fakat bazı isimlendirme farkları bulunuyor. Bu farkları css tarafındaki ve jsx tarafındaki style isimleri gibi değerlendirebiliriz. 
+JavaScript tarafındaki eventler ile neredeyse aynıdır fakat bazı isimlendirme farkları bulunuyor. Bu farkları CSS tarafındaki ve jsx tarafındaki style isimleri gibi değerlendirebiliriz. 
 
-Örneğin dom'da "onclick" (lowercase) iken react tarafında bunu "onClick" (camelCase) olarak kullanıyoruz. Ekstra olarak dom tarafında bu eventelere string içerisinde  fonksiyon isimlerini giriyorken react'da direkt olarak fonksiyonu belirtiyoruz.
+Örneğin DOM'da "onclick" (lowercase) iken React tarafında bunu "onClick" (camelCase) olarak kullanıyoruz. Ekstra olarak DOM tarafında bu eventlere string içerisinde  fonksiyon isimlerini giriyorken react'da direkt olarak fonksiyonu belirtiyoruz.
 
-Bir diğer fark ise dom tarafında bir elemanın varsayılan işlemini engellemek için "return false" ifadesi de kullanılabiliyorken react'da bu tanımlı değildir. Eğer bir eventin varsayılan özelliğini pasifleştirmek isterseniz "e.preventDefault()" fonksiyonunu kullanmalısınız.
+Bir diğer fark ise DOM tarafında bir elemanın varsayılan işlemini engellemek için "return false" ifadesi de kullanılabiliyorken React'da bu tanımlı değildir. Eğer bir eventin varsayılan özelliğini pasifleştirmek isterseniz "e.preventDefault()" fonksiyonunu kullanmalısınız.
 
 React'ın kendi dökümanında tüm eventlerin bir listesi bulunmuyor ya da ben bulamadım. Burada bir tablo halinde kullanabileceğininiz tüm event isimlerini kategorilendirerek paylaşacağım fakat tek tek açılmalarını yapmayacağım. Çünkü zaten isimlerinden kolaylıkla ne için kullanılacağı anlaşılabiliyor.
 
@@ -770,7 +770,7 @@ Kategori isimlerini özellikle çevirmedim çünkü bazı çevirilerin anlamı b
 
 ### Eventler için Bind
 
-Eğer bileşen sınıfımızdaki nesneleri event bağlantısını yaptığımız metod içinde kullanmaya devam etmek istiyorsak bind işlemi uygulamalıyız. Javascript üzerinde bind fonksiyonun tanımı için Mustafa Murat Coşkun'un medium yazısından bir alıntı yapacağım.
+Eğer bileşen sınıfımızdaki nesneleri event bağlantısını yaptığımız metod içinde kullanmaya devam etmek istiyorsak bind işlemi uygulamalıyız. JavaScript üzerinde bind fonksiyonun tanımı için Mustafa Murat Coşkun'un medium yazısından bir alıntı yapacağım.
 
 > Bind() fonksiyonu, içine verilen objeye göre yeni bir fonksiyon kopyası yaratır. Oluşan bu kopya fonksiyonu daha sonradan argüman listesi ile beraber gönderilen objeye kullanabiliriz.
 
@@ -902,13 +902,13 @@ Bu amaçla üretilen çok kütüphane olabilir fakat şuanda en fazla kullanıla
 
 - **Redux**: Redux ile global state kavramını kullanabiliyoruz. Normalde tek state üzerinden yaptığımız işlemler action, reducer ve store katmanlarından geçiyor. Kullanımı yeni başlayanlar için gerçekten çok karmaşık ve neyin ne amaçla yapıldığı çok fazla anlaşılmıyor. Başlangıç için "bir şeyler sürekli bir yerlere gidiyor/geliyor ama neden?" benzeri soruların kaçınılmaz olduğu bir kütüphane. 2020 Ocak için en fazla kullanılan state yönetim aracı olduğunu söyleyebiliriz.
 
-- **MobX**: MobX'de redux gibi bir state yönetim aracı. Fakat kullanılabilirlik ve okunabilirlik açısından çok daha sade ve basit. MobX içerisinde sadece ekstra olarak store ve actionları tanımlamanız yeterli oluyor, reducer kavramını ortadan kaldırmış oluyoruz bu şekilde. Ayrıca mobX üzerinde decorators dediğimiz babel yazım biçimini kullanarak çok tatlı bir şekilde geliştirme yapabiliyoruz. Benim tavsiyem react uygulamalarında mobX kullanmanızdan yana olacaktır.
+- **MobX**: MobX'de redux gibi bir state yönetim aracı. Fakat kullanılabilirlik ve okunabilirlik açısından çok daha sade ve basit. MobX içerisinde sadece ekstra olarak store ve actionları tanımlamanız yeterli oluyor, reducer kavramını ortadan kaldırmış oluyoruz bu şekilde. Ayrıca mobX üzerinde decorators dediğimiz babel yazım biçimini kullanarak çok tatlı bir şekilde geliştirme yapabiliyoruz. Benim tavsiyem React uygulamalarında mobX kullanmanızdan yana olacaktır.
 
 > Redux ve MobX için yapılan övgü ve eleştiriler kesinlik içeren şeyler değil sadece benim düşüncelerimdir. Projeye ve kullanım yerine göre iki kütüphane de farklı sebeplerden dolayı tercih edilebilir.
 
 ---
 
-Şu an itibariyle react.js tarafındaki temel kavramları öğrendik diyebiliriz. Bundan sonrasında daha gelişmiş işlemleri ile ilgileneceğiz. Başlangıç için hooks, ui kütüphanesi kullanımı ve api kullanımına bakacağız. İleride talepler doğrultusunda server side rendering, mobx ve refler gibi daha karmaşık konularla da devam edebiliriz.
+Şu an itibariyle React.js tarafındaki temel kavramları öğrendik diyebiliriz. Bundan sonrasında daha gelişmiş işlemleri ile ilgileneceğiz. Başlangıç için hooks, ui kütüphanesi kullanımı ve api kullanımına bakacağız. İleride talepler doğrultusunda server side rendering, mobx ve refler gibi daha karmaşık konularla da devam edebiliriz.
 
 ## React Router
 
@@ -970,7 +970,7 @@ export default function Anasayfa() {
 
 ## UI Kütüphanesi Dahil Etmek (bootstrap vs.)
 
-Tasarımları koda dökerken ui kütühaneleri gerçekten çok işimize yarıyor. Aslında sadece ui diğer bir çok kütüphaneyi kullanıyoruz. Sonuçta react bileşen tabanlı bir sistem ve geliştiriciler tarafından hazırlanmış binlerce hazır bileşen var. Yeri geldiğinde bunları kullanmak bize zamandan ve koddan tasarruf sağlatıyor.
+Tasarımları koda dökerken ui kütühaneleri gerçekten çok işimize yarıyor. Aslında sadece ui diğer bir çok kütüphaneyi kullanıyoruz. Sonuçta React bileşen tabanlı bir sistem ve geliştiriciler tarafından hazırlanmış binlerce hazır bileşen var. Yeri geldiğinde bunları kullanmak bize zamandan ve koddan tasarruf sağlatıyor.
 
 **React üzerinde en popüler ui kütühaneler:**
 
@@ -996,15 +996,15 @@ React Bootstrap dökümanı: [https://react-bootstrap.github.io/](https://react-
 npm i bootstrap react-bootstrap --save
 ```
 
-bootstrap kütüphanesini css tarafı için ekledik böylece bildiğimiz grid, button, alert vs. css sınıflarını direkt tanımlayarak kullanabileceğiz. react-bootstrap ise daha çok çalışması için javascript gereken modal, dropdown, carousel gibi bileşenler için. Bu demek değil ki react-bootstrap'ın içinde button, alert ve diğer basit bileşenler yok. Yine react-bootstrap içinden bu bileşenleri de JSX olarak kullanabileceğiz.
+bootstrap kütüphanesini CSS tarafı için ekledik böylece bildiğimiz grid, button, alert vs. CSS sınıflarını direkt tanımlayarak kullanabileceğiz. react-bootstrap ise daha çok çalışması için JavaScript gereken modal, dropdown, carousel gibi bileşenler için. Bu demek değil ki react-bootstrap'ın içinde button, alert ve diğer basit bileşenler yok. Yine react-bootstrap içinden bu bileşenleri de JSX olarak kullanabileceğiz.
 
-Npm paketlerimizi indirdikten sonra projemize bootstrap'in css tarafını dahil edelim. Bunu 2 yöntem ile yapabiliriz.
+Npm paketlerimizi indirdikten sonra projemize bootstrap'in CSS tarafını dahil edelim. Bunu 2 yöntem ile yapabiliriz.
 
-1. public/index.html dosyamıza link tag olarak css dosyamızı ekleriz.
+1. public/index.html dosyamıza link tag olarak CSS dosyamızı ekleriz.
 
-2. index.js veya App.js (tüm bileşenleri kapsayan) bir dosyadan import ile css dosyasını dahil ederiz. (tavsiye)
+2. index.js veya App.js (tüm bileşenleri kapsayan) bir dosyadan import ile CSS dosyasını dahil ederiz. (tavsiye)
 
-Eğer birinci adımı uygulayacak isek css dosyalarını cdn üzerinden de çağırabiliriz. Aksi halde tarayıcı üzerinden projemizdeki bir dosyaya ulaşmak için public klasöründe barınması gerektiğinden bootstrap dosyasını taşımamız gerekecek ve bu çok saçma bir hareket olacak. O yüzden eğer html içinde ekliyorsak cdn kullanalım.
+Eğer birinci adımı uygulayacak isek CSS dosyalarını cdn üzerinden de çağırabiliriz. Aksi halde tarayıcı üzerinden projemizdeki bir dosyaya ulaşmak için public klasöründe barınması gerektiğinden bootstrap dosyasını taşımamız gerekecek ve bu çok saçma bir hareket olacak. O yüzden eğer HTML içinde ekliyorsak cdn kullanalım.
 
 ```html
 <!-- 1. yöntem (public/index.html) -->
@@ -1020,7 +1020,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 Yukarıdaki yöntemlerden birini seçip uygulayın. Benim tavsiyem ikinci yöntem olacak. Eklemeyi yaptıkran sonra artık bootstrap bileşenlerini kullanabilir durumdayız.
 
-Örnek olması için bir button eklemesi yapalım ve bunu hem bileşen hem de css olarak gösterelim.
+Örnek olması için bir button eklemesi yapalım ve bunu hem bileşen hem de CSS olarak gösterelim.
 
 ```jsx
 import React from "react";
@@ -1100,13 +1100,13 @@ function Ornek() {
 export default Ornek;
 ```
 
-Gördüğünüz gibi basit bir kullanımı var. State kullanımı react kütüphanesinden çağırdığımız useState fonksiyonuyla sağlıyoruz.
+Gördüğünüz gibi basit bir kullanımı var. State kullanımı React kütüphanesinden çağırdığımız useState fonksiyonuyla sağlıyoruz.
 
 Tanımlama kısmındaki sayac ve setSayac'dan birincisi değişkenimizin adını, ikincisi ise state'i güncellememizi sağlayan fonksiyonu tanımlıyor. State'imizin başlangıç değerini ise useState içine gönderdiğimiz değer tanımlıyor. Biz "0" gönderdiğimiz için sayacımız 0'dan başlayacak.
 
 ### Hook'lar ile Effect Kullanımı
 
-Az önce yaptığımız örnekten bahsetmek gerekirse sayaç state'i değiştiğinde dom üzerinde bir güncelleme olacak ve sayfadaki sayaç değeri yenilenecektir. Bu değişim yapıldığı anda bazı kontroller veya birbirini tetikleyen başka değişiklikler de yapmak isteyebiliririz. React'ın yaşam döngüsünde gördüğümüz componentDidUpdate metodu bunun için ideal fakat bunu sadece sınıf tabanlı bileşenlerde kullanabiliyoruz.
+Az önce yaptığımız örnekten bahsetmek gerekirse sayaç state'i değiştiğinde DOM üzerinde bir güncelleme olacak ve sayfadaki sayaç değeri yenilenecektir. Bu değişim yapıldığı anda bazı kontroller veya birbirini tetikleyen başka değişiklikler de yapmak isteyebiliririz. React'ın yaşam döngüsünde gördüğümüz componentDidUpdate metodu bunun için ideal fakat bunu sadece sınıf tabanlı bileşenlerde kullanabiliyoruz.
 
 Bu tarz durumlarda bir değişiklik olduğunda işlem yapmak için useEffect hook'unu kullanacağız.
 
@@ -1144,7 +1144,7 @@ Hook tarafında sadece useState ve useEffect yok. Sınıf üzerinde yapabileceğ
 
 ## API Kullanımı (axios)
 
-İnternet üzerinden bir bağlantı yapmak istediğimizde genel olarak REST veya SOAP üzerinden bağlantı sağlarız ve veri alışverişinde bulunuruz. Bu bağlantıyı javascript üzerinde bulunan fetch ile sağlayabiliriz. Fetch yerine daha kullanışlı olan api kullanımı üzerine geliştirilen kütüphaneler de mevcut. Bunların bir listesini ve karşılaştırma tablosunu görsel olarak ekleyeceğim. Ben axios kullanmayı tercih ediyorum ve kaynak üzerinde de kullanım olarak basit bir şekilde bunu göstereceğim. Siz daha önceden aşina olduğunuz (tabloda jQuery de mevcut onu görmezden gelin) diğer kütüphaneleri de kullanabilirisiniz, ama mantık olarak zaten hepsi aynı olduğundan fark etmeyecektir.
+İnternet üzerinden bir bağlantı yapmak istediğimizde genel olarak REST veya SOAP üzerinden bağlantı sağlarız ve veri alışverişinde bulunuruz. Bu bağlantıyı JavaScript üzerinde bulunan fetch ile sağlayabiliriz. Fetch yerine daha kullanışlı olan api kullanımı üzerine geliştirilen kütüphaneler de mevcut. Bunların bir listesini ve karşılaştırma tablosunu görsel olarak ekleyeceğim. Ben axios kullanmayı tercih ediyorum ve kaynak üzerinde de kullanım olarak basit bir şekilde bunu göstereceğim. Siz daha önceden aşina olduğunuz (tabloda jQuery de mevcut onu görmezden gelin) diğer kütüphaneleri de kullanabilirisiniz, ama mantık olarak zaten hepsi aynı olduğundan fark etmeyecektir.
 
 ![axios](images/axios.png)
 
@@ -1230,7 +1230,7 @@ Araya küçük bir reklam girmiş gibi oldu ama bir önceki örnekte aslında ke
 
 Uyarıdan da görüldüğü gibi sadece key parametresi olması yetmiyor ayrıca bu key parametreleri her elemana özgün olup tekrar etmemeli.
 
-Bunu yapmamızın sebebi react sayfalarda değişiklikler olduğunda bu elemanlara bir kimlik atıyor. Böylece hangi elemanın değiştini, silindiğini veya yeni bir eleman eklendiğini anlayabilecek ve daha hızlı işlem yapacak.
+Bunu yapmamızın sebebi React sayfalarda değişiklikler olduğunda bu elemanlara bir kimlik atıyor. Böylece hangi elemanın değiştini, silindiğini veya yeni bir eleman eklendiğini anlayabilecek ve daha hızlı işlem yapacak.
 
 **Önemli:** Key değerleri özgün olması gerektiği gibi veri tipi de string olması gerekiyor.
 
@@ -1238,7 +1238,7 @@ Bir önceki örnekte bizim verimizdeki id'lerimiz integer olarak bulunuyordu. Be
 
 ## Server Side Rendering
 
-React üzerinde yazdığımız kodlar tarayıcı üzerinde sayfa açıldığıda render edilir ve ekrana çıktı üretilir. Bu yüzden geliştirci konsolundan sayfanın kaynağını incele dediğinizde yazdığınız kodları göremezsiniz. Göreceğiniz içerik public/index.html dosyasının içeriği ve ekstra olarak bundle haline getirilmiş javascript dosyaları.
+React üzerinde yazdığımız kodlar tarayıcı üzerinde sayfa açıldığıda render edilir ve ekrana çıktı üretilir. Bu yüzden geliştirci konsolundan sayfanın kaynağını incele dediğinizde yazdığınız kodları göremezsiniz. Göreceğiniz içerik public/index.html dosyasının içeriği ve ekstra olarak bundle haline getirilmiş JavaScript dosyaları.
 
 ![sayfakaynagi](images/sayfakaynagi.png)
 
@@ -1246,13 +1246,13 @@ React üzerinde yazdığımız kodlar tarayıcı üzerinde sayfa açıldığıda
 
 Birincil olarak en büyük problem SEO tarafında. Google sayfaları index'leyip veritabanına kaydeder ve sonrasında arama sonuçlarında görünür olmasını sağlar. Buradaki en büyük etkenler title, description ve sayfa kaynak kodunda bulunan metinlerdir. Bizim içeriğimiz client tarafında render edildiği için Google tüm sayfalarda boş bir index.html görecek ve bunu sağlıklı bir şekilde index'lemeyecektir. Eğer doğrudan erişme kapalı bir site değilsek ve google arama sonuçlarında çıkmazsak bu gerçekten büyük bir problem yaratır.    
 
-Bunu Server Side Rendering dediğimiz yöntem ile çözebiliyoruz. Mevcut react kodlarımız build alınarak statik html sayfalar oluşturuluyor. Böylelikle yazdığımız kodların html haline dönüştürülmüş versiyonunu yayımlıyoruz ve örümcekler (google ve diğer arama motorlarının sayfaları dolaşan yazılımlarına verilen isim) sitemizin içeriğini anlayabiliyor ve indexliyor.
+Bunu Server Side Rendering dediğimiz yöntem ile çözebiliyoruz. Mevcut React kodlarımız build alınarak statik HTML sayfalar oluşturuluyor. Böylelikle yazdığımız kodların HTML haline dönüştürülmüş versiyonunu yayımlıyoruz ve örümcekler (google ve diğer arama motorlarının sayfaları dolaşan yazılımlarına verilen isim) sitemizin içeriğini anlayabiliyor ve indexliyor.
 
 Bahsettiğimiz build kısmı kullandığımız create-react-app oluşturucusunda da mevcut fakat yine bir bundle üretiyor ve kaynak kodu statik olarak oluşturmuyor.
 
 ![nextjs](images/nextjs.png)
 
-Bu sebeple kullanabileceğimiz en iyi çözüm react üzerine server side rendering uygulamalar geliştirmek için hazırlanmış **next.js** kütüphanesi olacaktır. Next.js içinde dahili bir router bulunduğundan ekstra bir router kütüphanesi kullanmamıza da gerek kalmayacak. Ayrıca create-react-app üzerinde eject işlemi yaparak yapabildiğimiz konfigurasyonları da yapmamızı sağlıyor. Bu yüzden basit ve tatlı bir kütüphane.
+Bu sebeple kullanabileceğimiz en iyi çözüm React üzerine server side rendering uygulamalar geliştirmek için hazırlanmış **next.js** kütüphanesi olacaktır. Next.js içinde dahili bir router bulunduğundan ekstra bir router kütüphanesi kullanmamıza da gerek kalmayacak. Ayrıca create-react-app üzerinde eject işlemi yaparak yapabildiğimiz konfigurasyonları da yapmamızı sağlıyor. Bu yüzden basit ve tatlı bir kütüphane.
 
 Şuan için next.js kütüphanesinin kullanımına girmeyeceğim, ileriki zamanlarda bir yazı ya da video olarak kullanımı hakkında paylaşım yapabilirim.
 
@@ -1264,7 +1264,7 @@ package.json dosyasından da görebileceğiniz üzere create-react-app ile oluş
 npm run build
 ```
 
-İşlem tamamlandığında proje dizininde build adında bir klasör oluşacak. static klasörü içerisinde bundle halindeki css ve javascript dosyaları bulunuyor. Projenizde public klasörüne koyduğunuz dosyalar ise direkt olarak build klasörü içine geliyor ve böylelikle sunucu tarafında erişilebilir oluyor. Sunucuyu aktarımı sağladığınız zaman gelen bir istek olduğunda index.html dosyası çalışacak ve bundle dosyaları ile projenizi kullanıcıya render ederek gösterecek.
+İşlem tamamlandığında proje dizininde build adında bir klasör oluşacak. static klasörü içerisinde bundle halindeki CSS ve JavaScript dosyaları bulunuyor. Projenizde public klasörüne koyduğunuz dosyalar ise direkt olarak build klasörü içine geliyor ve böylelikle sunucu tarafında erişilebilir oluyor. Sunucuyu aktarımı sağladığınız zaman gelen bir istek olduğunda index.html dosyası çalışacak ve bundle dosyaları ile projenizi kullanıcıya render ederek gösterecek.
 
 ## Çoklu import/export Kullanımı (webpack)
 
@@ -1317,7 +1317,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 
 ## Kapanış
 
-Şuan için genel olarak react konularını bitirdik. Eğer eksik veya hatalı gördüğünüz bir kısım var ise öncelikle bu repoyu forklayıp sonrasında kendinize göre düzenleme yaptıktan sonra pull request gönderirseniz, kaynağa siz de katkı sağlamış olursunuz.
+Şuan için genel olarak React konularını bitirdik. Eğer eksik veya hatalı gördüğünüz bir kısım var ise öncelikle bu repoyu forklayıp sonrasında kendinize göre düzenleme yaptıktan sonra pull request gönderirseniz, kaynağa siz de katkı sağlamış olursunuz.
 
 Eğer kaynağı beğenerek okuduysanız ve bir kahve ısmarlamak isterseniz aşağıdan ko-fi profilime ulaşabilirsiniz.
 

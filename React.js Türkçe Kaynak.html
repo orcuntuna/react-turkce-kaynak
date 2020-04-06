@@ -1197,7 +1197,7 @@ pre[class*="language-"] {
 <h2 class="atx" id="giriş-ve-tanışma">Giriş ve Tanışma</h2>
 <p>React.js ile ilgili içeriklere başlamadan önce kısaca kendimden bu kaynağın yapılış amacından bahsedeyim. İsmim <strong>Orçun Tuna</strong>, yazılım mühendisi adayıyım. Bu kaynak ile sizlerin günümüzün en popüler ön yüz kütüphanesi olan React'ı öğrenmesini amaçlıyorum. Bu projenin çıkış noktası ise ücretsiz yazılım kaynakları sunan goalkicker oldu. Aynı şekilde Türkçe olarak da detaylı bir kaynak olması açısından bu dökümanı baz alarak bu kaynağı hazırlamaya başladım. Bahsettiğim kaynak üzerindeki bilgileri çeviri ile sizlere sunmayacağım. Kendim düzenlemeler, eklemeler ve çıkarmalar yapacağım. Ama genel olarak rotamızı oradan kopya çekerek ilerleteceğiz. Bu kaynak GitHub üzerinde paylaşılacağı için eksik veya yanlış gördüğünüz yerleri "pull request" göndererek kaynağı iyileştirmeme yardımcı olabilirsiniz.</p>
 <h2 class="atx" id="nelere-i̇htiyacımız-olacak">Nelere İhtiyacımız Olacak?</h2>
-<p>React bir javascript kütüphanesi ve javascript platform bağımsız çalışan bir dil olduğundan işletim sistemi olarak herhangi bir kısıtlamamız yok. Aynı şekilde editör tarafında da birçok editör veya ide arasından seçim yapabilirsiniz. Geliştirme yaparken kullanabileceğiniz birkaç editörü yazalım bunlar arasından tercihinizi siz yapın.</p>
+<p>React bir JavaScript kütüphanesi ve JavaScript platform bağımsız çalışan bir dil olduğundan işletim sistemi olarak herhangi bir kısıtlamamız yok. Aynı şekilde editör tarafında da birçok editör veya IDE arasından seçim yapabilirsiniz. Geliştirme yaparken kullanabileceğiniz birkaç editörü yazalım bunlar arasından tercihinizi siz yapın.</p>
 <ul>
 <li><p>Visual Studio Code</p>
 </li>
@@ -1212,7 +1212,7 @@ pre[class*="language-"] {
 </ul>
 <p>Benim tavsiyemi soracak olursanız eğer öğrenci iseniz JetBrains ürünlerinden ücretsiz faydalanarak WebStorm kullanmanızı öneririm. Değilseniz üzülmeyin, VS Code'da çok kaliteli ve işinizi fazlasıyla görecek bir editör.</p>
 <p>Kurulum tarafında ihtiyacımız olacak yazılım ise NPM ve Node.js olacak. Bunları da kolaylıkla indirip platform bağımsız şekilde kurabilirsiniz.</p>
-<p>Geldik programlama dillerine, aşağıdakileri bilmeden maalesef react öğrenmeye başlayamazsınız. Eğer listedeki dil veya kavramlardan eksiğiniz var ise öncelikle bunları tamamlayıp sonrasında buraya dönmenizi tavsiye ederim. Aksi halde çoğu şeyi anlayamayabilirsiniz.</p>
+<p>Geldik programlama dillerine, aşağıdakileri bilmeden maalesef React öğrenmeye başlayamazsınız. Eğer listedeki dil veya kavramlardan eksiğiniz var ise öncelikle bunları tamamlayıp sonrasında buraya dönmenizi tavsiye ederim. Aksi halde çoğu şeyi anlayamayabilirsiniz.</p>
 <ul>
 <li><p>HTML</p>
 </li>
@@ -1223,21 +1223,21 @@ pre[class*="language-"] {
 </ul>
 <h2 class="atx" id="react-nedir">React Nedir?</h2>
 <p>React, Facebook tarafından geliştirilen ve açık kaynaklı bir front-end kütüphanesidir. Ayrıca daha önce duymuş olabileceğiniz "component based" yani bileşen tabanlıdır.</p>
-<p>Ayrıca React DOM'u kullanarak sanal bir DOM (Document Object Model) oluşturur. Bu sayede sayfa üzerinde bir değişiklik olduğunda tüm sayfayı güncellemek yerine sadece değişiklik yapılan kısmı güncellerek. Böylelikle performans tarafında fark gerçek DOM'a göre daha hızlı çalışır.</p>
+<p>Ayrıca React DOM'u kullanarak sanal bir DOM (Document Object Model) oluşturur. Bu sayede sayfa üzerinde bir değişiklik olduğunda tüm sayfayı güncellemek yerine sadece değişiklik yapılan kısmı güncellenecek. Böylelikle performans tarafında fark gerçek DOM'a göre daha hızlı çalışır.</p>
 <p>React içerisinde JSX adı verilen özel bir biçimlendirme dili kullanılır. React bu JSX kodlarını HTML kodlarına dönüştürür ve tarayıcı tarafından çalıştırılmasını sağlar. JSX denildiğinde gözünüz korkmasın. Neredeyse birebir olarak HTML şeklinde fakat kendine özgü birkaç özelliği daha olan bir biçimlendirme dili.</p>
 <p>İlk paragrafta basettiğim bileşen tabanlılık özelliği ile geliştirme tarafında büyük kolaylıklar sağlar. Bunu şu şekilde basit bir örnek ile açıklayabiliriz. Bir yemek tarifi sitesinin anasayfasını düşünelim. Header, footer, sidebar ve yemek tariflerinin bulunduğu kartlar var. Buradaki her bir alanı bir bileşen olarak böleriz ve bunları tekrar tekrar kullanabiliriz. Header bileşeni, yemek tarifi kartı bileşeni ve bu şekilde bileşenleri oluştururuz.</p>
-<p>Bu kısımda son olarak react'ın neden bir framework değilde kütüphane olduğunu konuşalım. Framework ve kütüphane ayrımı front-end tarafında içinde router bulunup bulunmadığına bakılarak karar veriliyor. React.js içinde varsayılan olarak bir router bulunmadığı için react'a kütüphane diyebiliriz. Router kısmını ise ileride react-router veya next.js gibi ekstra çözümler ile halletmeye çalışacağız.</p>
+<p>Bu kısımda son olarak React'ın neden bir framework değilde kütüphane olduğunu konuşalım. Framework ve kütüphane ayrımı front-end tarafında içinde router bulunup bulunmadığına bakılarak karar veriliyor. React.js içinde varsayılan olarak bir router bulunmadığı için React'a kütüphane diyebiliriz. Router kısmını ise ileride react-router veya next.js gibi ekstra çözümler ile halletmeye çalışacağız.</p>
 <h2 class="atx" id="webpack-ve-babel-kavramları">Webpack ve Babel Kavramları</h2>
 <p>Geliştirmeye başlamadan önce webpack ve babel kavramları hakkında bilgi sahibi olunması gerektiğini düşünüyorum. Şayet bunları sıklıkla kullancağız ve ne olduklarını bilmeden kullanmamız saçma olacaktır.</p>
 <h3 class="atx" id="webpack">Webpack</h3>
 <p><img alt="oruz." src="images/webpack.jpg"></p>
-<p>Bildiğiniz gibi javascript üzerinde farklı kodları içeri aktarıp bir dosya üzerinden kodlamaya devam edebileceğimiz bir sistem mevcut değil (Python'daki import, PHP'deki include gibi). Burada webpack devreye giriyor. Webpack oluşturduğumuz dosyalar arasında içeri aktarma yapmamızı sağlıyor. Sonrasında ise bir bundle dosyasında tüm içerikleri bir araya getiriyor. Böylelikle javascript üzerinde import işlemi yapabilmiş oluyoruz.</p>
+<p>Bildiğiniz gibi JavaScript üzerinde farklı kodları içeri aktarıp bir dosya üzerinden kodlamaya devam edebileceğimiz bir sistem mevcut değil (Python'daki import, PHP'deki include gibi). Burada webpack devreye giriyor. Webpack oluşturduğumuz dosyalar arasında içeri aktarma yapmamızı sağlıyor. Sonrasında ise bir bundle dosyasında tüm içerikleri bir araya getiriyor. Böylelikle JavaScript üzerinde import işlemi yapabilmiş oluyoruz.</p>
 <h3 class="atx" id="babel">Babel</h3>
-<p>Gereksinimler kısmında javascript yanında biraz da ecmascript demiştik. Babel'in görevi ecmascript üzerine ve bu yüzden ecmascript'e biraz hakim olmak gerekiyor.</p>
+<p>Gereksinimler kısmında JavaScript yanında biraz da ecmascript demiştik. Babel'in görevi ecmascript üzerine ve bu yüzden ecmascript'e biraz hakim olmak gerekiyor.</p>
 <p>Şuanda kullandığımız tarayıcılar tam olarak bütün ecmascript sürümlerini maalesef destekleyemiyorlar. Bu yüzden tarayıcının bizim kodlarımızı anlayabilmesi için ecmascript kodlarını daha düşük ecmascript versiyonlarına çevirmemiz gerekiyor.</p>
 <p>Babel tam olarak bu işi yapıyoruz. Böylelikle daha modern ve anlaşılır kod yazabiliyoruz.</p>
 <h2 class="atx" id="kurulum-ve-create-react-app">Kurulum ve create-react-app</h2>
-<p>Yeni bir react projesi oluşturmak için create-react-app paketini kullanacağız. Paket kullanılmadan manuel olarak da react projeleri oluşturulabilir. Fakat hem çok fazla kullanılmadığı hem de başlangıçta kafa karışıklığına sebep olmamak için bu kısımdan bahsetmeyeceğim. Direkt olarak kurulumumuzu create-react-app paketini kullanarak yapacağız.</p>
+<p>Yeni bir React projesi oluşturmak için create-react-app paketini kullanacağız. Paket kullanılmadan manuel olarak da React projeleri oluşturulabilir. Fakat hem çok fazla kullanılmadığı hem de başlangıçta kafa karışıklığına sebep olmamak için bu kısımdan bahsetmeyeceğim. Direkt olarak kurulumumuzu create-react-app paketini kullanarak yapacağız.</p>
 <p>create-react-app paketi Facebook tarafından sunulan react proje oluşturma aracı. Bu aracı kullanarak manuel olarak yapmamız gereken her şeyden kurtulacağız. Paket bize hazır olarak şunları sağlıyor:</p>
 <ol>
 <li><p>ES6 ve JSX çevrimi</p>
@@ -1260,11 +1260,11 @@ pre[class*="language-"] {
 <pre><code class="fenced-code-block language-bash"><span class="token builtin class-name">cd</span> ilk-uygulama
 <span class="token function">npm</span> start
 </code></pre>
-<p>Şuanda yerel sunucunuzda react çalışır durumda olması gerekiyor. Otomatik olarak tarayıcınızda bağlantı açılacaktır eğer açılmaz ise, tarayıcınızda adres çubuğuna <strong><a href="http://localhost:3000">http://localhost:3000</a></strong> yazarak bağlanabilirsiniz. Karşılaşmanız gereken ekran şu şekilde olmalı:</p>
+<p>Şuanda yerel sunucunuzda React çalışır durumda olması gerekiyor. Otomatik olarak tarayıcınızda bağlantı açılacaktır eğer açılmaz ise, tarayıcınızda adres çubuğuna <strong><a href="http://localhost:3000">http://localhost:3000</a></strong> yazarak bağlanabilirsiniz. Karşılaşmanız gereken ekran şu şekilde olmalı:</p>
 <p><img alt="s" src="images/react.png"></p>
 <p>package.json dosyasını incelerseniz "scripts" kısmında kullanabileceğiniz bazı komutlara rastlayacaksınız. Buradaki start, build, test ve eject komutlarını kısaca inceleyelim.</p>
 <ul>
-<li><p><strong>npm run start:</strong> geliştirme ortamında react uygulamasını ayağa kaldırır.</p>
+<li><p><strong>npm run start:</strong> geliştirme ortamında React uygulamasını ayağa kaldırır.</p>
 </li>
 <li><p><strong>npm run build:</strong> geliştirme ortamından canlı ortalama transfer için build işlemini gerçekleştirir.</p>
 </li>
@@ -1273,12 +1273,12 @@ pre[class*="language-"] {
 <li><p><strong>npm run eject:</strong> proje dosyaları içinde görmediğimiz server ve config dosyalarını manuel olarak yönetmek için dışarı çıkarır. Bu işlem yapılmak isteniyorsa proje oluşturulduğunda hiçbir ekleme ve düzenleme yapılmadan çalıştırılmalıdır. Aksi halde çalışmaz ve bu komutu çalıştırırken dikkatli olunması gerekir çünkü kalıcı bir zarar verebilir.</p>
 </li>
 </ul>
-<p>create-react-app haricinde react projesi oluşturmak için birçok farklı alternatif araç mevcut. Biz facebook tarafından geliştirilen resmi araç olduğu için create-react-app kullanacağız. Siz diğer alternatiflere de göz atmak isterseniz diye onları da bir liste halinde ekleyeceğim.</p>
+<p>create-react-app haricinde React projesi oluşturmak için birçok farklı alternatif araç mevcut. Biz facebook tarafından geliştirilen resmi araç olduğu için create-react-app kullanacağız. Siz diğer alternatiflere de göz atmak isterseniz diye onları da bir liste halinde ekleyeceğim.</p>
 <p>Alternatif araçlar: <a href="https://github.com/eanplatter/enclave">enclave</a>, <a href="https://github.com/insin/nwb">nwb</a>, <a href="https://github.com/steelbrain/motion">motion</a>, <a href="https://github.com/mzabriskie/rackt-cli">rackt-cli</a>, <a href="https://github.com/mattdesl/budo">budo</a>, <a href="https://github.com/petehunt/rwb">rwb</a>, <a href="https://github.com/satya164/quik">quik</a>, <a href="https://github.com/saguijs/sagui">sagui</a>, <a href="https://github.com/rocjs/roc">roc</a></p>
 <h2 class="atx" id="jsx-ve-html">JSX ve HTML</h2>
 <p><img alt="jsx" src="images/jsx.png"></p>
-<p>JSX React için özel olarak hazırlanmış bir biçimlendirme dilidir. React içinde HTML değil de JSX kullanmamızın en büyük sebeplerinden biri de JSX ile oluşturduğumuz şablonlara javascript ile kolaylıkla hükmedebiliyor olmamızdır. Yani JSX yazarken aslında biraz eskiye dönüp javascript ve html dillerini bir arada yazıyoruz.</p>
-<p>Örneğin html ile değişkenleri, matematiksel işlemleri, fonksiyonları, koşullu karşılaştırmaları, döngüleri ve bunlar gibi dinamik olan hiçbir şeyi kullanamazken JSX ile bunları kullanabiliyoruz.</p>
+<p>JSX React için özel olarak hazırlanmış bir biçimlendirme dilidir. React içinde HTML değil de JSX kullanmamızın en büyük sebeplerinden biri de JSX ile oluşturduğumuz şablonlara macOS Catalina ile kolaylıkla hükmedebiliyor olmamızdır. Yani JSX yazarken aslında biraz eskiye dönüp JavaScript ve HTML dillerini bir arada yazıyoruz.</p>
+<p>Örneğin HTML ile değişkenleri, matematiksel işlemleri, fonksiyonları, koşullu karşılaştırmaları, döngüleri ve bunlar gibi dinamik olan hiçbir şeyi kullanamazken JSX ile bunları kullanabiliyoruz.</p>
 <p>Genel olarak JSX yazımı HTML üzerine kurulmuştur. Bazı anahtar kelimeler değiştirilmiş ve bazı zorunluluklar getirilmiştir.</p>
 <p><strong>HTML ve JSX arasındaki bazı anahtar kelime farkları:</strong></p>
 <table>
@@ -1297,7 +1297,7 @@ pre[class*="language-"] {
 <tr>
 <td>class</td>
 <td>className</td>
-<td>bir elemanın tasarımını css ile ilişkilendirme özelliği</td>
+<td>bir elemanın tasarımını CSS ile ilişkilendirme özelliği</td>
 </tr>
 <tr>
 <td>for</td>
@@ -1307,7 +1307,7 @@ pre[class*="language-"] {
 <tr>
 <td>style=""</td>
 <td>style={}</td>
-<td>style özelliği ile inline css verilirken html'de string olarak jsx'de ise javascript objesi olarak değer girilir</td>
+<td>style özelliği ile inline CSS verilirken HTML'de string olarak jsx'de ise JavaScript objesi olarak değer girilir</td>
 </tr>
 <tr>
 <td>value</td>
@@ -1323,14 +1323,14 @@ pre[class*="language-"] {
 <span class="token comment">// {"container"} yerine "container" de kullanılabilir</span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">className</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token string">"container"</span><span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
 </code></pre>
-<p><strong>Bir elemana inline css atama karşılaştırması:</strong></p>
-<pre><code class="fenced-code-block language-html"><span class="token comment">&lt;!-- HTML ile div'e inline css ekleme --&gt;</span>
+<p><strong>Bir elemana inline CSS atama karşılaştırması:</strong></p>
+<pre><code class="fenced-code-block language-html"><span class="token comment">&lt;!-- HTML ile div'e inline CSS ekleme --&gt;</span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token style-attr language-css"><span class="token attr-name"> <span class="token attr-name">style</span></span><span class="token punctuation">="</span><span class="token attr-value"><span class="token property">margin-top</span><span class="token punctuation">:</span>10px<span class="token punctuation">;</span><span class="token property">background-color</span><span class="token punctuation">:</span>#fff<span class="token punctuation">;</span><span class="token property">width</span><span class="token punctuation">:</span>75%</span><span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
 </code></pre>
-<pre><code class="fenced-code-block language-jsx"><span class="token comment">// JSX ile div'e inline css ekleme</span>
+<pre><code class="fenced-code-block language-jsx"><span class="token comment">// JSX ile div'e inline CSS ekleme</span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">style</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> marginTop<span class="token punctuation">:</span> <span class="token number">10</span><span class="token punctuation">,</span> backgroundColor<span class="token punctuation">:</span> <span class="token string">"#fff"</span><span class="token punctuation">,</span> width<span class="token punctuation">:</span> <span class="token string">"75%"</span> <span class="token punctuation">}</span><span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span>
 </code></pre>
-<p>HTML ve JSX arasında style tanımlamalarında farklar görmüş olabilirsiniz. Biraz da bu farklarda değinelim. JSX tarafında tanımlamalar javascript objesi olarak yapıldığı için direkt olarak style üzerinde de javascript üzerinde kullanılan css isimlendirmelerini kullanıyoruz. Yani normalde "margin-top: 10px" derken aradaki çizgiyi kaldırıp her ilk kelime hariç sonraki harflerin ilk harfini büyük harfe çevirerek "marginTop: 10" şeklinde yazıyoruz. Ayrıca fark ettiğiniz gibi HTML'de "10px" yazarken JSX'de integer olarak 10 yazdık. Aynı yazım biçimini fontSize, height, weight gibi sayısal değerler girilen özelliklerde de kullanıyoruz. Burada integer olarak yazılan değerler piksel olarak algılanıyor. Eğer yüzde şeklinde bir ifade girmek isterseniz bunu tırnakların içine olarak belirtiyorsunuz. Eğer bu yazım tarzı size sıkıcı geldi ise özel bir css dosyası oluşturup içine normal css kodlarını yazmaya devam edebilirsiniz, bileşene "className" özelliğini kullanarak bu sınıf ismini verdiğinizde css kodlarınız geçerli olacaktır.</p>
+<p>HTML ve JSX arasında style tanımlamalarında farklar görmüş olabilirsiniz. Biraz da bu farklarda değinelim. JSX tarafında tanımlamalar JavaScript objesi olarak yapıldığı için direkt olarak style üzerinde de JavaScript üzerinde kullanılan CSS isimlendirmelerini kullanıyoruz. Yani normalde "margin-top: 10px" derken aradaki çizgiyi kaldırıp her ilk kelime hariç sonraki harflerin ilk harfini büyük harfe çevirerek "marginTop: 10" şeklinde yazıyoruz. Ayrıca fark ettiğiniz gibi HTML'de "10px" yazarken JSX'de integer olarak 10 yazdık. Aynı yazım biçimini fontSize, height, weight gibi sayısal değerler girilen özelliklerde de kullanıyoruz. Burada integer olarak yazılan değerler piksel olarak algılanıyor. Eğer yüzde şeklinde bir ifade girmek isterseniz bunu tırnakların içine olarak belirtiyorsunuz. Eğer bu yazım tarzı size sıkıcı geldi ise özel bir CSS dosyası oluşturup içine normal CSS kodlarını yazmaya devam edebilirsiniz, bileşene "className" özelliğini kullanarak bu sınıf ismini verdiğinizde CSS kodlarınız geçerli olacaktır.</p>
 <table>
 <thead>
 <tr>
@@ -1362,7 +1362,7 @@ pre[class*="language-"] {
 <p>CSS ve HTML DOM Style biçimlendirmesi arasındaki tüm farkları (aslında HTML DOM stillerini) görmek için <a href="https://www.w3schools.com/jsref/dom_obj_style.asp">buraya tıklayarak</a> w3school'un hazırladığı listeye göz atabilirsiniz.</p>
 <p>Yukarıdaki tabloda da görüldüğü gibi neredeyse bire bir olarak aynılar. Üst kısımda bazı zorunluluklar olduğundan bahsetmiştik. Bunlara da kısaca bir göz atalım. </p>
 <p>HTML üzerinde bir eleman açılır ve kapatılmaz ise genellikle tarayıcılar bunu gözardı eder ve bir sorun yokmuş gibi devam eder. JSX tarafında eğer bir bileşen açıldıysa kapatılmak zorundadır, kapatmazsanız hata alacaksınız.</p>
-<p>Bir eleman html ve jsx üzerinde 2 farklı şekilde kapatılabilir.</p>
+<p>Bir eleman HTML ve jsx üzerinde 2 farklı şekilde kapatılabilir.</p>
 <ol>
 <li><p>İçinde başka bir eleman olacak şekilde kapatma</p>
 </li>
@@ -1382,8 +1382,8 @@ pre[class*="language-"] {
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>kutucuk<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span>
 </code></pre>
 <p>Yukarıda 2. örnekte sondan hemen önce koyduğumuz "/" işareti o elemanı kapattığımızın göstergesidir. Yukarıdaki 2 örnek de doğrudur ve bu şekilde tüm elemanlar açıldığı gibi kapatılmalıdır. Eğer HTML tarafında input, img ve br gibi etiketleri kapatmasaydınız da kod çalışmaya devam edecekti.</p>
-<p>Başka bir zorunluluk ise oluşturacağımız bileşenlerde ilk harfi büyük seçmemiz gerekiyor. Aksi taktirde bu özel bir bileşen değil html elemanı olarak algınacaktır ve bileşene erişimimizi engelleyecektir.</p>
-<p>Son olarak JSX'in birkaç özelliğine daha değinip JSX bölümünü bitirelim. Az biraz yukarıda JSX içinde HTML tarafında yapamadığımız bazı şeyleri de yapabildiğimizi söyledik. Bunlardan bazılarında JSX kodlarını bir değişkene atayabiliriz ya da bir JSX kodu içinde mevcut javascript değişkenlerini kullanabiliriz. O da mı yetmedi? Fonksiyon çağırıp bir de gelen cevaba 5 bile ekleriz.</p>
+<p>Başka bir zorunluluk ise oluşturacağımız bileşenlerde ilk harfi büyük seçmemiz gerekiyor. Aksi taktirde bu özel bir bileşen değil HTML elemanı olarak algınacaktır ve bileşene erişimimizi engelleyecektir.</p>
+<p>Son olarak JSX'in birkaç özelliğine daha değinip JSX bölümünü bitirelim. Az biraz yukarıda JSX içinde HTML tarafında yapamadığımız bazı şeyleri de yapabildiğimizi söyledik. Bunlardan bazılarında JSX kodlarını bir değişkene atayabiliriz ya da bir JSX kodu içinde mevcut JavaScript değişkenlerini kullanabiliriz. O da mı yetmedi? Fonksiyon çağırıp bir de gelen cevaba 5 bile ekleriz.</p>
 <pre><code class="fenced-code-block language-jsx"><span class="token comment">// JSX'i değişkene atama ve içerisinde değişken kullanma</span>
 
 <span class="token keyword">const</span> isim <span class="token operator">=</span> <span class="token string">"orçun"</span><span class="token punctuation">;</span>
@@ -1405,7 +1405,7 @@ pre[class*="language-"] {
 <li><p>Render edilen başka bir bileşen içinde çağrılması</p>
 </li>
 </ol>
-<p>Varsayılan olarak oluşturduğumuz uygulamada index.js içinde 1. maddedeki gibi App bileşeni render ediliyor ve bu sayesede tarayıcıda App bileşenini görüyoruz. Eğer başka bir bileşen daha oluşturup bunu da App içinde çağırıp kullansaydık bu da 2. maddedeki gibi bir bileşen kullanımı olacaktı. Aşağıda birinci maddeye projemizdeki örnek kodu ekledim, ikinci maddenin örneğini de kendi bileşenlerimizi oluşturmaya başladığımızda göreceğiz.</p>
+<p>Varsayılan olarak oluşturduğumuz uygulamada index.js içinde 1. maddedeki gibi App bileşeni render ediliyor ve bu sayede tarayıcıda App bileşenini görüyoruz. Eğer başka bir bileşen daha oluşturup bunu da App içinde çağırıp kullansaydık bu da 2. maddedeki gibi bir bileşen kullanımı olacaktı. Aşağıda birinci maddeye projemizdeki örnek kodu ekledim, ikinci maddenin örneğini de kendi bileşenlerimizi oluşturmaya başladığımızda göreceğiz.</p>
 <pre><code class="fenced-code-block language-jsx"><span class="token comment">// bahsedilen index.js içeriği</span>
 
 <span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
@@ -1422,7 +1422,7 @@ ReactDOM<span class="token punctuation">.</span><span class="token function">ren
 </li>
 </ol>
 <p>Bu iki tip bileşen aslında aynı şeyi temsil ediyor fakat kullanım tarafında büyük farklar oluşuyor. Yaşam döngüsü içinde bulunan bazı metodları sınıf tabanlı bileşenlerde kullanabiliyorken fonksiyon tabanlı metodlarda kullanamıyoruz. Aynı şekilde daha işlemediğimiz ama en önemli kavramlardan biri olan state'ler önceden fonksiyon tabanlı bileşenlerde kullanılamıyordu, React 16.8 ile birlikte gelen Hooks güncellemesi ile state'ler fonksiyonel bileşenlerde de kullanılmaya başlandı.</p>
-<p>Bahsettiğimiz iki tip bileşen arasında özellik olarak bakıldığında çok fark kalmıyor. Daha önemli kısım olan optimizasyon tarafına baktığımızda ise react'ın resmi dökümanında fonksiyonel bileşen kullanımının daha performanslı olduğundan bahsediliyor ve kullanımı tavsiye ediliyor. Bunun sebebi de aslında javascript tarafında normalde sınıf diye bir kavram yok. Ecmascript 2015 ile sınıfları kullanmamıza olanak sağlanıyor fakat hala arka tarafta bir sınıf yok. Bizim yazdığımız sınıf kodları işlenirken prototype'lara dönüştürülüyor. Bu yüzden direkt olarak OOP mimarisini kullanamıyoruz ve bir yavaşlık söz konusu oluyor. </p>
+<p>Bahsettiğimiz iki tip bileşen arasında özellik olarak bakıldığında çok fark kalmıyor. Daha önemli kısım olan optimizasyon tarafına baktığımızda ise React'ın resmi dökümanında fonksiyonel bileşen kullanımının daha performanslı olduğundan bahsediliyor ve kullanımı tavsiye ediliyor. Bunun sebebi de aslında JavaScript tarafında normalde sınıf diye bir kavram yok. Ecmascript 2015 ile sınıfları kullanmamıza olanak sağlanıyor fakat hala arka tarafta bir sınıf yok. Bizim yazdığımız sınıf kodları işlenirken prototype'lara dönüştürülüyor. Bu yüzden direkt olarak OOP mimarisini kullanamıyoruz ve bir yavaşlık söz konusu oluyor. </p>
 <p>Syntax olarak fonksiyon ve sınıf tabanlı bileşenlere göz atalım. (Bu örneklerde props'lar devreye sokulmamıştır)</p>
 <pre><code class="fenced-code-block language-jsx"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">"react"</span><span class="token punctuation">;</span>
 
@@ -1514,13 +1514,13 @@ ReactDOM<span class="token punctuation">.</span><span class="token function">ren
 
 <span class="token keyword">export</span> <span class="token keyword">default</span> App<span class="token punctuation">;</span>
 </code></pre>
-<p>Burada nasıl React'ı import ediyorsak aynı şekilde kendi bileşenimizi de import ettik. Sadece farkettiyseniz bir dosyayı içeri aktardığımız halde "./HavaDurumu" yazdık ve ".js" uzantısını eklemedik. Javascript dosyalarını içeri atarırken bu şekilde sadece dosya ismini yazmamız yeterli oluyor.</p>
-<p>Eğer projeniz çalışır durumda değilde "npm start" ile ayağa kaldırın ve localhost:3000 üzerinde bu ekranı görüp görmediğinizi kontrol edin. Eğer bu şekilde çıktıyı aldıysanız her şey tamam demektir.</p>
+<p>Burada nasıl React'ı import ediyorsak aynı şekilde kendi bileşenimizi de import ettik. Sadece farkettiyseniz bir dosyayı içeri aktardığımız halde "./HavaDurumu" yazdık ve ".js" uzantısını eklemedik. JavaScript dosyalarını içeri atarırken bu şekilde sadece dosya ismini yazmamız yeterli oluyor.</p>
+<p>Eğer projeniz çalışır durumda değilse "npm start" ile ayağa kaldırın ve localhost:3000 üzerinde bu ekranı görüp görmediğinizi kontrol edin. Eğer bu şekilde çıktıyı aldıysanız her şey tamam demektir.</p>
 <p><img alt="bilesen" src="images/bilesen.png"></p>
 <h2 class="atx" id="props-bileşen-parametreleri">Props (Bileşen Parametreleri)</h2>
 <p>Şimdiye kadar oluşturduğumuz bileşenlerde herhangi bir özelleştirme yapmadık ve hiçbir parametre kullanmadık. Prop'lar ile bileşenlerimize veri gönderimi sağlayabiliyoruz. Bu şekilde gönderdiğimiz parametreleri bileşen içinde kullanarak özelleştirmeler yapabiliyoruz.</p>
 <p>Prop'ları bileşenlerde sınıf tabanlı veya fonksiyonel tabanlı olması farketmeksizin tümünde kullanabiliyoruz. Aralarında nesne yönelimli kullanımdan kaynaklanın tek kelimelik bir fark oluyor fakat bunu da nesneye biraz hakimseniz karıştıracağınızı düşünmüyorum.</p>
-<p>Prop'ların örneklerine geçmeden önce html üzerinden basit bir örnek vererek mantığını  pekiştirebileceğinizi düşünüyorum. Html üzerinde bir resim çağırdığımızı düşünelim. Bunu koda nasıl ekleriz?</p>
+<p>Prop'ların örneklerine geçmeden önce HTML üzerinden basit bir örnek vererek mantığını  pekiştirebileceğinizi düşünüyorum. Html üzerinde bir resim çağırdığımızı düşünelim. Bunu koda nasıl ekleriz?</p>
 <pre><code class="fenced-code-block language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>logo.png<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>site başlığı<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span>
 </code></pre>
 <p>Burada gördüğünüz gibi img elemanına src ve alt olmak üzere iki paremetre gönderdik. Tarayıcı kodu görüntüye çevirirken bu parametreleri kullanacak ve bize bir sonuç üretecek. Aynı şekilde bileşenlere de direkt olarak aynı şekilde (biraz daha gelişmiş) parametreler göndereceğiz. HTML içinde bu parametrelerin nasıl kullanılacağına karar veremeyiz ama bileşenimiz üzerinden gelen bu değişkenleri kontrol edip ona göre hareket etmesini sağlayacağız.</p>
@@ -1569,7 +1569,7 @@ ReactDOM<span class="token punctuation">.</span><span class="token function">ren
 <p>App tarafında da HavaDurumu olarak çağırdığımız bileşenlerin sayısını 3'e çıkardım ve her birine durum parametresi ile farklı bir string değer gönderdim. Görmemiz gereken ekran şuna benzer bir şey olması gerekiyor.</p>
 <p><img alt="props" src="images/props.png"></p>
 <p>HTML içinde bu parametrelere attributes diyoruz ve bunlara sadece string olarak parametreler gönderiliyor. JSX'de ise burada sadece string gönderme gibi bir durum yok. </p>
-<p>Prop içeriği olarak string, integer, boolean, object, array ve hatta fonksiyon bile gönderebiliriz. String haricinde bir prop gönderimini incelemek için 2 parametre daha ekleyelim. Birincisi style (object), ikincisi ise aktiflik (boolean) olsun. Tanımladığımız style'ı bileşenimiz içerisindeki html üzerinden kullanığımız p'nin style özelliğine bağlayacağız ve eğer aktiflik parametresinde false değeri geldiyse geri dönüş olarak yazımızı değil de null bir değer döndüreceğiz.</p>
+<p>Prop içeriği olarak string, integer, boolean, object, array ve hatta fonksiyon bile gönderebiliriz. String haricinde bir prop gönderimini incelemek için 2 parametre daha ekleyelim. Birincisi style (object), ikincisi ise aktiflik (boolean) olsun. Tanımladığımız style'ı bileşenimiz içerisindeki HTML üzerinden kullanığımız p'nin style özelliğine bağlayacağız ve eğer aktiflik parametresinde false değeri geldiyse geri dönüş olarak yazımızı değil de null bir değer döndüreceğiz.</p>
 <p>Bu sefer öncelikle App tarafını yapalım sonrasında bileşenimizi düzenleyelim.</p>
 <pre><code class="fenced-code-block language-jsx"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">"react"</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token string">"./App.css"</span><span class="token punctuation">;</span>
@@ -1723,28 +1723,28 @@ Telefon<span class="token punctuation">.</span>defaultProps <span class="token o
 <p>Bir önceki bölümde prop'lardan bahsetmiştik. Bir üst bileşenden gönderilen prop değerlerini bileşen içinde kullanıyorduk. Bileşene gönderilen prop değeri sabittir, sonradan değişmez.</p>
 <p>State ise isminden de anlaşılabileceği gibi durumu temsil ediyor ve her an değişebilir bir şekilde bekliyor. State değeri değiştiğinde bileşen tekrar render edilir ve değişen değeri bileşen içinde kullanırız.</p>
 <p>State'ler, prop'larda olduğu gibi bir üst bileşenden aktarılmaz. Ama istersek prop'dan gelen değeri state değişkenine eşitleriz ve state'in ilk değerini belirlemiş olabiliriz.</p>
-<p>Ayrıca şu an için (react 16.12) state'ler normal yazımı ile sınıf tabanlı bileşenlerde kullanılabilir durumdalar. Fonksiyon tabanlı bileşenlerde de state'leri kullanmamızı sağlayan hooks güncellemesini ileriki bölümlerde göreceğiz. Bu sebeple bu bölümde sınıf tabanlı bileşenlerle çalışacağız.</p>
+<p>Ayrıca şu an için (React 16.12) state'ler normal yazımı ile sınıf tabanlı bileşenlerde kullanılabilir durumdalar. Fonksiyon tabanlı bileşenlerde de state'leri kullanmamızı sağlayan hooks güncellemesini ileriki bölümlerde göreceğiz. Bu sebeple bu bölümde sınıf tabanlı bileşenlerle çalışacağız.</p>
 <h3 class="atx" id="jquery-tarafında-state-mantığı">jQuery tarafında state mantığı</h3>
 <blockquote>
-<p>State mantığını daha iyi kavrayabilmeniz için jQuery ile basit bir state mimarisi oluşturacağım. Bunun react ile hiçbir ilgisi yok. Eğer jQuery bilmiyorsanız burayı atlayabilirsiniz.</p>
+<p>State mantığını daha iyi kavrayabilmeniz için jQuery ile basit bir state mimarisi oluşturacağım. Bunun React ile hiçbir ilgisi yok. Eğer jQuery bilmiyorsanız burayı atlayabilirsiniz.</p>
 </blockquote>
-<pre><code class="fenced-code-block language-javascript"><span class="token operator">&lt;</span>span id<span class="token operator">=</span><span class="token string">"sayac"</span><span class="token operator">&gt;</span><span class="token number">0</span><span class="token operator">&lt;</span><span class="token operator">/</span>span<span class="token operator">&gt;</span>
+<pre><code class="fenced-code-block language-JavaScript">&lt;span id="sayac"&gt;0&lt;/span&gt;
 
-<span class="token keyword">var</span> sayac <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+var sayac = 0;
 
-<span class="token keyword">function</span> <span class="token function">sayacGuncelle</span><span class="token punctuation">(</span><span class="token parameter">sure</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-    sayac <span class="token operator">=</span> sure<span class="token punctuation">;</span>
-    <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"#sayac"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">text</span><span class="token punctuation">(</span>sayac<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
+function sayacGuncelle(sure){
+    sayac = sure;
+    $("#sayac").text(sayac);
+}
 
-<span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-    <span class="token function">setInterval</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-    <span class="token function">    sayacGuncelle</span><span class="token punctuation">(</span>sayac <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+$(function(){
+    setInterval(function(){
+    &nbsp;&nbsp;&nbsp;&nbsp;sayacGuncelle(sayac + 1);
+&nbsp;&nbsp;&nbsp;&nbsp;}, 1000);
+});
 </code></pre>
 <p>Kabataslak böyle bir jquery kodu yazdığımızda ekranımızda sıfırdan başlayarak her saniye bir artan bir sayaç görüntüleceğiz.</p>
-<p>Hadi bunu react ile yapalım. Sayaca adında bir bileşen oluşturup App üzerinden çağıralım ve içine şu şekilde dolduralım.</p>
+<p>Hadi bunu React ile yapalım. Sayaca adında bir bileşen oluşturup App üzerinden çağıralım ve içine şu şekilde dolduralım.</p>
 <pre><code class="fenced-code-block language-jsx"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">"react"</span><span class="token punctuation">;</span>
 
 <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">class</span> <span class="token class-name">Sayac</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span> <span class="token punctuation">{</span>
@@ -1771,15 +1771,15 @@ Telefon<span class="token punctuation">.</span>defaultProps <span class="token o
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<p>State değerleri sınıfın içindeki state değişkeninde bir obje olarak tutuluyor. Bu değerleri  this.state.state_ismi şeklinde erişebiliyoruz. Buradaki en önemli şey ise bir state değerini değiştirmek istediğimizde bu değere direkt olarak müdahale etmemek. Değişiklik yapacağımızda <strong>setState</strong> metodunu kullanmalıyız. Böylece react state üzerinde bir değişiklik olduğunu anlayacak ve bileşeni tekrar render edecek.</p>
+<p>State değerleri sınıfın içindeki state değişkeninde bir obje olarak tutuluyor. Bu değerleri  this.state.state_ismi şeklinde erişebiliyoruz. Buradaki en önemli şey ise bir state değerini değiştirmek istediğimizde bu değere direkt olarak müdahale etmemek. Değişiklik yapacağımızda <strong>setState</strong> metodunu kullanmalıyız. Böylece React state üzerinde bir değişiklik olduğunu anlayacak ve bileşeni tekrar render edecek.</p>
 <p>Varsayılan state değerleri oluşturmak için de sınıf içinde direkt olarak state objesinin içine ekleme yapabiliriz.</p>
 <blockquote>
-<p>Kodda gördüğünüz <strong>componentDidMount</strong> react içinde tanımlı özel bir metoddur. Bileşen render edildikten hemen sonra çalıştırılır. Bir sonraki bölümde yaşam döngüsü dediğimiz bu özel metodları listeleyeceğiz.</p>
+<p>Kodda gördüğünüz <strong>componentDidMount</strong> React içinde tanımlı özel bir metoddur. Bileşen render edildikten hemen sonra çalıştırılır. Bir sonraki bölümde yaşam döngüsü dediğimiz bu özel metodları listeleyeceğiz.</p>
 </blockquote>
 <p><img alt="state" src="images/state.png"></p>
 <p>Ekranım ara verdiğimde açık kalmış ve aşağıdaki gibi 2210 saniye ilerlemiş :)</p>
 <h2 class="atx" id="yaşam-döngüsü">Yaşam Döngüsü</h2>
-<p>Yazdığımız react kodları ekranda görülebilir bir hale gelmeden önce belirli aşamalaradan geçiyor ve yaşam döngüsünde özel metodları kullanarak bu aşamalara dahil olup işleyişe müdaheleler yapabiliyoruz. Önceki bölümde kullandığımız componentDidMount bu özel metodlardan biriydi. Aynı şekilde kaynağın başından beri her yerde gördüğünüz render'da bu özel metodların arasında. React'ın işleyişindeki bu yaşam döngüsüne lifecycle ismini veriyoruz. Birkaç önemli noktaya değindikten sonra bir görsel ile tüm bu işleyişi öğreneceğiz.</p>
+<p>Yazdığımız React kodları ekranda görülebilir bir hale gelmeden önce belirli aşamalaradan geçiyor ve yaşam döngüsünde özel metodları kullanarak bu aşamalara dahil olup işleyişe müdahaleler yapabiliyoruz. Önceki bölümde kullandığımız componentDidMount bu özel metodlardan biriydi. Aynı şekilde kaynağın başından beri her yerde gördüğünüz render'da bu özel metodların arasında. React'ın işleyişindeki bu yaşam döngüsüne lifecycle ismini veriyoruz. Birkaç önemli noktaya değindikten sonra bir görsel ile tüm bu işleyişi öğreneceğiz.</p>
 <p><strong>Yaşam döngüsü aşamaları:</strong></p>
 <ul>
 <li><p>Mounting (ekleme)</p>
@@ -1800,7 +1800,7 @@ Telefon<span class="token punctuation">.</span>defaultProps <span class="token o
 </thead>
 <tbody><tr>
 <td>constructor</td>
-<td>Bileşen çağrıldığında ilk çalışan metod budur. Çalıştığı anda bileşen üzerinde herhangi bir şey render edilmemiş olur ve yüzden dom ile ilgili işlemler yapılamaz. Prop'lar ve state'ler ile ilgili kontrolleri yapabiliriz.</td>
+<td>Bileşen çağrıldığında ilk çalışan metod budur. Çalıştığı anda bileşen üzerinde herhangi bir şey render edilmemiş olur ve yüzden DOM ile ilgili işlemler yapılamaz. Prop'lar ve state'ler ile ilgili kontrolleri yapabiliriz.</td>
 </tr>
 <tr>
 <td>render</td>
@@ -1816,13 +1816,13 @@ Telefon<span class="token punctuation">.</span>defaultProps <span class="token o
 </tr>
 <tr>
 <td>componentWillUnmount</td>
-<td>Bileşen eğer dom'dan çıkarılacak ise çıkarılmadan önce bu metod çalışır. Örneğin az önce yaptığımız sayaç bileşenden sonlanırken durdurulmalı ve bu işlemi burada yapmalıyız.</td>
+<td>Bileşen eğer DOM'dan çıkarılacak ise çıkarılmadan önce bu metod çalışır. Örneğin az önce yaptığımız sayaç bileşenden sonlanırken durdurulmalı ve bu işlemi burada yapmalıyız.</td>
 </tr>
 </tbody></table>
 <h2 class="atx" id="olay-yönetimi-events">Olay Yönetimi (Events)</h2>
-<p>Javascript tarafındaki eventler ile neredeyse aynıdır fakat bazı isimlendirme farkları bulunuyor. Bu farkları css tarafındaki ve jsx tarafındaki style isimleri gibi değerlendirebiliriz. </p>
-<p>Örneğin dom'da "onclick" (lowercase) iken react tarafında bunu "onClick" (camelCase) olarak kullanıyoruz. Ekstra olarak dom tarafında bu eventelere string içerisinde  fonksiyon isimlerini giriyorken react'da direkt olarak fonksiyonu belirtiyoruz.</p>
-<p>Bir diğer fark ise dom tarafında bir elemanın varsayılan işlemini engellemek için "return false" ifadesi de kullanılabiliyorken react'da bu tanımlı değildir. Eğer bir eventin varsayılan özelliğini pasifleştirmek isterseniz "e.preventDefault()" fonksiyonunu kullanmalısınız.</p>
+<p>JavaScript tarafındaki eventler ile neredeyse aynıdır fakat bazı isimlendirme farkları bulunuyor. Bu farkları CSS tarafındaki ve jsx tarafındaki style isimleri gibi değerlendirebiliriz. </p>
+<p>Örneğin DOM'da "onclick" (lowercase) iken React tarafında bunu "onClick" (camelCase) olarak kullanıyoruz. Ekstra olarak DOM tarafında bu eventlere string içerisinde  fonksiyon isimlerini giriyorken react'da direkt olarak fonksiyonu belirtiyoruz.</p>
+<p>Bir diğer fark ise DOM tarafında bir elemanın varsayılan işlemini engellemek için "return false" ifadesi de kullanılabiliyorken React'da bu tanımlı değildir. Eğer bir eventin varsayılan özelliğini pasifleştirmek isterseniz "e.preventDefault()" fonksiyonunu kullanmalısınız.</p>
 <p>React'ın kendi dökümanında tüm eventlerin bir listesi bulunmuyor ya da ben bulamadım. Burada bir tablo halinde kullanabileceğininiz tüm event isimlerini kategorilendirerek paylaşacağım fakat tek tek açılmalarını yapmayacağım. Çünkü zaten isimlerinden kolaylıkla ne için kullanılacağı anlaşılabiliyor.</p>
 <table>
 <thead>
@@ -1890,7 +1890,7 @@ Telefon<span class="token punctuation">.</span>defaultProps <span class="token o
 </tbody></table>
 <p>Kategori isimlerini özellikle çevirmedim çünkü bazı çevirilerin anlamı bozduğunu düşünüyorum.</p>
 <h3 class="atx" id="eventler-için-bind">Eventler için Bind</h3>
-<p>Eğer bileşen sınıfımızdaki nesneleri event bağlantısını yaptığımız metod içinde kullanmaya devam etmek istiyorsak&nbsp;bind işlemi uygulamalıyız. Javascript üzerinde bind fonksiyonun tanımı için Mustafa Murat Coşkun'un medium yazısından bir alıntı yapacağım.</p>
+<p>Eğer bileşen sınıfımızdaki nesneleri event bağlantısını yaptığımız metod içinde kullanmaya devam etmek istiyorsak&nbsp;bind işlemi uygulamalıyız. JavaScript üzerinde bind fonksiyonun tanımı için Mustafa Murat Coşkun'un medium yazısından bir alıntı yapacağım.</p>
 <blockquote>
 <p>Bind() fonksiyonu, içine verilen objeye göre yeni bir fonksiyon kopyası yaratır. Oluşan bu kopya fonksiyonu daha sonradan argüman listesi ile beraber gönderilen objeye kullanabiliriz.</p>
 </blockquote>
@@ -1997,14 +1997,14 @@ Telefon<span class="token punctuation">.</span>defaultProps <span class="token o
 <ul>
 <li><p><strong>Redux</strong>: Redux ile global state kavramını kullanabiliyoruz. Normalde tek state üzerinden yaptığımız işlemler action, reducer ve store katmanlarından geçiyor. Kullanımı yeni başlayanlar için gerçekten çok karmaşık ve neyin ne amaçla yapıldığı çok fazla anlaşılmıyor. Başlangıç için "bir şeyler sürekli bir yerlere gidiyor/geliyor ama neden?" benzeri soruların kaçınılmaz olduğu bir kütüphane. 2020 Ocak için en fazla kullanılan state yönetim aracı olduğunu söyleyebiliriz.</p>
 </li>
-<li><p><strong>MobX</strong>: MobX'de redux gibi bir state yönetim aracı. Fakat kullanılabilirlik ve okunabilirlik açısından çok daha sade ve basit. MobX içerisinde sadece ekstra olarak store ve actionları tanımlamanız yeterli oluyor, reducer kavramını ortadan kaldırmış oluyoruz bu şekilde. Ayrıca mobX üzerinde decorators dediğimiz babel yazım biçimini kullanarak çok tatlı bir şekilde geliştirme yapabiliyoruz. Benim tavsiyem react uygulamalarında mobX kullanmanızdan yana olacaktır.</p>
+<li><p><strong>MobX</strong>: MobX'de redux gibi bir state yönetim aracı. Fakat kullanılabilirlik ve okunabilirlik açısından çok daha sade ve basit. MobX içerisinde sadece ekstra olarak store ve actionları tanımlamanız yeterli oluyor, reducer kavramını ortadan kaldırmış oluyoruz bu şekilde. Ayrıca mobX üzerinde decorators dediğimiz babel yazım biçimini kullanarak çok tatlı bir şekilde geliştirme yapabiliyoruz. Benim tavsiyem React uygulamalarında mobX kullanmanızdan yana olacaktır.</p>
 </li>
 </ul>
 <blockquote>
 <p>Redux ve MobX için yapılan övgü ve eleştiriler kesinlik içeren şeyler değil sadece benim düşüncelerimdir. Projeye ve kullanım yerine göre iki kütüphane de farklı sebeplerden dolayı tercih edilebilir.</p>
 </blockquote>
 <hr>
-<p>Şu an itibariyle react.js tarafındaki temel kavramları öğrendik diyebiliriz. Bundan sonrasında daha gelişmiş işlemleri ile ilgileneceğiz. Başlangıç için hooks, ui kütüphanesi kullanımı ve api kullanımına bakacağız. İleride talepler doğrultusunda server side rendering, mobx ve refler gibi daha karmaşık konularla da devam edebiliriz.</p>
+<p>Şu an itibariyle React.js tarafındaki temel kavramları öğrendik diyebiliriz. Bundan sonrasında daha gelişmiş işlemleri ile ilgileneceğiz. Başlangıç için hooks, ui kütüphanesi kullanımı ve api kullanımına bakacağız. İleride talepler doğrultusunda server side rendering, mobx ve refler gibi daha karmaşık konularla da devam edebiliriz.</p>
 <h2 class="atx" id="react-router">React Router</h2>
 <p>React router ile sayfalar arasında geçiş yapabiliyoruz. Şuana kadar hep tek bir sayfa üzerinde çalıştık. Şimdi ise birden fazla sayfaya sahip olacağız ve bu sayfalar arasında geçiş yapacağız. Aslında mantık olarak yine tek bir ana bileşene sahip olacağız. Router gelen url üzerinden, belirttiğimiz sayfa deseniyle eşleşen sayfa bileşenini aktif edecek.</p>
 <p>Router için alt kısımda bahsettiğimiz "server side rendering" bölümünde next.js kütüphanesi ile de bunu daha basit bir şekilde kullanacağımızı söyleyeceğiz. Daha güzel bir çözüm için orayı da okumayı unutmayın.</p>
@@ -2052,7 +2052,7 @@ Telefon<span class="token punctuation">.</span>defaultProps <span class="token o
 <span class="token punctuation">}</span>
 </code></pre>
 <h2 class="atx" id="ui-kütüphanesi-dahil-etmek-bootstrap-vs">UI Kütüphanesi Dahil Etmek (bootstrap vs.)</h2>
-<p>Tasarımları koda dökerken ui kütühaneleri gerçekten çok işimize yarıyor. Aslında sadece ui diğer bir çok kütüphaneyi kullanıyoruz. Sonuçta react bileşen tabanlı bir sistem ve geliştiriciler tarafından hazırlanmış binlerce hazır bileşen var. Yeri geldiğinde bunları kullanmak bize zamandan ve koddan tasarruf sağlatıyor.</p>
+<p>Tasarımları koda dökerken ui kütühaneleri gerçekten çok işimize yarıyor. Aslında sadece ui diğer bir çok kütüphaneyi kullanıyoruz. Sonuçta React bileşen tabanlı bir sistem ve geliştiriciler tarafından hazırlanmış binlerce hazır bileşen var. Yeri geldiğinde bunları kullanmak bize zamandan ve koddan tasarruf sağlatıyor.</p>
 <p><strong>React üzerinde en popüler ui kütühaneler:</strong></p>
 <ul>
 <li><p>Ant Design (tavsiyem)</p>
@@ -2073,15 +2073,15 @@ Telefon<span class="token punctuation">.</span>defaultProps <span class="token o
 <p>React Bootstrap dökümanı: <a href="https://react-bootstrap.github.io/">https://react-bootstrap.github.io/</a></p>
 <pre><code class="fenced-code-block language-bash"><span class="token function">npm</span> i bootstrap react-bootstrap --save
 </code></pre>
-<p>bootstrap kütüphanesini css tarafı için ekledik böylece bildiğimiz grid, button, alert vs. css sınıflarını direkt tanımlayarak kullanabileceğiz. react-bootstrap ise daha çok çalışması için javascript gereken modal, dropdown, carousel gibi bileşenler için. Bu demek değil ki react-bootstrap'ın içinde button, alert ve diğer basit bileşenler yok. Yine react-bootstrap içinden bu bileşenleri de JSX olarak kullanabileceğiz.</p>
-<p>Npm paketlerimizi indirdikten sonra projemize bootstrap'in css tarafını dahil edelim. Bunu 2 yöntem ile yapabiliriz.</p>
+<p>bootstrap kütüphanesini CSS tarafı için ekledik böylece bildiğimiz grid, button, alert vs. CSS sınıflarını direkt tanımlayarak kullanabileceğiz. react-bootstrap ise daha çok çalışması için JavaScript gereken modal, dropdown, carousel gibi bileşenler için. Bu demek değil ki react-bootstrap'ın içinde button, alert ve diğer basit bileşenler yok. Yine react-bootstrap içinden bu bileşenleri de JSX olarak kullanabileceğiz.</p>
+<p>Npm paketlerimizi indirdikten sonra projemize bootstrap'in CSS tarafını dahil edelim. Bunu 2 yöntem ile yapabiliriz.</p>
 <ol>
-<li><p>public/index.html dosyamıza link tag olarak css dosyamızı ekleriz.</p>
+<li><p>public/index.html dosyamıza link tag olarak CSS dosyamızı ekleriz.</p>
 </li>
-<li><p>index.js veya App.js (tüm bileşenleri kapsayan) bir dosyadan import ile css dosyasını dahil ederiz. (tavsiye)</p>
+<li><p>index.js veya App.js (tüm bileşenleri kapsayan) bir dosyadan import ile CSS dosyasını dahil ederiz. (tavsiye)</p>
 </li>
 </ol>
-<p>Eğer birinci adımı uygulayacak isek css dosyalarını cdn üzerinden de çağırabiliriz. Aksi halde tarayıcı üzerinden projemizdeki bir dosyaya ulaşmak için public klasöründe barınması gerektiğinden bootstrap dosyasını taşımamız gerekecek ve bu çok saçma bir hareket olacak. O yüzden eğer html içinde ekliyorsak cdn kullanalım.</p>
+<p>Eğer birinci adımı uygulayacak isek CSS dosyalarını cdn üzerinden de çağırabiliriz. Aksi halde tarayıcı üzerinden projemizdeki bir dosyaya ulaşmak için public klasöründe barınması gerektiğinden bootstrap dosyasını taşımamız gerekecek ve bu çok saçma bir hareket olacak. O yüzden eğer HTML içinde ekliyorsak cdn kullanalım.</p>
 <pre><code class="fenced-code-block language-html"><span class="token comment">&lt;!-- 1. yöntem (public/index.html) --&gt;</span>
 
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span>
@@ -2091,7 +2091,7 @@ Telefon<span class="token punctuation">.</span>defaultProps <span class="token o
 <span class="token keyword">import</span> <span class="token string">'bootstrap/dist/css/bootstrap.min.css'</span><span class="token punctuation">;</span>
 </code></pre>
 <p>Yukarıdaki yöntemlerden birini seçip uygulayın. Benim tavsiyem ikinci yöntem olacak. Eklemeyi yaptıkran sonra artık bootstrap bileşenlerini kullanabilir durumdayız.</p>
-<p>Örnek olması için bir button eklemesi yapalım ve bunu hem bileşen hem de css olarak gösterelim.</p>
+<p>Örnek olması için bir button eklemesi yapalım ve bunu hem bileşen hem de CSS olarak gösterelim.</p>
 <pre><code class="fenced-code-block language-jsx"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">"react"</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token punctuation">{</span> Button <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"react-bootstrap"</span><span class="token punctuation">;</span>
 
@@ -2151,10 +2151,10 @@ Telefon<span class="token punctuation">.</span>defaultProps <span class="token o
 
 <span class="token keyword">export</span> <span class="token keyword">default</span> Ornek<span class="token punctuation">;</span>
 </code></pre>
-<p>Gördüğünüz gibi basit bir kullanımı var. State kullanımı react kütüphanesinden çağırdığımız useState fonksiyonuyla sağlıyoruz.</p>
+<p>Gördüğünüz gibi basit bir kullanımı var. State kullanımı React kütüphanesinden çağırdığımız useState fonksiyonuyla sağlıyoruz.</p>
 <p>Tanımlama kısmındaki sayac ve setSayac'dan birincisi değişkenimizin adını, ikincisi ise state'i güncellememizi sağlayan fonksiyonu tanımlıyor. State'imizin başlangıç değerini ise useState içine gönderdiğimiz değer tanımlıyor. Biz "0" gönderdiğimiz için sayacımız 0'dan başlayacak.</p>
 <h3 class="atx" id="hook39lar-ile-effect-kullanımı">Hook'lar ile Effect Kullanımı</h3>
-<p>Az önce yaptığımız örnekten bahsetmek gerekirse sayaç state'i değiştiğinde dom üzerinde bir güncelleme olacak ve sayfadaki sayaç değeri yenilenecektir. Bu değişim yapıldığı anda bazı kontroller veya birbirini tetikleyen başka değişiklikler de yapmak isteyebiliririz. React'ın yaşam döngüsünde gördüğümüz componentDidUpdate metodu bunun için ideal fakat bunu sadece sınıf tabanlı bileşenlerde kullanabiliyoruz.</p>
+<p>Az önce yaptığımız örnekten bahsetmek gerekirse sayaç state'i değiştiğinde DOM üzerinde bir güncelleme olacak ve sayfadaki sayaç değeri yenilenecektir. Bu değişim yapıldığı anda bazı kontroller veya birbirini tetikleyen başka değişiklikler de yapmak isteyebiliririz. React'ın yaşam döngüsünde gördüğümüz componentDidUpdate metodu bunun için ideal fakat bunu sadece sınıf tabanlı bileşenlerde kullanabiliyoruz.</p>
 <p>Bu tarz durumlarda bir değişiklik olduğunda işlem yapmak için useEffect hook'unu kullanacağız.</p>
 <p>Az önceki yazdığımız kodda her butona tıklandığında p etiketi içindeki yazıyı tarayıcıda gözüken title'a yazmak isteseydik ne yapabilirdik? Sayfada title'a müdahale etmek için "document.title" kullanacağız fakat bunu direkt olarak sağlayacağımız bir yer yok. Aynı örneği kopyalayarak useEffect eklemesi yapalım.</p>
 <pre><code class="fenced-code-block language-jsx"><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> useState<span class="token punctuation">,</span> useEffect <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"react"</span><span class="token punctuation">;</span>
@@ -2187,7 +2187,7 @@ Telefon<span class="token punctuation">.</span>defaultProps <span class="token o
 </li>
 </ul>
 <h2 class="atx" id="api-kullanımı-axios">API Kullanımı (axios)</h2>
-<p>İnternet üzerinden bir bağlantı yapmak istediğimizde genel olarak REST veya SOAP üzerinden bağlantı sağlarız ve veri alışverişinde bulunuruz. Bu bağlantıyı javascript üzerinde bulunan fetch ile sağlayabiliriz. Fetch yerine daha kullanışlı olan api kullanımı üzerine geliştirilen kütüphaneler de mevcut. Bunların bir listesini ve karşılaştırma tablosunu görsel olarak ekleyeceğim. Ben axios kullanmayı tercih ediyorum ve kaynak üzerinde de kullanım olarak basit bir şekilde bunu göstereceğim. Siz daha önceden aşina olduğunuz (tabloda jQuery de mevcut onu görmezden gelin) diğer kütüphaneleri de kullanabilirisiniz, ama mantık olarak zaten hepsi aynı olduğundan fark etmeyecektir.</p>
+<p>İnternet üzerinden bir bağlantı yapmak istediğimizde genel olarak REST veya SOAP üzerinden bağlantı sağlarız ve veri alışverişinde bulunuruz. Bu bağlantıyı JavaScript üzerinde bulunan fetch ile sağlayabiliriz. Fetch yerine daha kullanışlı olan api kullanımı üzerine geliştirilen kütüphaneler de mevcut. Bunların bir listesini ve karşılaştırma tablosunu görsel olarak ekleyeceğim. Ben axios kullanmayı tercih ediyorum ve kaynak üzerinde de kullanım olarak basit bir şekilde bunu göstereceğim. Siz daha önceden aşina olduğunuz (tabloda jQuery de mevcut onu görmezden gelin) diğer kütüphaneleri de kullanabilirisiniz, ama mantık olarak zaten hepsi aynı olduğundan fark etmeyecektir.</p>
 <p><img alt="axios" src="images/axios.png"></p>
 <p>Öncelikle axios'u projemize eklemekle başlayalım.</p>
 <pre><code class="fenced-code-block language-bash"><span class="token function">npm</span> i axios --save
@@ -2251,24 +2251,24 @@ Telefon<span class="token punctuation">.</span>defaultProps <span class="token o
 <p>Warning: Each child in a list should have a unique "key" prop.</p>
 </blockquote>
 <p>Uyarıdan da görüldüğü gibi sadece key parametresi olması yetmiyor ayrıca bu key parametreleri her elemana özgün olup tekrar etmemeli.</p>
-<p>Bunu yapmamızın sebebi react sayfalarda değişiklikler olduğunda bu elemanlara bir kimlik atıyor. Böylece hangi elemanın değiştini, silindiğini veya yeni bir eleman eklendiğini anlayabilecek ve daha hızlı işlem yapacak.</p>
+<p>Bunu yapmamızın sebebi React sayfalarda değişiklikler olduğunda bu elemanlara bir kimlik atıyor. Böylece hangi elemanın değiştini, silindiğini veya yeni bir eleman eklendiğini anlayabilecek ve daha hızlı işlem yapacak.</p>
 <p><strong>Önemli:</strong> Key değerleri özgün olması gerektiği gibi veri tipi de string olması gerekiyor.</p>
 <p>Bir önceki örnekte bizim verimizdeki id'lerimiz integer olarak bulunuyordu. Ben yanına "user-" şeklinde bir ön ek koyarak bunu hem bu liste için özgün bir hale çevirdim hem de string türüne çevirmiş oldum. Size de bu şekilde kullanmanızı tavsiye ederim. Başka liste elemanları ile denk gelme ihtimalini de yoketmiş olursunuz.</p>
 <h2 class="atx" id="server-side-rendering">Server Side Rendering</h2>
-<p>React üzerinde yazdığımız kodlar tarayıcı üzerinde sayfa açıldığıda render edilir ve ekrana çıktı üretilir. Bu yüzden geliştirci konsolundan sayfanın kaynağını incele dediğinizde yazdığınız kodları göremezsiniz. Göreceğiniz içerik public/index.html dosyasının içeriği ve ekstra olarak bundle haline getirilmiş javascript dosyaları.</p>
+<p>React üzerinde yazdığımız kodlar tarayıcı üzerinde sayfa açıldığıda render edilir ve ekrana çıktı üretilir. Bu yüzden geliştirci konsolundan sayfanın kaynağını incele dediğinizde yazdığınız kodları göremezsiniz. Göreceğiniz içerik public/index.html dosyasının içeriği ve ekstra olarak bundle haline getirilmiş JavaScript dosyaları.</p>
 <p><img alt="sayfakaynagi" src="images/sayfakaynagi.png"></p>
 <p><strong>Peki bu ne gibi bir soruna yol açıyor?</strong></p>
 <p>Birincil olarak en büyük problem SEO tarafında. Google sayfaları index'leyip veritabanına kaydeder ve sonrasında arama sonuçlarında görünür olmasını sağlar. Buradaki en büyük etkenler title, description ve sayfa kaynak kodunda bulunan metinlerdir. Bizim içeriğimiz client tarafında render edildiği için Google tüm sayfalarda boş bir index.html görecek ve bunu sağlıklı bir şekilde index'lemeyecektir. Eğer doğrudan erişme kapalı bir site değilsek ve google arama sonuçlarında çıkmazsak bu gerçekten büyük bir problem yaratır.&nbsp;&nbsp;&nbsp;&nbsp;</p>
-<p>Bunu Server Side Rendering dediğimiz yöntem ile çözebiliyoruz. Mevcut react kodlarımız build alınarak statik html sayfalar oluşturuluyor. Böylelikle yazdığımız kodların html haline dönüştürülmüş versiyonunu yayımlıyoruz ve örümcekler (google ve diğer arama motorlarının sayfaları dolaşan yazılımlarına verilen isim) sitemizin içeriğini anlayabiliyor ve indexliyor.</p>
+<p>Bunu Server Side Rendering dediğimiz yöntem ile çözebiliyoruz. Mevcut React kodlarımız build alınarak statik HTML sayfalar oluşturuluyor. Böylelikle yazdığımız kodların HTML haline dönüştürülmüş versiyonunu yayımlıyoruz ve örümcekler (google ve diğer arama motorlarının sayfaları dolaşan yazılımlarına verilen isim) sitemizin içeriğini anlayabiliyor ve indexliyor.</p>
 <p>Bahsettiğimiz build kısmı kullandığımız create-react-app oluşturucusunda da mevcut fakat yine bir bundle üretiyor ve kaynak kodu statik olarak oluşturmuyor.</p>
 <p><img alt="nextjs" src="images/nextjs.png"></p>
-<p>Bu sebeple kullanabileceğimiz en iyi çözüm react üzerine server side rendering uygulamalar geliştirmek için hazırlanmış <strong>next.js</strong> kütüphanesi olacaktır. Next.js içinde dahili bir router bulunduğundan ekstra bir router kütüphanesi kullanmamıza da gerek kalmayacak. Ayrıca create-react-app üzerinde eject işlemi yaparak yapabildiğimiz konfigurasyonları da yapmamızı sağlıyor. Bu yüzden basit ve tatlı bir kütüphane.</p>
+<p>Bu sebeple kullanabileceğimiz en iyi çözüm React üzerine server side rendering uygulamalar geliştirmek için hazırlanmış <strong>next.js</strong> kütüphanesi olacaktır. Next.js içinde dahili bir router bulunduğundan ekstra bir router kütüphanesi kullanmamıza da gerek kalmayacak. Ayrıca create-react-app üzerinde eject işlemi yaparak yapabildiğimiz konfigurasyonları da yapmamızı sağlıyor. Bu yüzden basit ve tatlı bir kütüphane.</p>
 <p>Şuan için next.js kütüphanesinin kullanımına girmeyeceğim, ileriki zamanlarda bir yazı ya da video olarak kullanımı hakkında paylaşım yapabilirim.</p>
 <h2 class="atx" id="build-almak-create-react-app">Build Almak (create-react-app)</h2>
 <p>package.json dosyasından da görebileceğiniz üzere create-react-app ile oluşturduğunuz bir projeyi canlıya almak için "npm run build" komutunu kullanıyorsunuz.</p>
 <pre><code class="fenced-code-block language-bash"><span class="token function">npm</span> run build
 </code></pre>
-<p>İşlem tamamlandığında proje dizininde build adında bir klasör oluşacak. static klasörü içerisinde bundle halindeki css ve javascript dosyaları bulunuyor. Projenizde public klasörüne koyduğunuz dosyalar ise direkt olarak build klasörü içine geliyor ve böylelikle sunucu tarafında erişilebilir oluyor. Sunucuyu aktarımı sağladığınız zaman gelen bir istek olduğunda index.html dosyası çalışacak ve bundle dosyaları ile projenizi kullanıcıya render ederek gösterecek.</p>
+<p>İşlem tamamlandığında proje dizininde build adında bir klasör oluşacak. static klasörü içerisinde bundle halindeki CSS ve JavaScript dosyaları bulunuyor. Projenizde public klasörüne koyduğunuz dosyalar ise direkt olarak build klasörü içine geliyor ve böylelikle sunucu tarafında erişilebilir oluyor. Sunucuyu aktarımı sağladığınız zaman gelen bir istek olduğunda index.html dosyası çalışacak ve bundle dosyaları ile projenizi kullanıcıya render ederek gösterecek.</p>
 <h2 class="atx" id="çoklu-importexport-kullanımı-webpack">Çoklu import/export Kullanımı (webpack)</h2>
 <p>Başlık olarak ne yazacağıma tam olarak karar veremedim. Vereceğim örnek ile daha iyi anlaşılacağını düşünüyorum. Hook'lar ve fragment kısmında süslü parentezlerin arasında bileşenleri import ettik. Router kullanımı kısmında da hayali sayfalarımızı çoklu şekilde "./components" üzerinden import ettik.</p>
 <p>Hatırlamayanlar için flashback:</p>
@@ -2301,7 +2301,7 @@ Telefon<span class="token punctuation">.</span>defaultProps <span class="token o
 <p>Örnekte görüldüğü gibi artık BrowserRouter bileşenini Router olarak kullanacağız.</p>
 <hr>
 <h2 class="atx" id="kapanış">Kapanış</h2>
-<p>Şuan için genel olarak react konularını bitirdik. Eğer eksik veya hatalı gördüğünüz bir kısım var ise öncelikle bu repoyu forklayıp sonrasında kendinize göre düzenleme yaptıktan sonra pull request gönderirseniz, kaynağa siz de katkı sağlamış olursunuz.</p>
+<p>Şuan için genel olarak React konularını bitirdik. Eğer eksik veya hatalı gördüğünüz bir kısım var ise öncelikle bu repoyu forklayıp sonrasında kendinize göre düzenleme yaptıktan sonra pull request gönderirseniz, kaynağa siz de katkı sağlamış olursunuz.</p>
 <p>Eğer kaynağı beğenerek okuduysanız ve bir kahve ısmarlamak isterseniz aşağıdan ko-fi profilime ulaşabilirsiniz.</p>
 <p><a href="https://ko-fi.com/tunaorcun"><img alt="https://ko-fi.com/tunaorcun" src="images/kofi.svg"></a></p>
 <p>Bu kaynak <a href="https://github.com/orcuntuna">Orçun Tuna</a> tarafından hazırlanmıştır ve en güncel hali <a href="https://github.com/orcuntuna/react-turkce-kaynak">https://github.com/orcuntuna/react-turkce-kaynak</a> üzerinden ücretsiz bir şekilde okunabilir durumdadır. PDF ve HTML versiyonlarını da github üzerinden edinebilirsiniz.</p>
