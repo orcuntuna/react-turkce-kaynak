@@ -84,7 +84,7 @@ Bu kısımda son olarak React'ın neden bir framework değilde kütüphane oldu�
 
 ## Webpack ve Babel Kavramları
 
-Geliştirmeye başlamadan önce webpack ve babel kavramları hakkında bilgi sahibi olunması gerektiğini düşünüyorum. Şayet bunları sıklıkla kullancağız ve ne olduklarını bilmeden kullanmamız saçma olacaktır.
+Geliştirmeye başlamadan önce webpack ve babel kavramları hakkında bilgi sahibi olunması gerektiğini düşünüyorum. Şayet bunları sıklıkla kullanacağız ve ne olduklarını bilmeden kullanmamız saçma olacaktır.
 
 ### Webpack
 
