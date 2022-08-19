@@ -64,7 +64,7 @@ Kurulum tarafında ihtiyacımız olacak yazılım ise NPM ve Node.js olacak. Bun
 
 Geldik programlama dillerine, aşağıdakileri bilmeden maalesef React öğrenmeye başlayamazsınız. Eğer listedeki dil veya kavramlardan eksiğiniz var ise öncelikle bunları tamamlayıp sonrasında buraya dönmenizi tavsiye ederim. Aksi halde çoğu şeyi anlayamayabilirsiniz.
 
-- HTML
+- [HTML](https://www.scaler.com/topics/html)
 
 - CSS
 
