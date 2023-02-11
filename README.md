@@ -19,6 +19,7 @@
    2. [Varsayılan Prop Değerlerini Belirlemek](#varsayılan-prop-değerlerini-belirlemek)
 9. [State](#state)
    1. [jQuery tarafında state mantığı](#jquery-tarafında-state-mantığı)
+   2. [functional components usestate hook](#functional-components-usestate-hook)
 10. [Yaşam Döngüsü](#yaşam-döngüsü)
 11. [Olay Yönetimi (Events)](#olay-yönetimi-events)
     1. [Eventler için Bind](#eventler-için-bind)
@@ -714,6 +715,40 @@ Varsayılan state değerleri oluşturmak için de sınıf içinde direkt olarak 
 ![state](images/state.png)
 
 Ekranım ara verdiğimde açık kalmış ve aşağıdaki gibi 2210 saniye ilerlemiş :)
+
+### Functional components usestate hook kullanımı
+
+> useState hook ile sayac adında bir değişken tanımladık. sayac değişkenin değerini useState(0) hooku içine yazdık.
+Bu değeri değiştirmek için setSayac fonksiyonunu kullandık.
+Button her tetiklendiğinde arrow fonksiyon aracılığıyla sayac değeri değişecektir.
+
+```jsx
+import { useState } from "react";
+
+function App() {
+  const [sayac, setSayac] = useState(0);
+
+  const handleClick = () => {
+    setSayac(sayac + 1);
+  };
+
+  return (
+    <>
+      <button onClick={handleClick}>SAYAÇ ARTIR</button>
+      <p>SAYAÇ DEĞERİ : {sayac}</p>
+      <button
+        onClick={() => {
+          setValue(sayac - 1);
+        }}
+      >
+        SAYAÇ AZALT
+      </button>
+    </>
+  );
+}
+
+export default App;
+```
 
 ## Yaşam Döngüsü
 
